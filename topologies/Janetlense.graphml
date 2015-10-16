@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="label" attr.type="string" for="node" id="d4" />
+  <key attr.name="device_type" attr.type="string" for="node" id="d3" />
+  <key attr.name="asn" attr.type="string" for="node" id="d2" />
+  <key attr.name="ibgp_role" attr.type="string" for="node" id="d1" />
+  <key attr.name="vrf_role" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="11">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Chichester</data>
+    </node>
+    <node id="10">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Wymering</data>
+    </node>
+    <node id="13">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Southampton Core</data>
+    </node>
+    <node id="12">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Janet SJ5</data>
+    </node>
+    <node id="15">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Brighton Aggregation</data>
+    </node>
+    <node id="14">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Aldershot Core</data>
+    </node>
+    <node id="17">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Sussex</data>
+    </node>
+    <node id="16">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Brighton</data>
+    </node>
+    <node id="19">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Aldershot Aggregation</data>
+    </node>
+    <node id="18">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Surrey</data>
+    </node>
+    <node id="1">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Southampton</data>
+    </node>
+    <node id="0">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Southampton Aggregation</data>
+    </node>
+    <node id="3">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Portsmouth</data>
+    </node>
+    <node id="2">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Winchester</data>
+    </node>
+    <node id="5">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Bere Regis Colocation</data>
+    </node>
+    <node id="4">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Bournemouth</data>
+    </node>
+    <node id="7">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Bournemouth Aggregation</data>
+    </node>
+    <node id="6">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Solent</data>
+    </node>
+    <node id="9">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Hampton Park Colocation</data>
+    </node>
+    <node id="8">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Isle of Wight Colocation</data>
+    </node>
+    <edge source="11" target="13" />
+    <edge source="11" target="14" />
+    <edge source="10" target="8" />
+    <edge source="10" target="13" />
+    <edge source="10" target="14" />
+    <edge source="13" target="12" />
+    <edge source="13" target="15" />
+    <edge source="13" target="14" />
+    <edge source="13" target="17" />
+    <edge source="13" target="16" />
+    <edge source="13" target="19" />
+    <edge source="13" target="18" />
+    <edge source="13" target="1" />
+    <edge source="13" target="0" />
+    <edge source="13" target="3" />
+    <edge source="13" target="2" />
+    <edge source="13" target="4" />
+    <edge source="13" target="7" />
+    <edge source="13" target="6" />
+    <edge source="12" target="14" />
+    <edge source="15" target="9" />
+    <edge source="15" target="14" />
+    <edge source="14" target="17" />
+    <edge source="14" target="16" />
+    <edge source="14" target="19" />
+    <edge source="14" target="18" />
+    <edge source="14" target="1" />
+    <edge source="14" target="0" />
+    <edge source="14" target="3" />
+    <edge source="14" target="2" />
+    <edge source="14" target="4" />
+    <edge source="14" target="7" />
+    <edge source="14" target="6" />
+    <edge source="5" target="7" />
+  </graph>
+</graphml>

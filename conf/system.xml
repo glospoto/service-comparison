@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file contains, for each environment, all alternatives that can run using it.
+This file is basic for the framework: please DO NOT MODIFY IT!
+-->
+<system>
+
+  <services>
+    <service name="VPN" parser="services.vpn.parser.VpnServiceParser">
+      <alternatives>
+        <alternative name="rm3-sdn-vpn" 
+          adapter="services.vpn.alternative.Rm3SdnVpnAlternative" />
+        <alternative name="mpls-bgp-vpn" 
+          adapter="services.vpn.alternative.MplsBgpVpnAlternative" />
+      </alternatives>
+    </service>
+  </services>
+
+  <metrics>
+    <metric name="device-load" 
+      extractor_adapter="collector.extractors.device_load.DeviceLoad" />
+    
+    <metric name="control-plane-convergence-time" 
+      extractor_adapter="collector.extractors.convergence_time.ControlPlaneConvergenceTime"
+      collector_adapter="collector.collectors.cp.ControlPlaneMessages" />
+
+    <metric name="control-plane-overhead" 
+      extractor_adapter="collector.extractors.overhead.ControlPlaneOverhead"
+      collector_adapter="collector.collectors.cp.ControlPlaneMessages" />
+  </metrics>
+
+  <environments>
+    <environment name="Mininet" 
+      adapter="loader.environment.MininetEnvironment">
+      <alternative id="rm3-sdn-vpn" />
+    </environment>
+    <environment name="Mininext" 
+      adapter="loader.environment.MininextEnvironment">
+      <alternative id="rm3-sdn-vpn" />
+      <alternative id="mpls-bgp-vpn" />
+    </environment>
+    <environment name="Netkit" 
+      adapter="loader.environment.NetkitEnvironment">
+      <alternative id="mpls-bgp-vpn" />
+    </environment>
+  </environments>
+
+</system>

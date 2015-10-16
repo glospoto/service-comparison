@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="label" attr.type="string" for="node" id="d4" />
+  <key attr.name="device_type" attr.type="string" for="node" id="d3" />
+  <key attr.name="asn" attr.type="string" for="node" id="d2" />
+  <key attr.name="ibgp_role" attr.type="string" for="node" id="d1" />
+  <key attr.name="vrf_role" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="11">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Pacific Wave Seattle</data>
+    </node>
+    <node id="10">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Pacific Wave Sunnyvale</data>
+    </node>
+    <node id="13">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Pacific Wave Hawaii</data>
+    </node>
+    <node id="12">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Internet2 DCN</data>
+    </node>
+    <node id="15">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Pacific Wave Los Angeles</data>
+    </node>
+    <node id="14">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">AARNET Sydney</data>
+    </node>
+    <node id="17">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">CENIC</data>
+    </node>
+    <node id="16">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">JGN2 Plus Tokyo</data>
+    </node>
+    <node id="1">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">CANARIE</data>
+    </node>
+    <node id="0">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">KRLight</data>
+    </node>
+    <node id="3">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">CSTNet HKEOEP</data>
+    </node>
+    <node id="2">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">NLR FrameNet</data>
+    </node>
+    <node id="5">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Pacific Northwest Gigapop</data>
+    </node>
+    <node id="4">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">StarLight</data>
+    </node>
+    <node id="7">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Internet2 DCN</data>
+    </node>
+    <node id="6">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">NLR FrameNet</data>
+    </node>
+    <node id="9">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">CENIC</data>
+    </node>
+    <node id="8">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">NLR FrameNet</data>
+    </node>
+    <edge source="11" target="10" />
+    <edge source="11" target="15" />
+    <edge source="11" target="1" />
+    <edge source="11" target="0" />
+    <edge source="11" target="3" />
+    <edge source="11" target="5" />
+    <edge source="11" target="4" />
+    <edge source="11" target="7" />
+    <edge source="11" target="6" />
+    <edge source="10" target="9" />
+    <edge source="10" target="2" />
+    <edge source="10" target="15" />
+    <edge source="13" target="15" />
+    <edge source="12" target="15" />
+    <edge source="15" target="14" />
+    <edge source="15" target="17" />
+    <edge source="15" target="16" />
+    <edge source="15" target="8" />
+    <edge source="17" target="8" />
+    <edge source="2" target="9" />
+    <edge source="5" target="7" />
+    <edge source="5" target="6" />
+  </graph>
+</graphml>
