@@ -3,6 +3,8 @@ This project aims to develop a framework being able to compare different alterna
 underlying network can be setted up using different approaches, such as simulators or virtual machines, keeping the
 scalability sustainable.
 
+## What's inside the framework
+
 ## Dependencies
 
 ## Run the framework
