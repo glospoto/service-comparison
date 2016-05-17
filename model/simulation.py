@@ -125,17 +125,20 @@ class Simulation(Thread):
                 else:
                     self._log.debug(self.__class__.__name__,
                                     'Collector %s has been already started.', collector.get_name())
+            else:
+                self._log.info(self.__class__.__name__, 'No collectors are required for this simulation.')
 
         '''
         Running a simulation consists in:
          1. setting up scenario;
          2. running the environment.
+         or vice-versa?
         '''
 
-        self._log.info(self.__class__.__name__, 'Setting up scenario for alternative %s.', self._alternative.get_name())
-        self._alternative.setting_up_scenario()
         self._log.info(self.__class__.__name__, 'Preparing the environment %s to be executed.', self._environment)
         self._environment.run(self._alternative.get_overlay())
+        self._log.info(self.__class__.__name__, 'Setting up scenario for alternative %s.', self._alternative.get_name())
+        self._alternative.setting_up_scenario()
 
         self._log.info(self.__class__.__name__, 'Preparing the execution of all extractors.')
         # At the end of the simulation, run extractor for each metric
@@ -158,6 +161,6 @@ class Simulation(Thread):
         if self._extractor_count == self._extractor_number:
             self._log.info(self.__class__.__name__, 'All extractors done; stop the environment.')
             self._alternative.destroy()
-            self._environment.stop()
+            #self._environment.stop()
             self._log.info(self.__class__.__name__, 'Environment has been stopped.')
             self._extractor_count = 0

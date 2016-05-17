@@ -1,5 +1,7 @@
 import os
 import shutil
+import subprocess
+from subprocess import PIPE
 
 from loader.env.controller import ControllerStarter
 from model.scenario import Scenario
@@ -91,4 +93,53 @@ class Rm3SdnVpnScenario(Scenario):
         self._log.debug(self.__class__.__name__, 'Stopping the controller.')
         # Stop the controller
         self._controller.stop()
+        self._log.info(self.__class__.__name__, 'Scenario %s has been correctly stopped.', self._name)
+
+"""
+This class models a scenario for Rm3SdnVpn alternative. It has in charge the task of running the controller.
+"""
+
+
+class MplsBgpVpnScenario(Scenario):
+    def __init__(self, *args, **kwargs):
+        Scenario.__init__(self)
+        # The name of the scenario
+        self._name = self.__class__.__name__
+        # Take params from kwargs
+        params = kwargs.get('scenario')
+        # Number of VPNs
+        self._number_of_vpns = int(params['number_of_vpns'])
+
+    def __repr__(self):
+        return 'MplsBpgVpnScenario[#VPNs=%s]' % (self._number_of_vpns)
+
+    '''
+    Return the name of this scenario.
+    '''
+    def get_name(self):
+        return self._name
+
+    '''
+    Return the number of VPNs declared in this scenario.
+    '''
+    def get_number_of_vpns(self):
+        return self._number_of_vpns
+
+    '''
+    This method allows the creation of this scenario.
+    '''
+    def start(self):
+        self._log.info(self.__class__.__name__, 'Preparing to start the scenario %s.', self._name)
+        # Put here the configuration of all docker instance, for example adding network interfaces
+        # Invoke pos.sh
+        self._fs.join(self._fs.get_tmp_folder(), 'poc.sh')
+        subprocess.Popen(self._fs.get_current_working_folder(), shell=True, stdout=PIPE, stderr=PIPE)
+        self._log.info(self.__class__.__name__, 'Scenario %s. has been correctly started.', self._name)
+
+    '''
+    This method destroys the scenario previously created.
+    '''
+    def destroy(self):
+        self._log.debug(self.__class__.__name__, 'Stopping scenario %s.', self._name)
+        # No specific actions for this scenario
         self._log.info(self.__class__.__name__, 'Scenario %s has been correctly stopped.', self._name)

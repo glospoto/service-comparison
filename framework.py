@@ -22,7 +22,7 @@ class ComparisonFramework(object):
         self._parser = Parser()
         # The topology
         self._topology = None
-        # Factory loader. For each alternative, a new environment is loaded in accord with the alternative itself.
+        # Factory loader. For each alternative, a new environment is loaded accordngly with the alternative itself.
         self._loader = EnvironmentLoader()
 
         # ArgParse
@@ -60,8 +60,8 @@ class ComparisonFramework(object):
     def run(self):
         self._init()
 
-        # Run simulation: for each service to evaluate, create a simulation and delegate to the loader objects
-        # the decision about the environment to load based on the alternatives
+        # Run simulation: for each service to evaluate, create a simulation and delegate to the loader 
+        # objects the decision about the environment to load based on the alternatives
         services = self._parser.get_services()
 
         for service in services:
@@ -70,19 +70,23 @@ class ComparisonFramework(object):
                 '''
                 Creating overlay and adding it to the topology object.
                 '''
-                self._log.info(self.__class__.__name__, 'Creating overlay for alternative %s.', alternative.get_name())
+                self._log.info(self.__class__.__name__, 'Creating overlay for alternative %s.', 
+                               alternative.get_name())
                 # Creating the overlay for current alternative
                 overlay = alternative.create_overlay(self._topology.get_topology_from_graphml())
-                self._log.info(self.__class__.__name__, 'Adding overlay %s for alternative %s to the topology.',
+                self._log.info(self.__class__.__name__, 
+                               'Adding overlay %s for alternative %s to the topology.',
                                overlay.get_name(), alternative.get_name())
                 self._topology.add_overlay(overlay)
 
                 '''
                 Loading environment, creating the simulation and running it.
                 '''
-                self._log.info(self.__class__.__name__, 'Loading the environment for the alternative %s.', alternative)
+                self._log.info(self.__class__.__name__, 'Loading the environment for the alternative %s.', 
+                               alternative)
                 # Load an environment for the current alternative of this service
                 environment = self._loader.load(alternative.get_environment())
+                environment.run(overlay)
                 # Create the simulation
                 simulation = Simulation(self._topology, service, environment, alternative)
                 self._log.info(
@@ -93,7 +97,9 @@ class ComparisonFramework(object):
                 simulation.start()
                 simulation.join()
 
-            self._log.info(self.__class__.__name__, 'All alternatives for service %s have been successfully tested.',
+            self._log.info(self.__class__.__name__, 
+                           'All alternatives for service %s have been successfully tested.',
                            service.get_name())
 
-        self._log.info(self.__class__.__name__, 'All services have been successfully tested; framework will stop.')
+        self._log.info(self.__class__.__name__, 
+                       'All services have been successfully tested; framework will stop.')

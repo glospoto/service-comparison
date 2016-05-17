@@ -31,7 +31,7 @@ This file is basic for the framework: please DO NOT MODIFY IT!
 
   <environments>
     <environment name="Mininet" 
-      adapter="loader.environment.MininetEnvironment">
+      adapter="loader.environment.MininetEnvironment">/
       <alternative id="rm3-sdn-vpn" />
     </environment>
     <environment name="Mininext" 
@@ -39,8 +39,8 @@ This file is basic for the framework: please DO NOT MODIFY IT!
       <alternative id="rm3-sdn-vpn" />
       <alternative id="mpls-bgp-vpn" />
     </environment>
-    <environment name="Netkit" 
-      adapter="loader.environment.NetkitEnvironment">
+    <environment name="Docker"
+      adapter="loader.environment.DockerEnvironment">
       <alternative id="mpls-bgp-vpn" />
     </environment>
   </environments>

@@ -1,6 +1,7 @@
 from abc import ABCMeta, abstractmethod
 
 from loader.env.mininet_simulator import MininetTopology, MininetStartSimulation
+from loader.env.docker_simulator import Docker
 import utils.class_for_name as Class
 from utils.log import Logger
 
@@ -92,3 +93,54 @@ class MininetEnvironment(Environment):
     '''
     def stop(self):
         self._mininet_starter.stop()
+
+"""
+This class models a Docker environment, namely an environment in which each node in the network is an instance of a
+docker container.
+"""
+
+
+class DockerEnvironment(Environment):
+    def __init__(self):
+        Environment.__init__(self)
+        # Running instances
+        self._running_docker_instances = []
+
+    def __repr__(self):
+        return self.__class__.__name__
+
+    '''
+    This method implements the steps for running this environment.
+    '''
+    def run(self, overlay):
+        self._log.info(self.__class__.__name__, 'Initializing the environment.')
+        self._log.info(self.__class__.__name__, 'Starting to create a Docker instance for each node in the overlay.')
+        # Create the network
+        for node in overlay.get_nodes().values():
+            self._log.debug(self.__class__.__name__, 'Creating Docker container for node %s.', node.get_name())
+            instance = Docker(node.get_name(), 'scf:v2', '--privileged=True')
+            # Add the instance to those running
+            self._running_docker_instances.append(instance)
+            instance.create()
+            self._log.debug(self.__class__.__name__, 'Container for node %s has been correctly created.', node.get_name())
+        self._log.info(self.__class__.__name__, 'All Docker instances are now successfully created.')
+        # Run all docker instances
+        self._log.info(self.__class__.__name__, 'Starting all Docker instances.')
+        for instance in self._running_docker_instances:
+            self._log.debug(self.__class__.__name__, 'Starting Docker container for node %s.', instance.get_name())
+            instance.start()
+            self._log.debug(self.__class__.__name__, 'Docker container %s has been successfully started.',
+                           instance.get_name())
+        self._log.info(self.__class__.__name__, 'All Docker instances are now successfully running.')
+
+    '''
+    This method implements the steps for stopping this environment.
+    '''
+    def stop(self):
+        self._log.info(self.__class__.__name__, 'Stopping the environment.')
+        for instance in self._running_docker_instances:
+            instance.stop()
+            instance.remove()
+            self._log.debug(self.__class__.__name__, 'Container for node %s has been correctly stopped.',
+                            instance.get_name())
+        self._log.info(self.__class__.__name__, 'All Docker instances are now successfully stopped.')

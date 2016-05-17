@@ -1,9 +1,15 @@
 import ConfigParser
 from xml.dom import minidom
+import subprocess
+from subprocess import PIPE
 
 from model.configurator import Configurator
 from services.vpn.vpn import VirtualPrivateNetwork, Site, Host, Link
 from utils.generator import AddressGenerator
+
+"""
+This class model the configuration management for Rm3Sdn alternative
+"""
 
 
 class Rm3SdnVpnConfigurator(Configurator):
@@ -166,3 +172,159 @@ class Rm3SdnVpnConfigurator(Configurator):
         with open(vpns_conf_file_str, 'w') as f:
             f.write(xml_str)
         self._log.info(self.__class__.__name__, '%s has been correctly generated.', self.__VPNS_FILE_NAME)
+
+"""
+This class model the configuration management for Rm3Sdn alternative
+"""
+
+
+class MplsBgpVpnConfigurator(Configurator):
+    def __init__(self):
+        Configurator.__init__(self)
+        self._name = self.__class__.__name__
+        # All created VPNs
+        self._vpns = {}
+        # References to object for handling configuration files
+        self._system_config = ConfigParser.ConfigParser()
+        self._vpns_config = minidom.Document()
+        # Files names
+        self.__SYS_CONG_FILE_NAME = 'system.conf'
+        self.__VPNS_FILE_NAME = 'vpns.xml'
+
+    def __repr__(self):
+        return '%s' % self._name
+
+    '''
+    Return the name of this configurator.
+    '''
+    def get_name(self):
+        return self._name
+
+    '''
+    Return the map of all created VPNs.
+    '''
+    def get_vpns(self):
+        return self._vpns
+
+    '''
+    This method has in charge the task of creating all VPNs defined using the configuration file.
+    '''
+    # Fixme VPNs should be the same for all alternatives of this service. Move in a common point into the code!
+    def create_vpns(self, overlay, number_of_vpns):
+        self._log.info(self.__class__.__name__, 'Starting to configure the alternative.')
+        for i in range(0, number_of_vpns):
+            name = 'vpn-' + str(i)
+            vpn = VirtualPrivateNetwork(name)
+            self._log.debug(self.__class__.__name__, 'VPN %s has been created', name)
+            # Take two random PEs
+            pes = overlay.get_two_random_pes()
+            # Create sites
+            self._log.debug(self.__class__.__name__, 'Starting to creates the sites for VPN %s.', vpn.get_name())
+            vpn.add_site(self._create_site(vpn, pes[0], overlay, i))
+            vpn.add_site(self._create_site(vpn, pes[1], overlay, i))
+            self._log.debug(self.__class__.__name__, 'Sites have been correctly created.')
+
+            # Add VPN to the map of VPNs
+            self._vpns[name] = vpn
+        self._log.info(self.__class__.__name__, 'All VPNs have been created.')
+
+    '''
+    Private method used for creating a site to add to a VPN. This is made in accord to the model defined into
+    services.vpn.vpn.py
+    '''
+    def _create_site(self, vpn, pe, overlay, i):
+        # First of all, create an host for this site
+        # IP addresses for the hosts
+        self._log.debug(self.__class__.__name__, 'Starting to create a new site for VPN %s.', vpn.get_name())
+        self._log.debug(self.__class__.__name__, 'Generating IP address for the host.')
+        h_ip = AddressGenerator.generate_ip_address()
+        host = Host('h' + str(i) + '_' + pe.get_name(), h_ip)
+        self._log.debug(self.__class__.__name__, 'Host %s has been correctly generated.', host.get_name())
+        # Add host to the overlay
+        overlay.add_host(host)
+        self._log.debug(self.__class__.__name__, 'Host %s has been added to the overlay.', host.get_name())
+        host.set_pe(pe)
+        self._log.debug(self.__class__.__name__, 'Host %s has been connected to its PE.', host.get_name())
+        # Add this host to the VPN
+        vpn.add_host(host)
+        self._log.debug(self.__class__.__name__, 'Host %s has been added to the VPN %s.',
+                        host.get_name(), vpn.get_name())
+        pe.assign_interface_to_host(host)
+        self._log.debug(self.__class__.__name__, 'Host %s has been assigned to a certain interface of PE %s.',
+                        host.get_name(), pe.get_name())
+        # Finally, create a Link object between host and PE and add it to the overlay
+        link = Link(host, pe)
+        self._log.debug(self.__class__.__name__, 'Link %s has been created.', link)
+        overlay.add_link(link)
+        self._log.debug(self.__class__.__name__,
+                        'Link %s created and added to %s', link, overlay.get_name())
+
+        return Site(vpn, pe, pe.get_interface_for_host(host), AddressGenerator.get_subnet_from_ip(host.get_ip()))
+
+    '''
+    This method has in charge the task of writing the configuration files for RM3 SDN VPN controller.
+    '''
+    def write_configurations(self, overlay):
+        self._log.info(self.__class__.__name__, 'Starting to create the configuration.')
+
+        # Generating all configuration file for BagPipeBGP, GoBGP and OSPF
+        # Copying all configuration files into the docker instances
+        # Executing all routing daemons (OSPF on all nodes and GoBGP and BagPipeBGP on PE)
+        for node in overlay.get_nodes().values():
+
+            self._log.info(self.__class__.__name__, 'Creating the Zebra configuration file.')
+            self._fs.join(self._fs.get_tmp_folder(), 'confs')
+            cmd_zebra = 'sudo docker cp %s/zebra.conf %s:/etc/quagga/' % (
+                self._fs.get_current_working_folder(), node.get_name())
+            subprocess.Popen(cmd_zebra, shell=True, stdout=PIPE, stderr=PIPE)
+            self._log.debug(self.__class__.__name__, 'Zebra configuration file has been successfully created.')
+
+            self._log.info(self.__class__.__name__, 'Creating the Quagga configuration file.')
+            self._fs.join(self._fs.get_tmp_folder(), 'confs')
+            cmd_quagga = 'sudo docker cp %s/daemons %s:/etc/quagga/' % (
+                self._fs.get_current_working_folder(), node.get_name())
+            subprocess.Popen(cmd_quagga, shell=True, stdout=PIPE, stderr=PIPE)
+            self._log.debug(self.__class__.__name__, 'Quagga configuration file has been successfully created.')
+
+            # Switch to specific node configuration folder
+            self._fs.join(self._fs.get_tmp_folder(), 'confs', node.get_name())
+
+            if node.get_role() == 'PE':
+                self._log.info(self.__class__.__name__, 'Creating the GoBGP configuration file.')
+                # Copying all file in the current directory into the container
+                cmd_gobgp = 'sudo docker cp %s/gobgp.conf %s:/etc/quagga/' % (
+                    self._fs.get_current_working_folder(), node.get_name())
+                subprocess.Popen(cmd_gobgp, shell=True, stdout=PIPE, stderr=PIPE)
+                self._log.debug(self.__class__.__name__, 'GoBGP configuration file has been successfully created.')
+
+                self._log.info(self.__class__.__name__, 'Starting GoBGP routing daemon.')
+                # Starting GoBGP
+                cmd_gobgp_daemon = 'sudo docker exec -d %s /root/go/bin/gobgpd -f /etc/quagga/gobgp.conf' % node.get_name()
+                subprocess.Popen(cmd_gobgp_daemon, shell=True, stdout=PIPE, stderr=PIPE)
+                self._log.debug(self.__class__.__name__, 'GoBGP routing daemon has been successfully started.')
+
+                self._log.info(self.__class__.__name__, 'Creating the BagPipiBGP configuration file.')
+                cmd_bagpipebgp = 'sudo docker cp %s/bgp.conf %s:/etc/bagpipe-bgp/' % (
+                    self._fs.get_current_working_folder(), node.get_name())
+                subprocess.Popen(cmd_bagpipebgp, shell=True, stdout=PIPE, stderr=PIPE)
+                self._log.debug(self.__class__.__name__, 'BagPipeBGP configuration file has been successfully created.')
+
+                self._log.info(self.__class__.__name__, 'Starting BagPipeBGP routing daemon.')
+                # Starting BagPipeBGP
+                cmd_bagpipebgp_daemon = 'sudo docker exec -d %s service bagpipe-bgp start' % node.get_name()
+                subprocess.Popen(cmd_bagpipebgp_daemon, shell=True, stdout=PIPE, stderr=PIPE)
+                self._log.debug(self.__class__.__name__, 'BagPipeBGP routing daemon has been successfully started.')
+
+            self._log.info(self.__class__.__name__, 'Creating the OSPF configuration file.')
+            cmd_ospf = 'sudo docker cp %s/ospfd.conf %s:/etc/quagga/' % (
+                self._fs.get_current_working_folder(), node.get_name())
+            subprocess.Popen(cmd_ospf, shell=True, stdout=PIPE, stderr=PIPE)
+            self._log.debug(self.__class__.__name__, 'OSPF configuration file has been successfully created.')
+
+            self._log.info(self.__class__.__name__, 'Starting OSPF routing daemon.')
+            # Starting OSPF
+            cmd_ospf_daemon = 'sudo docker exec -d %s /etc/init.d/quagga start' % node.get_name()
+            subprocess.Popen(cmd_ospf_daemon, shell=True, stdout=PIPE, stderr=PIPE)
+            self._log.debug(self.__class__.__name__, 'OSPF routing daemon has been successfully started.')
+
+        self._log.info(self.__class__.__name__, 'Configuration has been correctly created.')
