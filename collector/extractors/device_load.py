@@ -151,13 +151,16 @@ class DockerDeviceLoad(DeviceLoad):
     def extract_data(self):
         # First of all, sleep for 1 minute
         self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
-        time.sleep(15)
+        time.sleep(10)
         self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
-        # switches = self._overlay.get_nodes()
-        # # Probably put here the creation of the folder which will contain all datapaths' flow tables.
-        # for switch in switches.values():
-        #     self._log.debug(self.__class__.__name__, 'Extracting routing table from %s', switch.get_name())
-        #     # Command for extracting data
+        switches = self._overlay.get_nodes()
+        # Probably put here the creation of the folder which will contain all datapaths' flow tables.
+        for switch in switches.values():
+            self._log.debug(self.__class__.__name__, 'Extracting routing table from %s', switch.get_name())
+            # Command for extracting data
+            if switch.get_role() == 'PE':
+                print '################################# Get BGP table'
+            print '######################### GET OSPF table'
         #     cmd = 'sudo ovs-ofctl -O OpenFlow13 dump-flows ' + switch.get_name()
         #     # File into the simulation folder in which storing data
         #     output_file_name = self._simulation_path + '/' + self._extractor_folder + '/' + switch.get_name() + '.data'

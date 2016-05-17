@@ -276,14 +276,14 @@ class MplsBgpVpnConfigurator(Configurator):
             self._fs.join(self._fs.get_tmp_folder(), 'confs')
             cmd_zebra = 'sudo docker cp %s/zebra.conf %s:/etc/quagga/' % (
                 self._fs.get_current_working_folder(), node.get_name())
-            subprocess.Popen(cmd_zebra, shell=True, stdout=PIPE, stderr=PIPE)
+            subprocess.Popen(cmd_zebra, shell=True, stdout=PIPE, stderr=PIPE).communicate()
             self._log.debug(self.__class__.__name__, 'Zebra configuration file has been successfully created.')
 
             self._log.info(self.__class__.__name__, 'Creating the Quagga configuration file.')
             self._fs.join(self._fs.get_tmp_folder(), 'confs')
             cmd_quagga = 'sudo docker cp %s/daemons %s:/etc/quagga/' % (
                 self._fs.get_current_working_folder(), node.get_name())
-            subprocess.Popen(cmd_quagga, shell=True, stdout=PIPE, stderr=PIPE)
+            subprocess.Popen(cmd_quagga, shell=True, stdout=PIPE, stderr=PIPE).communicate()
             self._log.debug(self.__class__.__name__, 'Quagga configuration file has been successfully created.')
 
             # Switch to specific node configuration folder
@@ -294,37 +294,37 @@ class MplsBgpVpnConfigurator(Configurator):
                 # Copying all file in the current directory into the container
                 cmd_gobgp = 'sudo docker cp %s/gobgp.conf %s:/etc/quagga/' % (
                     self._fs.get_current_working_folder(), node.get_name())
-                subprocess.Popen(cmd_gobgp, shell=True, stdout=PIPE, stderr=PIPE)
+                subprocess.Popen(cmd_gobgp, shell=True, stdout=PIPE, stderr=PIPE).communicate()
                 self._log.debug(self.__class__.__name__, 'GoBGP configuration file has been successfully created.')
 
                 self._log.info(self.__class__.__name__, 'Starting GoBGP routing daemon.')
                 # Starting GoBGP
                 cmd_gobgp_daemon = 'sudo docker exec -d %s /root/go/bin/gobgpd -f /etc/quagga/gobgp.conf' % node.get_name()
-                subprocess.Popen(cmd_gobgp_daemon, shell=True, stdout=PIPE, stderr=PIPE)
+                subprocess.Popen(cmd_gobgp_daemon, shell=True, stdout=PIPE, stderr=PIPE).communicate()
                 self._log.debug(self.__class__.__name__, 'GoBGP routing daemon has been successfully started.')
 
                 self._log.info(self.__class__.__name__, 'Creating the BagPipiBGP configuration file.')
                 cmd_bagpipebgp = 'sudo docker cp %s/bgp.conf %s:/etc/bagpipe-bgp/' % (
                     self._fs.get_current_working_folder(), node.get_name())
-                subprocess.Popen(cmd_bagpipebgp, shell=True, stdout=PIPE, stderr=PIPE)
+                subprocess.Popen(cmd_bagpipebgp, shell=True, stdout=PIPE, stderr=PIPE).communicate()
                 self._log.debug(self.__class__.__name__, 'BagPipeBGP configuration file has been successfully created.')
 
                 self._log.info(self.__class__.__name__, 'Starting BagPipeBGP routing daemon.')
                 # Starting BagPipeBGP
                 cmd_bagpipebgp_daemon = 'sudo docker exec -d %s service bagpipe-bgp start' % node.get_name()
-                subprocess.Popen(cmd_bagpipebgp_daemon, shell=True, stdout=PIPE, stderr=PIPE)
+                subprocess.Popen(cmd_bagpipebgp_daemon, shell=True, stdout=PIPE, stderr=PIPE).communicate()
                 self._log.debug(self.__class__.__name__, 'BagPipeBGP routing daemon has been successfully started.')
 
             self._log.info(self.__class__.__name__, 'Creating the OSPF configuration file.')
             cmd_ospf = 'sudo docker cp %s/ospfd.conf %s:/etc/quagga/' % (
                 self._fs.get_current_working_folder(), node.get_name())
-            subprocess.Popen(cmd_ospf, shell=True, stdout=PIPE, stderr=PIPE)
+            subprocess.Popen(cmd_ospf, shell=True, stdout=PIPE, stderr=PIPE).communicate()
             self._log.debug(self.__class__.__name__, 'OSPF configuration file has been successfully created.')
 
             self._log.info(self.__class__.__name__, 'Starting OSPF routing daemon.')
             # Starting OSPF
             cmd_ospf_daemon = 'sudo docker exec -d %s /etc/init.d/quagga start' % node.get_name()
-            subprocess.Popen(cmd_ospf_daemon, shell=True, stdout=PIPE, stderr=PIPE)
+            subprocess.Popen(cmd_ospf_daemon, shell=True, stdout=PIPE, stderr=PIPE).communicate()
             self._log.debug(self.__class__.__name__, 'OSPF routing daemon has been successfully started.')
 
         self._log.info(self.__class__.__name__, 'Configuration has been correctly created.')
