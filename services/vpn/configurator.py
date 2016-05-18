@@ -3,6 +3,8 @@ from xml.dom import minidom
 import subprocess
 from subprocess import PIPE
 
+import time
+
 from model.configurator import Configurator
 from services.vpn.vpn import VirtualPrivateNetwork, Site, Host, Link
 from utils.generator import AddressGenerator
@@ -327,4 +329,22 @@ class MplsBgpVpnConfigurator(Configurator):
             subprocess.Popen(cmd_ospf_daemon, shell=True, stdout=PIPE, stderr=PIPE).communicate()
             self._log.debug(self.__class__.__name__, 'OSPF routing daemon has been successfully started.')
 
+        time.sleep(30)
+        self._attach_customers(overlay)
+
         self._log.info(self.__class__.__name__, 'Configuration has been correctly created.')
+
+    def _attach_customers(self, overlay):
+        for node in overlay.get_nodes().values():
+            if node.get_name() == 'WestP':
+                cmd_customer = 'sudo docker exec -d %s bagpipe-rest-attach --attach --port netns ' \
+                                '--ip 192.168.10.1 --network-type evpn --vpn-instance-id test --rt 64512:79' % \
+                                node.get_name()
+            else:
+                 cmd_customer = 'sudo docker exec -d %s bagpipe-rest-attach --attach --port netns ' \
+                                 '--ip 192.168.11.1 --network-type evpn --vpn-instance-id test --rt 64512:79' % \
+                                 node.get_name()
+            self._log.info(self.__class__.__name__, 'Attaching client to %s.', node.get_name())
+            # Attaching customer
+            subprocess.Popen(cmd_customer, shell=True, stdout=PIPE, stderr=PIPE).communicate()
+            self._log.debug(self.__class__.__name__, 'Client has been successfully attached to %s.', node.get_name())

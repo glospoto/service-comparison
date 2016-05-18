@@ -1,5 +1,5 @@
 from abc import ABCMeta, abstractmethod
-from subprocess import Popen
+from subprocess import Popen, PIPE
 import os
 import time
 
@@ -149,18 +149,37 @@ class DockerDeviceLoad(DeviceLoad):
     Start the process of extracting data.
     '''
     def extract_data(self):
+        extractors = []
         # First of all, sleep for 1 minute
         self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
-        time.sleep(10)
+        time.sleep(120)
         self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
         switches = self._overlay.get_nodes()
         # Probably put here the creation of the folder which will contain all datapaths' flow tables.
         for switch in switches.values():
             self._log.debug(self.__class__.__name__, 'Extracting routing table from %s', switch.get_name())
+            # File into the simulation folder in which storing data
+            output_file_name = self._simulation_path + '/' + self._extractor_folder + '/' + switch.get_name() + '.data'
+            # Create a file starting from its name
+            output_file = open(output_file_name, 'wa')
             # Command for extracting data
             if switch.get_role() == 'PE':
-                print '################################# Get BGP table'
-            print '######################### GET OSPF table'
+                self._log.debug(self.__class__.__name__, 'Starting to extract VRF information.')
+                cmd_vrf = 'sudo docker exec %s bagpipe-looking-glass vpns instances test routes' % switch.get_name()
+                extractor_customer = Popen(cmd_vrf, shell=True, stdout=output_file)
+                extractors.append(extractor_customer)
+                self._log.debug(self.__class__.__name__, 'VRF information have been correctly extracted.')
+            self._log.debug(self.__class__.__name__, 'Starting to extract FIB information.')
+            cmd_fib = 'sudo docker exec %s ip r s' % switch.get_name()
+            extractor_fib = Popen(cmd_fib, shell=True, stdout=output_file)
+            extractors.append(extractor_fib)
+            self._log.debug(self.__class__.__name__, 'FIB information have been correctly extracted.')
+            # Write data on disk
+            output_file.flush()
+            os.fsync(output_file.fileno())
+            # Wait for process termination
+            for e in extractors:
+                e.wait()
         #     cmd = 'sudo ovs-ofctl -O OpenFlow13 dump-flows ' + switch.get_name()
         #     # File into the simulation folder in which storing data
         #     output_file_name = self._simulation_path + '/' + self._extractor_folder + '/' + switch.get_name() + '.data'
