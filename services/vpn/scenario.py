@@ -142,4 +142,7 @@ class MplsBgpVpnScenario(Scenario):
     def destroy(self):
         self._log.debug(self.__class__.__name__, 'Stopping scenario %s.', self._name)
         # No specific actions for this scenario
+        # Invoke clean.sh
+        self._fs.join(self._fs.get_tmp_folder(), 'clean.sh')
+        subprocess.Popen(self._fs.get_current_working_folder(), shell=True, stdout=PIPE, stderr=PIPE)
         self._log.info(self.__class__.__name__, 'Scenario %s has been correctly stopped.', self._name)

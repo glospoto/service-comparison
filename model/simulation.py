@@ -161,6 +161,6 @@ class Simulation(Thread):
         if self._extractor_count == self._extractor_number:
             self._log.info(self.__class__.__name__, 'All extractors done; stop the environment.')
             self._alternative.destroy()
-            #self._environment.stop()
+            self._environment.stop()
             self._log.info(self.__class__.__name__, 'Environment has been stopped.')
             self._extractor_count = 0

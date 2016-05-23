@@ -86,7 +86,7 @@ class ComparisonFramework(object):
                                alternative)
                 # Load an environment for the current alternative of this service
                 environment = self._loader.load(alternative.get_environment())
-                environment.run(overlay)
+                #environment.run(overlay)
                 # Create the simulation
                 simulation = Simulation(self._topology, service, environment, alternative)
                 self._log.info(

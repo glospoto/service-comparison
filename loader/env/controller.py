@@ -43,7 +43,7 @@ class ControllerStarter(object):
         process = psutil.Process(self._controller_process.pid)
         self._log.debug(self.__class__.__name__, 'All child have been kept.')
         # Get all child' PID
-        child_pid = process.get_children(recursive=True)
+        child_pid = process.children(recursive=True)
         self._log.debug(self.__class__.__name__, 'Starting to kill each children.')
         # Kill each children
         for pid in child_pid:
