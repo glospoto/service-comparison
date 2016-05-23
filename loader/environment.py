@@ -11,7 +11,6 @@ This class has in charge the task to load the environment.
 
 
 class EnvironmentLoader(object):
-
     def __init__(self):
         # self._factory_loader = FactoryLoader()
         self._log = Logger.get_instance()
@@ -22,11 +21,13 @@ class EnvironmentLoader(object):
     '''
     This method loads an environment starting from its class name.
     '''
+
     def load(self, environment_class_name):
         environment = Class.for_name(environment_class_name)
         self._log.info(
             'EnvironmentLoader', 'Environment %s has been loaded.', environment_class_name)
         return environment
+
 
 """
 This class models a generic environment.
@@ -43,6 +44,7 @@ class Environment(object):
     '''
     This method implements the steps for running this environment.
     '''
+
     @abstractmethod
     def run(self, overlay):
         pass
@@ -68,6 +70,7 @@ class MininetEnvironment(Environment):
     '''
     This method implements the steps for running this environment.
     '''
+
     def run(self, overlay):
         self._log.info(self.__class__.__name__, 'Initializing the environment')
         self._log.debug(self.__class__.__name__, 'Creating the topology in Mininet, starting from the current overlay.')
@@ -91,8 +94,10 @@ class MininetEnvironment(Environment):
     '''
     This method implements the steps for stopping this environment.
     '''
+
     def stop(self):
         self._mininet_starter.stop()
+
 
 """
 This class models a Docker environment, namely an environment in which each node in the network is an instance of a
@@ -112,6 +117,7 @@ class DockerEnvironment(Environment):
     '''
     This method implements the steps for running this environment.
     '''
+
     def run(self, overlay):
         self._log.info(self.__class__.__name__, 'Initializing the environment.')
         self._log.info(self.__class__.__name__, 'Starting to create a Docker instance for each node in the overlay.')
@@ -122,7 +128,8 @@ class DockerEnvironment(Environment):
             # Add the instance to those running
             self._running_docker_instances.append(instance)
             instance.create()
-            self._log.debug(self.__class__.__name__, 'Container for node %s has been correctly created.', node.get_name())
+            self._log.debug(self.__class__.__name__, 'Container for node %s has been correctly created.',
+                            node.get_name())
         self._log.info(self.__class__.__name__, 'All Docker instances are now successfully created.')
         # Run all docker instances
         self._log.info(self.__class__.__name__, 'Starting all Docker instances.')
@@ -130,12 +137,13 @@ class DockerEnvironment(Environment):
             self._log.debug(self.__class__.__name__, 'Starting Docker container for node %s.', instance.get_name())
             instance.start()
             self._log.debug(self.__class__.__name__, 'Docker container %s has been successfully started.',
-                           instance.get_name())
+                            instance.get_name())
         self._log.info(self.__class__.__name__, 'All Docker instances are now successfully running.')
 
     '''
     This method implements the steps for stopping this environment.
     '''
+
     def stop(self):
         self._log.info(self.__class__.__name__, 'Stopping the environment.')
         for instance in self._running_docker_instances:

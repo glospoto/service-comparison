@@ -19,7 +19,6 @@ All simulations are contained in the folder "simulation" and it has the followin
 
 
 class Simulation(Thread):
-
     def __init__(self, topology, service, environment, alternative):
         Thread.__init__(self)
         """ Utils objects """
@@ -55,6 +54,7 @@ class Simulation(Thread):
     '''
     Private method useful for initialize internal structures of this class.
     '''
+
     def _init(self):
         # Check if the simulation folder exists
         if not os.path.exists(self._root_simulation_path):
@@ -81,30 +81,35 @@ class Simulation(Thread):
     '''
     Return the topology which the simulation is running on.
     '''
+
     def get_topology(self):
         return self._topology
 
     '''
     Return the service under test.
     '''
+
     def get_service(self):
         return self._service
 
     '''
     Return the alternative under test.
     '''
+
     def get_alternative(self):
         return self._alternative
 
     '''
     Return the path in which framework will store all data about this simulation.
     '''
+
     def get_simulation_path(self):
         return self._simulation_path
 
     '''
     Run the simulation
     '''
+
     def run(self):
         # The list of activated collectors
         activated_collectors = []
@@ -126,7 +131,7 @@ class Simulation(Thread):
                     self._log.debug(self.__class__.__name__,
                                     'Collector %s has been already started.', collector.get_name())
             else:
-                self._log.info(self.__class__.__name__, 'No collectors are required for this simulation.')
+                self._log.info(self.__class__.__name__, 'No collectors are required for metric %s.', metric.get_name())
 
         '''
         Running a simulation consists in:
@@ -156,6 +161,7 @@ class Simulation(Thread):
     This method is implemented in accord with Observer pattern. It observes the extractor: when all extractors ends
     their task, the update method will stop the environment.
     '''
+
     def update(self):
         self._extractor_count += 1
         if self._extractor_count == self._extractor_number:

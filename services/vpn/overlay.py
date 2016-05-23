@@ -18,7 +18,7 @@ class VpnOverlay(Overlay):
         self._hosts = {}
         # This is a map<device, list of all connected devices>; it is an OrderedDict to preserve the mapping between
         # host-pe connections.
-        self._links = [] #OrderedDict()
+        self._links = []  # OrderedDict()
 
     def __repr__(self):
         return "Overlay[name=%s, #switches=%i, #links=%i, #hosts=%i]" \
@@ -27,12 +27,14 @@ class VpnOverlay(Overlay):
     '''
     Return the name of this overlay.
     '''
+
     def get_name(self):
         return self._name
 
     '''
     Add a new datapath to this overlay.
     '''
+
     def add_node(self, switch):
         self._switches[switch.get_dpid()] = switch
         self._log.debug(self.__class__.__name__, 'Switch %s added.', switch)
@@ -40,6 +42,7 @@ class VpnOverlay(Overlay):
     '''
     Add a new link to this overlay.
     '''
+
     def add_link(self, link):
         self._links.append(link)
         self._log.debug(self.__class__.__name__, 'Link %s added.', link)
@@ -47,6 +50,7 @@ class VpnOverlay(Overlay):
     '''
     Add a new host to this overlay.
     '''
+
     def add_host(self, host):
         self._hosts[host.get_name()] = host
         self._log.debug(self.__class__.__name__, 'Host %s added.', host)
@@ -54,30 +58,35 @@ class VpnOverlay(Overlay):
     '''
     Return a datapath starting from its datapath ID.
     '''
+
     def get_node(self, dpid):
         return self._switches.get(dpid)
 
     '''
     Return all switches in this overlay.
     '''
+
     def get_nodes(self):
         return self._switches
 
     '''
     Return all links in this overlay.
     '''
+
     def get_links(self):
         return self._links
 
     '''
     Return all hosts in this overlay.
     '''
+
     def get_hosts(self):
         return self._hosts
 
     '''
     Return a random pair of PEs. On each PE, an host will be attached, in order to create VPN's sites.
     '''
+
     def get_two_random_pes(self):
         pes = []
         first_pe = None

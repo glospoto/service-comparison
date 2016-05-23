@@ -14,7 +14,6 @@ create topologies with objects that have their behavior related to the service.
 
 
 class Topology(object):
-
     def __init__(self, topology):
         self._name = None
         self._overlays = {}
@@ -33,36 +32,42 @@ class Topology(object):
     '''
     Return the topology read by a GraphML file.
     '''
+
     def get_topology_from_graphml(self):
         return nx.read_graphml(self._topology_as_graphml)
 
     '''
     Return all overlays associated to this topology
     '''
+
     def get_overlays(self):
         return self._overlays
 
     '''
     Return the current overlay of this topology.
     '''
+
     def get_current_overlay(self):
         return self._current_overlay
 
     '''
     Return an overlay starting from its name.
     '''
+
     def get_overlay(self, name):
         return self._overlays.get(name)
 
     '''
     Private method for reading a topology starting from a GraphML file.
     '''
+
     def _read_topology(self):
         return nx.read_graphml(self._topology_as_graphml)
 
     '''
     Add the first overlay to the topology.
     '''
+
     def _add_topology_overlay(self):
         self._log.info(self.__class__.__name__, 'Starting to add Topology Overlay to the topology.')
         file_name = os.path.basename(self._topology_as_graphml)
@@ -96,6 +101,7 @@ class Topology(object):
     '''
     Add an overlay to the topology.
     '''
+
     def add_overlay(self, overlay):
         self._overlays[overlay.get_name()] = overlay
         self._current_overlay = overlay

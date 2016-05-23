@@ -14,6 +14,7 @@ class VpnService(Service):
     '''
     Creating an alternative object starting from its adapter
     '''
+
     def create_alternative(self, alternative_name, alternative_adapter, scenario_parameters):
         self._log.info(self.__class__.__name__, 'Creating alternative %s.', alternative_name)
         # The pattern of params for the for_name method is: adapter, name of the alternative and all parameters defined

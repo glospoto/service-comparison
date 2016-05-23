@@ -36,6 +36,7 @@ class MininetTopology(object):
     '''
     Calculate the hex representation of the datapath's DPID starting from its decimal representation.
     '''
+
     @staticmethod
     def _dpid(dpid):
         return hex(dpid)[2:]
@@ -43,12 +44,14 @@ class MininetTopology(object):
     '''
     Return a referene to Mininet object.
     '''
+
     def get_mininet_object(self):
         return self._net
 
     '''
     Add switches to the Mininet object.
     '''
+
     # Add switch to the MininetTopology
     def add_switches(self):
         self._log.debug(self.__class__.__name__, 'Starting to add switches to Mininet.')
@@ -59,6 +62,7 @@ class MininetTopology(object):
     '''
     Add hosts to the Mininet object.
     '''
+
     def add_hosts(self):
         self._log.debug(self.__class__.__name__, 'Starting to add hosts to Mininet.')
         for host in self._overlay.get_hosts().values():
@@ -68,11 +72,13 @@ class MininetTopology(object):
     '''
     Add links to the Mininet object.
     '''
+
     def add_links(self):
         self._log.debug(self.__class__.__name__, 'Starting to add links to Mininet.')
         for link in self._overlay.get_links():
             self._net.addLink(link.get_from().get_name(), link.get_to().get_name())
         self._log.info(self.__class__.__name__, 'All links have been correctly added.')
+
 
 """
 This class implements a thread in which Mininet will be executed.
@@ -90,6 +96,7 @@ class MininetStartSimulation(Thread):
     '''
     Run the Mininet environment.
     '''
+
     def run(self):
         self._log.debug(self.__class__.__name__, 'Preparing to execute a Mininet instance.')
         net = self._mininet_topology.get_mininet_object()
@@ -99,6 +106,7 @@ class MininetStartSimulation(Thread):
     '''
     Stop the Mininet environment.
     '''
+
     def stop(self):
         self._log.debug(self.__class__.__name__, 'Preparing to stop Mininet instance.')
         # net = self._mininet_topology.get_mininet_object()

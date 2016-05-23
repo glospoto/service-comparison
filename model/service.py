@@ -9,7 +9,6 @@ alternatives to evaluate.
 
 
 class Service(object):
-
     __metaclass__ = ABCMeta
 
     def __init__(self, name):
@@ -26,18 +25,21 @@ class Service(object):
     '''
     Return the name of this service.
     '''
+
     def get_name(self):
         return self._name
 
     '''
     Return all alternatives defined for this service.
     '''
+
     def get_alternatives(self):
         return self._alternatives
 
     '''
     Create an alternative for this service starting from its adapter, its name and its configuration parameters.
     '''
+
     @abstractmethod
     def create_alternative(self, alternative_name, alternative_adapter, scenario_parameters):
         pass
