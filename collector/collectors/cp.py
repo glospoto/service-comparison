@@ -10,7 +10,6 @@ This class models an abstract DeviceLoad extractor
 
 
 class ControlPlaneMessages(Collector):
-
     __metaclass__ = ABCMeta
 
     def __init__(self):
@@ -22,6 +21,7 @@ class ControlPlaneMessages(Collector):
     '''
     Collect data for this metric.
     '''
+
     @abstractmethod
     def collect_data(self):
         pass
@@ -34,7 +34,6 @@ interface and collecting messages into a pcap file inside TMP folder.
 
 
 class MininetControlPlaneMessages(ControlPlaneMessages):
-
     def __init__(self):
         ControlPlaneMessages.__init__(self)
 
@@ -44,6 +43,7 @@ class MininetControlPlaneMessages(ControlPlaneMessages):
     '''
     Collect data for this collector.
     '''
+
     def collect_data(self):
         self._log.debug(self.__class__.__name__, 'Creating a new sniffer on interface lo.')
         # Starting a sniffer
@@ -56,5 +56,6 @@ class MininetControlPlaneMessages(ControlPlaneMessages):
     '''
     Run the thread containing the control plane messages collector.
     '''
+
     def run(self):
         self.collect_data()

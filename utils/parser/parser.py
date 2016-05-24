@@ -38,12 +38,14 @@ class Parser(object):
     '''
     Return the list of all services defined in the configuration file.
     '''
+
     def get_services(self):
         return self._services
 
     '''
     This method has in charge the task of parsing the configuration file.
     '''
+
     def parse(self, config_file):
         # First of all, run the SystemParser
         self._system_parser.parse()
@@ -134,6 +136,7 @@ class Parser(object):
     '''
     Check if all services' names are valid.
     '''
+
     def _check_services(self, services):
         for service in services:
             if not self._system_parser.service_is_valid(service):
@@ -146,6 +149,7 @@ class Parser(object):
     the associations declared into the file system.xml. Actually, this method also checks if alternatives and
     environments are valid in accord with the system.xml file.
     '''
+
     def _check_mapping_alternative_to_environment(self, alternative, environment):
         # Check alternative name
         if not self._system_parser.alternative_is_valid(alternative):
@@ -171,6 +175,7 @@ class Parser(object):
     This method has in charge the task of creating alternative objects for the service passed as parameter; moreover,
     on that alternative, it has also in charge the task of creating the corresponding scenario
     '''
+
     def _handle_alternative_and_metric_for_service(self, service, service_block, alternatives, metrics):
         for alternative_name in alternatives:
             # Load the specific scenario for the current alternative
@@ -200,6 +205,7 @@ class Parser(object):
     '''
     This method has in charge the task of creating metric objects alternative passed as parameter.
     '''
+
     def _handle_metrics_for_alternative(self, alternative, environment, metrics):
         for metric_name in metrics:
             self._log.info(self.__class__.__name__, 'Loading metric %s.', metric_name)

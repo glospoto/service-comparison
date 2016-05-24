@@ -1,6 +1,7 @@
 import argparse
 import os.path
 
+from utils.fs import FileSystem
 from utils.log import Logger
 from utils.parser.parser import Parser
 
@@ -18,6 +19,8 @@ class ComparisonFramework(object):
     def __init__(self):
         # Get a logger
         self._log = Logger.get_instance()
+        # Get a file system handler
+        self._fs = FileSystem.get_instance()
         # Create the parser
         self._parser = Parser()
         # The topology
@@ -47,7 +50,7 @@ class ComparisonFramework(object):
         args = self._arg.parse_args()
         config_file = str(args.config_file)
         topology = str(args.topology)
-        topology_path = os.path.abspath(topology)
+        topology_path = self._fs.get_absolute_path(topology)
         self._log.info(self.__class__.__name__, 'Creating the topology.')
         self._topology = Topology(topology_path)
 
@@ -90,7 +93,6 @@ class ComparisonFramework(object):
                                alternative)
                 # Load an environment for the current alternative of this service
                 environment = self._loader.load(alternative.get_environment())
-                # environment.run(overlay)
                 # Create the simulation
                 simulation = Simulation(self._topology, service, environment, alternative)
                 self._log.info(

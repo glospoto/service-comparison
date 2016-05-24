@@ -21,6 +21,7 @@ class FactoryCollector(object):
     '''
     In accord with Singleton pattern, it returns an instance of this class.
     '''
+
     @classmethod
     def get_instance(cls):
         if cls.__instance is None:
@@ -31,6 +32,7 @@ class FactoryCollector(object):
     Starting from the name of collector class and the environment which this collector will run on, it creates a
     collector object.
     '''
+
     def create_collector(self, collector_name, environment):
         self._log.info(self.__class__.__name__, 'Starting to create collector %s for environment %s',
                        collector_name, environment)
@@ -59,6 +61,7 @@ class FactoryCollector(object):
         self._log.info(self.__class__.__name__, 'Collector %s has been created.', collector_class_name)
         return self._collector
 
+
 """
 Abstract class that model a collector. A Collector extends Thread: this implies that each collector will be executed in
 a separated thread with respect to the execution of the environment.
@@ -66,7 +69,6 @@ a separated thread with respect to the execution of the environment.
 
 
 class Collector(Thread):
-
     __metaclass__ = ABCMeta
 
     def __init__(self):
@@ -77,12 +79,14 @@ class Collector(Thread):
     '''
     Return the name of this collector.
     '''
+
     def get_name(self):
         return self.__class__.__name__
 
     '''
     This method implements the strategy for collecting data.
     '''
+
     @abstractmethod
     def collect_data(self):
         pass

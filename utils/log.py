@@ -5,7 +5,6 @@ from utils.patterns.singleton import Singleton
 
 
 class Logger(object):
-
     __instance = None
 
     # Remember do not directly use __init__(); use get_instance() method instead

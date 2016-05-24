@@ -16,6 +16,7 @@ class VpnServiceParser(ServiceParser):
     '''
     This method has in charge the task of creating the specific service.
     '''
+
     def create_service(self):
         self._log.debug(self.__class__.__name__, 'Creating service object for service %s.', self._service_name)
         service = VpnService(self._service_name)

@@ -10,7 +10,6 @@ through the manipulation of those information, this class will be able to run di
 
 
 class Scenario(object):
-
     __metaclass__ = ABCMeta
 
     def __init__(self):
@@ -22,6 +21,7 @@ class Scenario(object):
     '''
     Return the name of this scenario.
     '''
+
     @abstractmethod
     def get_name(self):
         pass
@@ -29,6 +29,7 @@ class Scenario(object):
     '''
     Start this scenario.
     '''
+
     @abstractmethod
     def start(self):
         pass
@@ -36,6 +37,7 @@ class Scenario(object):
     '''
     Destroy this scenario
     '''
+
     @abstractmethod
     def destroy(self):
         pass

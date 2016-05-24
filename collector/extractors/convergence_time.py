@@ -13,7 +13,6 @@ This class implements an extractor for measuring the convergence time of an alte
 
 
 class ControlPlaneConvergenceTime(Extractor):
-
     __metaclass__ = ABCMeta
 
     def __init__(self):
@@ -24,6 +23,7 @@ class ControlPlaneConvergenceTime(Extractor):
     '''
     Set the simulation path in which save the extracted data.
     '''
+
     @abstractmethod
     def set_simulation_path(self, simulation_path):
         pass
@@ -31,6 +31,7 @@ class ControlPlaneConvergenceTime(Extractor):
     '''
     Set the overlay on which the simulation is running on.
     '''
+
     @abstractmethod
     def set_overlay(self, overlay):
         pass
@@ -38,9 +39,11 @@ class ControlPlaneConvergenceTime(Extractor):
     '''
     Start the process of extracting data.
     '''
+
     @abstractmethod
     def extract_data(self):
         pass
+
 
 """
 This class implements an extractor for measuring the convergence time of an alternative running on Mininet simulator.
@@ -65,6 +68,7 @@ class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
     '''
     Set the simulation path in which save the extracted data.
     '''
+
     def set_simulation_path(self, simulation_path):
         self._simulation_path = simulation_path
         # Create extractor's folder
@@ -73,12 +77,14 @@ class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
     '''
     Set the overlay on which the simulation is running on.
     '''
+
     def set_overlay(self, overlay):
         self._overlay = overlay
 
     '''
     Start the process of extracting data.
     '''
+
     def extract_data(self):
         # First of all, sleep for 1 minute
         self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
@@ -116,5 +122,6 @@ class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
     '''
     Run the thread in which this extractor is in execution.
     '''
+
     def run(self):
         self.extract_data()

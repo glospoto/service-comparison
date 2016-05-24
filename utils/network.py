@@ -13,6 +13,7 @@ class Sniffer(object):
     '''
     Sniff network packets.
     '''
+
     def sniff(self):
         pkts = sniff(iface=self._interface, timeout=14)
         wrpcap(self._pcap_file, pkts)

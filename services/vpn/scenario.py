@@ -36,30 +36,35 @@ class Rm3SdnVpnScenario(Scenario):
     '''
     Return the name of this scenario.
     '''
+
     def get_name(self):
         return self._name
 
     '''
     Return the number of VPNs declared in this scenario.
     '''
+
     def get_number_of_vpns(self):
         return self._number_of_vpns
 
     '''
     Return the path in which the controller is placed.
     '''
+
     def get_controller_path(self):
         return self._controller_path
 
     '''
     Return the name of the command running the controller.
     '''
+
     def get_controller_cmd(self):
         return self._controller_cmd
 
     '''
     This method allows the creation of this scenario.
     '''
+
     def start(self):
         self._log.info(self.__class__.__name__, 'Preparing to start the scenario %s.', self._name)
         # Before starting controller, copy VPNs configuration file inside the controller conf folder.
@@ -84,6 +89,7 @@ class Rm3SdnVpnScenario(Scenario):
     '''
     This method destroys the scenario previously created.
     '''
+
     def destroy(self):
         self._log.debug(self.__class__.__name__, 'Stopping scenario %s.', self._name)
         # Remove files from tmp dir
@@ -94,6 +100,7 @@ class Rm3SdnVpnScenario(Scenario):
         # Stop the controller
         self._controller.stop()
         self._log.info(self.__class__.__name__, 'Scenario %s has been correctly stopped.', self._name)
+
 
 """
 This class models a scenario for Rm3SdnVpn alternative. It has in charge the task of running the controller.
@@ -116,18 +123,21 @@ class MplsBgpVpnScenario(Scenario):
     '''
     Return the name of this scenario.
     '''
+
     def get_name(self):
         return self._name
 
     '''
     Return the number of VPNs declared in this scenario.
     '''
+
     def get_number_of_vpns(self):
         return self._number_of_vpns
 
     '''
     This method allows the creation of this scenario.
     '''
+
     def start(self):
         self._log.info(self.__class__.__name__, 'Preparing to start the scenario %s.', self._name)
         # Put here the configuration of all docker instance, for example adding network interfaces
@@ -139,6 +149,7 @@ class MplsBgpVpnScenario(Scenario):
     '''
     This method destroys the scenario previously created.
     '''
+
     def destroy(self):
         self._log.debug(self.__class__.__name__, 'Stopping scenario %s.', self._name)
         # No specific actions for this scenario

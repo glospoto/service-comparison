@@ -30,6 +30,7 @@ class Rm3SdnVpnAlternative(Alternative):
     '''
     Create the overlay for this alternative.
     '''
+
     def create_overlay(self, topology):
         """
         Remember that is important to keep coherence between host-pe interface associations in the generation of network
@@ -75,12 +76,14 @@ class Rm3SdnVpnAlternative(Alternative):
     '''
     Return the overlay associated to this alternative.
     '''
+
     def get_overlay(self):
         return self._overlay
 
     '''
     Create the scenario associated to this alternative.
     '''
+
     def setting_up_scenario(self):
         # Generate the configuration file
         self._configurator.write_configurations(self._overlay)
@@ -90,42 +93,49 @@ class Rm3SdnVpnAlternative(Alternative):
     '''
     Return the scenario associated with this alternative.
     '''
+
     def get_scenario(self):
         return self._scenario
 
     '''
     Destroy the scenario associated to this alternative.
     '''
+
     def destroy(self):
         self._scenario.destroy()
 
     '''
     Return the configurator associated to this alternative.
     '''
+
     def get_configurator(self):
         return self._configurator
 
     '''
     Set the environment (object) to this alternative.
     '''
+
     def set_environment(self, environment):
         self._environment = environment
 
     '''
     Get the environment (object) associated to this alternative.
     '''
+
     def get_environment(self):
         return self._environment
 
     '''
     Add a metric to this alternative.
     '''
+
     def add_metric(self, metric):
         self._metrics.append(metric)
 
     '''
     Return all metrics associated to this alternative. Those metrics are defined into configuration file.
     '''
+
     def get_metrics(self):
         return self._metrics
 
@@ -141,9 +151,9 @@ class MplsBgpVpnAlternative(Alternative):
         # This is an instance of services.vpn.overlay.VpnOverlay
         self._overlay = VpnOverlay()
         # This is an instance of services.vpn.scenario.MplsBgpVpnScenario
-        self._scenario = MplsBgpVpnScenario(*args, **kwargs) # TODO
+        self._scenario = MplsBgpVpnScenario(*args, **kwargs)  # TODO
         # This is an instance of services.vpn.configurator.MplsBgpVpnConfigurator
-        self._configurator = MplsBgpVpnConfigurator() # TODO
+        self._configurator = MplsBgpVpnConfigurator()  # TODO
         # This is a string reference to the class that models the environment. This is NOT a reference to the object!
         self._environment = None
         # Metrics to consider for this alternative. This is a list of model.metric.Metric objects
@@ -155,6 +165,7 @@ class MplsBgpVpnAlternative(Alternative):
     '''
     Create the overlay for this alternative.
     '''
+
     def create_overlay(self, topology):
         """
         Remember that is important to keep coherence between host-pe interface associations in the generation of network
@@ -201,12 +212,14 @@ class MplsBgpVpnAlternative(Alternative):
     '''
     Return the overlay associated to this alternative.
     '''
+
     def get_overlay(self):
         return self._overlay
 
     '''
     Create the scenario associated to this alternative.
     '''
+
     def setting_up_scenario(self):
         # Generate the configuration file
         self._configurator.write_configurations(self._overlay)
@@ -216,41 +229,48 @@ class MplsBgpVpnAlternative(Alternative):
     '''
     Return the scenario associated with this alternative.
     '''
+
     def get_scenario(self):
         return self._scenario
 
     '''
     Destroy the scenario associated to this alternative.
     '''
+
     def destroy(self):
         self._scenario.destroy()
 
     '''
     Return the configurator associated to this alternative.
     '''
+
     def get_configurator(self):
         return self._configurator
 
     '''
     Set the environment (object) to this alternative.
     '''
+
     def set_environment(self, environment):
         self._environment = environment
 
     '''
     Get the environment (object) associated to this alternative.
     '''
+
     def get_environment(self):
         return self._environment
 
     '''
     Add a metric to this alternative.
     '''
+
     def add_metric(self, metric):
         self._metrics.append(metric)
 
     '''
     Return all metrics associated to this alternative. Those metrics are defined into configuration file.
     '''
+
     def get_metrics(self):
         return self._metrics

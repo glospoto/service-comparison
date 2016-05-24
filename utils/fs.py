@@ -7,7 +7,6 @@ This class models the framework filesystem, storing the organization of the fold
 
 
 class FileSystem(object):
-
     __instance = None
 
     def __init__(self):
@@ -21,11 +20,12 @@ class FileSystem(object):
         # Current simulation folder
         self._current_simulation_folder = None
         # Current working directory
-        self._current_working_folder = self._root_folder
+        self._current_working_path = self._root_folder
 
     '''
     Return an instance of this class in accord with the Singleton pattern.
     '''
+
     @classmethod
     def get_instance(cls):
         if cls.__instance is None:
@@ -37,64 +37,90 @@ class FileSystem(object):
     '''
     Return the framework root folder.
     '''
+
     def get_root_folder(self):
         return self._root_folder
 
     '''
     Return the simulation folder.
     '''
-    def get_simulations_folder(self):
-        return self._simulations_folder
 
-    '''
-    Return the simulation folder (it seems a duplicate of the previous method: check it!)
-    '''
-    def get_current_simulation_folder(self):
+    def get_simulations_folder(self):
         return self._simulations_folder
 
     '''
     Return the path to the framewok temporary folder.
     '''
+
     def get_tmp_folder(self):
         return self._tmp_folder
 
     '''
     Return the current framework working folder.
     '''
-    def get_current_working_folder(self):
-        return self._current_working_folder
+
+    def get_current_path(self):
+        return self._current_working_path
 
     """ Methods for operating over application's folders """
 
     '''
     Set the current working directory to the root folder.
     '''
+
     def root(self):
         os.chdir(self._root_folder)
         # Set the current working folder to the root folder
-        self._current_working_folder = self._root_folder
+        self._current_working_path = self._root_folder
 
     '''
     Change directory, placing into path.
     '''
+
     def cd(self, path):
         if path.startswith('~'):
             os.chdir(os.path.expanduser(path))
         else:
             os.chdir(path)
         # Set the current working folder to the new path
-        self._current_working_folder = os.getcwd()
+        self._current_working_path = os.getcwd()
 
     '''
     Join one or more paths into a single one. This one will become the current working directory.
     '''
+
     def join(self, path, *paths):
-        self._current_working_folder = os.path.join(path, *paths)
-        return self._current_working_folder
+        self._current_working_path = os.path.join(path, *paths)
+        return self._current_working_path
+
+    '''
+    Check whether a path exists
+    '''
+
+    @staticmethod
+    def path_exists(path):
+        return os.path.exists(path)
+
+    '''
+    Create a directory called dir_name
+    '''
+
+    @staticmethod
+    def make_dir(dir_name):
+        os.makedirs(dir_name)
+
+    '''
+    Return the absolute path
+    '''
+
+    @staticmethod
+    def get_absolute_path(path):
+        return os.path.abspath(path)
 
     '''
     Copy source into destination.
     '''
+
     @staticmethod
     def copy(source, destination):
         if source.startswith('~'):
@@ -106,6 +132,7 @@ class FileSystem(object):
     '''
     Delete path.
     '''
+
     @staticmethod
     def delete(path):
         os.remove(path)

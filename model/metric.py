@@ -17,17 +17,20 @@ class Metric(object):
     '''
     Return the name of this metric.
     '''
+
     def get_name(self):
         return self._name
 
     '''
     Return the collector (if needed) associated to this metric.
     '''
+
     def get_collector(self):
         return self._collector
 
     '''
     Return the extractor associated to this extractor.
     '''
+
     def get_extractor(self):
         return self._extractor

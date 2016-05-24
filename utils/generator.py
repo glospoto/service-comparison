@@ -4,7 +4,6 @@ This class implements a random IP addresses generator
 
 
 class AddressGenerator(object):
-
     @staticmethod
     def generate_ip_address():
         import random

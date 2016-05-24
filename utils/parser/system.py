@@ -36,54 +36,63 @@ class SystemParser(object):
     '''
     This method return a parser for the given service
     '''
+
     def get_service_parser(self, service_name):
         return self._services.get(service_name)
 
     '''
     This method return an adapter for the given alternative
     '''
+
     def get_alternative_adapter(self, alternative_name):
         return self._alternatives.get(alternative_name)
 
     '''
     This method return an environment adapter
     '''
+
     def get_environment_adapter(self, environment_name):
         return self._environments.get(environment_name)
 
     '''
     This method return an extractor adapter
     '''
+
     def get_extractor_adapter(self, metric_name):
         return self._metric_to_extractor.get(metric_name)
 
     '''
     This method return a collector adapter
     '''
+
     def get_collector_adapter(self, metric_name):
         return self._metric_to_collector.get(metric_name)
 
     '''
     Check if a service is valid in accord with system.xml file
     '''
+
     def service_is_valid(self, service_name):
         return service_name in self._services.keys()
 
     '''
     Check if an alternative is valid in accord with the system.xml file
     '''
+
     def alternative_is_valid(self, alternative_name):
         return alternative_name in self._alternatives.keys()
 
     '''
     Check if an environment is valid in accord with the system.xml file
     '''
+
     def environment_is_valid(self, environment_name):
         return environment_name in self._environments.keys()
 
     '''
     Check if alternative can be executed into environment
     '''
+
     def mapping_alternative_to_environment_is_valid(self, alternative, environment):
         success = False
         # Try to catch tha alternative list supported by environment
@@ -96,6 +105,7 @@ class SystemParser(object):
     '''
     Parse the system.xml file, loading services, alternatives, metrics and environments.
     '''
+
     def parse(self):
         root = self._parser.getroot()
         # Get all macro-block from the root
@@ -110,6 +120,7 @@ class SystemParser(object):
     '''
     Method for parsing all services
     '''
+
     def _parse_services(self, services):
         self._log.info(self.__class__.__name__, 'Parsing services.')
         # For each service, add an entry into _services map
@@ -128,6 +139,7 @@ class SystemParser(object):
     '''
     Support method for parsing services' alternatives
     '''
+
     def _parse_alternatives_for_service(self, service, service_name):
         self._log.info(self.__class__.__name__, 'Parsing alternatives for service %s.', service_name)
         # Take alternatives for this service
@@ -163,6 +175,7 @@ class SystemParser(object):
     '''
     Method for parsing all metrics
     '''
+
     def _parse_metrics(self, metrics):
         # For each metric, add an entry into _metrics map
         for metric in metrics:
@@ -192,6 +205,7 @@ class SystemParser(object):
     '''
     Method for parsing all environments
     '''
+
     def _parse_environments(self, environments):
         self._log.info(self.__class__.__name__, 'Parsing environments.')
         # For each environment, add entries into _environments and environment_to_alternatives' maps

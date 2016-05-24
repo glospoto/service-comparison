@@ -33,18 +33,21 @@ class Rm3SdnVpnConfigurator(Configurator):
     '''
     Return the name of this configurator.
     '''
+
     def get_name(self):
         return self._name
 
     '''
     Return the map of all created VPNs.
     '''
+
     def get_vpns(self):
         return self._vpns
 
     '''
     This method has in charge the task of creating all VPNs defined using the configuration file.
     '''
+
     def create_vpns(self, overlay, number_of_vpns):
         self._log.info(self.__class__.__name__, 'Starting to configure the alternative.')
         for i in range(0, number_of_vpns):
@@ -67,6 +70,7 @@ class Rm3SdnVpnConfigurator(Configurator):
     Private method used for creating a site to add to a VPN. This is made in accord to the model defined into
     services.vpn.vpn.py
     '''
+
     def _create_site(self, vpn, pe, overlay, i):
         # First of all, create an host for this site
         # IP addresses for the hosts
@@ -99,6 +103,7 @@ class Rm3SdnVpnConfigurator(Configurator):
     '''
     This method has in charge the task of writing the configuration files for RM3 SDN VPN controller.
     '''
+
     def write_configurations(self, overlay):
         self._log.info(self.__class__.__name__, 'Starting to create the configuration file for the controller.')
         self._write_system_configuration()
@@ -107,6 +112,7 @@ class Rm3SdnVpnConfigurator(Configurator):
     '''
     This method writes the system.conf VPN's controller configuration file.
     '''
+
     def _write_system_configuration(self):
         self._log.debug(self.__class__.__name__, 'Creating the %s file for VPN controller.', self.__SYS_CONG_FILE_NAME)
         # This method has in charge the task of creating the system configuration file. A system configuration file
@@ -116,7 +122,7 @@ class Rm3SdnVpnConfigurator(Configurator):
         self._log.debug(self.__class__.__name__, 'Adding System section to the the %s file.', self.__SYS_CONG_FILE_NAME)
         self._system_config.add_section('System')
         self._system_config.set('System', 'vpn-config-file',
-                                'conf/vpns/' + self.__VPNS_FILE_NAME)   # VPN conf file; see below
+                                'conf/vpns/' + self.__VPNS_FILE_NAME)  # VPN conf file; see below
         self._log.debug(self.__class__.__name__,
                         'Adding Policies section to the the %s file.', self.__SYS_CONG_FILE_NAME)
         self._system_config.add_section('Policies')
@@ -133,6 +139,7 @@ class Rm3SdnVpnConfigurator(Configurator):
     '''
     This method writes the XML VPN's configuration file.
     '''
+
     def _write_vpns_configuration(self, overlay):
         self._log.debug(self.__class__.__name__, 'Creating the %s file for VPN controller.', self.__VPNS_FILE_NAME)
         # This method has in charge the task of creating the VPNs configuartion file. A VPN configuration file is a
@@ -175,6 +182,7 @@ class Rm3SdnVpnConfigurator(Configurator):
             f.write(xml_str)
         self._log.info(self.__class__.__name__, '%s has been correctly generated.', self.__VPNS_FILE_NAME)
 
+
 """
 This class model the configuration management for Rm3Sdn alternative
 """
@@ -199,18 +207,21 @@ class MplsBgpVpnConfigurator(Configurator):
     '''
     Return the name of this configurator.
     '''
+
     def get_name(self):
         return self._name
 
     '''
     Return the map of all created VPNs.
     '''
+
     def get_vpns(self):
         return self._vpns
 
     '''
     This method has in charge the task of creating all VPNs defined using the configuration file.
     '''
+
     # Fixme VPNs should be the same for all alternatives of this service. Move in a common point into the code!
     def create_vpns(self, overlay, number_of_vpns):
         self._log.info(self.__class__.__name__, 'Starting to configure the alternative.')
@@ -234,6 +245,7 @@ class MplsBgpVpnConfigurator(Configurator):
     Private method used for creating a site to add to a VPN. This is made in accord to the model defined into
     services.vpn.vpn.py
     '''
+
     def _create_site(self, vpn, pe, overlay, i):
         # First of all, create an host for this site
         # IP addresses for the hosts
@@ -266,6 +278,7 @@ class MplsBgpVpnConfigurator(Configurator):
     '''
     This method has in charge the task of writing the configuration files for RM3 SDN VPN controller.
     '''
+
     def write_configurations(self, overlay):
         self._log.info(self.__class__.__name__, 'Starting to create the configuration.')
 
@@ -338,12 +351,12 @@ class MplsBgpVpnConfigurator(Configurator):
         for node in overlay.get_nodes().values():
             if node.get_name() == 'WestP':
                 cmd_customer = 'sudo docker exec -d %s bagpipe-rest-attach --attach --port netns ' \
-                                '--ip 192.168.10.1 --network-type evpn --vpn-instance-id test --rt 64512:79' % \
-                                node.get_name()
+                               '--ip 192.168.10.1 --network-type evpn --vpn-instance-id test --rt 64512:79' % \
+                               node.get_name()
             else:
-                 cmd_customer = 'sudo docker exec -d %s bagpipe-rest-attach --attach --port netns ' \
-                                 '--ip 192.168.11.1 --network-type evpn --vpn-instance-id test --rt 64512:79' % \
-                                 node.get_name()
+                cmd_customer = 'sudo docker exec -d %s bagpipe-rest-attach --attach --port netns ' \
+                               '--ip 192.168.11.1 --network-type evpn --vpn-instance-id test --rt 64512:79' % \
+                               node.get_name()
             self._log.info(self.__class__.__name__, 'Attaching client to %s.', node.get_name())
             # Attaching customer
             subprocess.Popen(cmd_customer, shell=True, stdout=PIPE, stderr=PIPE).communicate()

@@ -8,7 +8,6 @@ This file contains all specialized parser for services. Moreover, there is a fac
 parser
 """
 
-
 """
 This class implements a factory for creating the correct specialized service parser in accord with the service's name
 """
@@ -32,9 +31,11 @@ class FactoryServiceParser(object):
     '''
     Create an instance of service parser identified by the service_adapter passed as paramter.
     '''
+
     def create_service_parser(self, service_adapter, service_name):
         self._service_parser = Class.for_name(service_adapter, service_name)
         return self._service_parser
+
 
 """
 This class models a generic service parser
@@ -42,7 +43,6 @@ This class models a generic service parser
 
 
 class ServiceParser(object):
-
     __metaclass__ = ABCMeta
 
     def __init__(self, service_name):
@@ -54,6 +54,7 @@ class ServiceParser(object):
     '''
     Create the service.
     '''
+
     @abstractmethod
     def create_service(self):
         pass

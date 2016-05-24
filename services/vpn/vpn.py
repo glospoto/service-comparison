@@ -1,6 +1,5 @@
 from netaddr import IPNetwork
 
-
 """
 This class models a VirtualPrivateNetwork (VPN). A VPN consists of two PEs and two hosts, each of which
 is connected to a PE
@@ -34,6 +33,7 @@ class VirtualPrivateNetwork(object):
     def get_host(self, host):
         return self._hosts.get(host.get_name())
 
+
 """
 This class models a site. Each VPN has at least two sites linked on different PEs. So, a site represents the VPN subnet
 linked at a certain PE at a well known port
@@ -62,6 +62,7 @@ class Site(object):
 
     def get_network(self):
         return self._network
+
 
 """
 This class models the switch in the network
@@ -108,6 +109,7 @@ class Switch(object):
     def get_interface_for_host(self, host):
         return self._name + '-eth' + str(self._interfaces_to_host.get(host))
 
+
 """
 This class models a link in the network. An edge is an object with a start end an end switch.
 """
@@ -126,6 +128,7 @@ class Link(object):
 
     def get_to(self):
         return self._to
+
 
 """
 This class models a host in the network

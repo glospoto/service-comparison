@@ -12,7 +12,6 @@ This class models a device load extractor. This kind of extractor has in charge 
 
 
 class DeviceLoad(Extractor):
-
     __metaclass__ = ABCMeta
 
     def __init__(self):
@@ -23,6 +22,7 @@ class DeviceLoad(Extractor):
     '''
     Set the simulation path in which save the extracted data.
     '''
+
     @abstractmethod
     def set_simulation_path(self, simulation_path):
         pass
@@ -30,6 +30,7 @@ class DeviceLoad(Extractor):
     '''
     Set the overlay on which the simulation is running on.
     '''
+
     @abstractmethod
     def set_overlay(self, overlay):
         pass
@@ -37,9 +38,11 @@ class DeviceLoad(Extractor):
     '''
     Start the process of extracting data.
     '''
+
     @abstractmethod
     def extract_data(self):
         pass
+
 
 """
 This class implements an extractor for measuring the device load in terms of how many entries are installed inside the
@@ -64,6 +67,7 @@ class MininetDeviceLoad(DeviceLoad):
     '''
     Set the simulation path in which save the extracted data.
     '''
+
     def set_simulation_path(self, simulation_path):
         self._simulation_path = simulation_path
         # Create extractor's folder
@@ -72,16 +76,18 @@ class MininetDeviceLoad(DeviceLoad):
     '''
     Set the overlay which the simulation is running on.
     '''
+
     def set_overlay(self, overlay):
         self._overlay = overlay
 
     '''
     Start the process of extracting data.
     '''
+
     def extract_data(self):
         # First of all, sleep for 1 minute
         self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
-        time.sleep(120)
+        time.sleep(15)
         self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
         switches = self._overlay.get_nodes()
         # Probably put here the creation of the folder which will contain all datapaths' flow tables.
@@ -108,8 +114,10 @@ class MininetDeviceLoad(DeviceLoad):
     '''
     Run the thread in which this extractor is in execution.
     '''
+
     def run(self):
         self.extract_data()
+
 
 """
 This class implements an extractor for measuring the device load in terms of how many entries are installed inside the
@@ -134,6 +142,7 @@ class DockerDeviceLoad(DeviceLoad):
     '''
     Set the simulation path in which save the extracted data.
     '''
+
     def set_simulation_path(self, simulation_path):
         self._simulation_path = simulation_path
         # Create extractor's folder # Fixme Move into FileSystem
@@ -142,12 +151,14 @@ class DockerDeviceLoad(DeviceLoad):
     '''
     Set the overlay which the simulation is running on.
     '''
+
     def set_overlay(self, overlay):
         self._overlay = overlay
 
     '''
     Start the process of extracting data.
     '''
+
     def extract_data(self):
         extractors = []
         # First of all, sleep for 1 minute
@@ -180,7 +191,7 @@ class DockerDeviceLoad(DeviceLoad):
             # Wait for process termination
             for e in extractors:
                 e.wait()
-        #     cmd = 'sudo ovs-ofctl -O OpenFlow13 dump-flows ' + switch.get_name()
+        # cmd = 'sudo ovs-ofctl -O OpenFlow13 dump-flows ' + switch.get_name()
         #     # File into the simulation folder in which storing data
         #     output_file_name = self._simulation_path + '/' + self._extractor_folder + '/' + switch.get_name() + '.data'
         #     # Create a file starting from its name
@@ -200,5 +211,6 @@ class DockerDeviceLoad(DeviceLoad):
     '''
     Run the thread in which this extractor is in execution.
     '''
+
     def run(self):
         self.extract_data()

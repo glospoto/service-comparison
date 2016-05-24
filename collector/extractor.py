@@ -22,6 +22,7 @@ class FactoryExtractor(object):
     '''
     In accord with Singleton pattern, it returns an instance of this class.
     '''
+
     @classmethod
     def get_instance(cls):
         if cls.__instance is None:
@@ -32,6 +33,7 @@ class FactoryExtractor(object):
     Starting from the name of extractor class and the environment which this extractor will run on, it creates a
     extractor object.
     '''
+
     def create_extractor(self, extractor_name, environment):
         self._log.info(self.__class__.__name__, 'Starting to create extractor %s for environment %s',
                        extractor_name, environment)
@@ -60,6 +62,7 @@ class FactoryExtractor(object):
         self._log.info(self.__class__.__name__, 'Extractor %s has been created.', extractor_class_name)
         return self._extractor
 
+
 """
 Abstract class that model an extractor. An Extractor extends both Thread and Observable object: Thread because the
 extraction is ran in a separated thread with respect to the execution of the environment; Observable because when
@@ -68,7 +71,6 @@ extraction finishes, the extractor notify its observer for stopping the environm
 
 
 class Extractor(Thread, Observable):
-
     __metaclass__ = ABCMeta
 
     def __init__(self):
@@ -82,12 +84,14 @@ class Extractor(Thread, Observable):
     '''
     Return the name of this collector.
     '''
+
     def get_name(self):
         return self.__class__.__name__
 
     '''
     This method implements the strategy for collecting data.
     '''
+
     @abstractmethod
     def extract_data(self):
         pass

@@ -1,4 +1,4 @@
-import importlib, sys
+import importlib
 
 
 def for_name(class_name, *args, **kwargs):
@@ -18,4 +18,3 @@ def for_name(class_name, *args, **kwargs):
     # configurator = xConfigurator()
     class_instance = class_name(*args, **kwargs)
     return class_instance
-

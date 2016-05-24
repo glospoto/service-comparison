@@ -57,9 +57,9 @@ class Simulation(Thread):
 
     def _init(self):
         # Check if the simulation folder exists
-        if not os.path.exists(self._root_simulation_path):
-            self._log.info(self.__class__.__name__, 'I do not find any simulation folder; it has been just created.')
-            os.makedirs(self._root_simulation_path)
+        if not self._fs.path_exists(self._root_simulation_path):
+            self._log.info(self.__class__.__name__, 'Simulation folder misses; it has been just created.')
+            self._fs.make_dir(self._root_simulation_path)
         else:
             self._log.debug(self.__class__.__name__, 'Simulation folder exists.')
         # Create a folder for this simulation (simulations/service/alternative/) up to the name of the alternative
@@ -67,16 +67,16 @@ class Simulation(Thread):
             self._root_simulation_path, self._service.get_name().lower(), self._alternative.get_name())
         if not os.path.exists(alternative_path):
             self._log.info(self.__class__.__name__,
-                           'Creating a folder for simulating service %s', self._service.get_name())
-            os.makedirs(alternative_path)
+                           'Creating a folder for simulating service %s.', self._service.get_name())
+            self._fs.make_dir(alternative_path)
         else:
             self._log.debug(
                 self.__class__.__name__, 'Service folder inside %s already exists; create folders for environment.',
                 self._simulation_path)
         # Create the last level of folder (timestamp based)
-        self._simulation_path = os.path.join(alternative_path, time.strftime('%Y%m%d%H%M%S', time.localtime()))
+        self._simulation_path = self._fs.join(alternative_path, time.strftime('%Y%m%d%H%M%S', time.localtime()))
         self._log.info(self.__class__.__name__, 'Creating folder for this simulation.')
-        os.makedirs(self._simulation_path)
+        self._fs.make_dir(self._simulation_path)
 
     '''
     Return the topology which the simulation is running on.
@@ -107,10 +107,10 @@ class Simulation(Thread):
         return self._simulation_path
 
     '''
-    Run the simulation
+    Execute extractors, if needed
     '''
 
-    def run(self):
+    def _execute_collectors(self):
         # The list of activated collectors
         activated_collectors = []
         self._log.info(self.__class__.__name__, 'Preparing the execution of collectors.')
@@ -133,18 +133,21 @@ class Simulation(Thread):
             else:
                 self._log.info(self.__class__.__name__, 'No collectors are required for metric %s.', metric.get_name())
 
-        '''
-        Running a simulation consists in:
-         1. setting up scenario;
-         2. running the environment.
-         or vice-versa?
-        '''
+    '''
+    Start the environment and the alternative's scenario running on top of it
+    '''
 
+    def _start_environment_and_scenario(self):
         self._log.info(self.__class__.__name__, 'Preparing the environment %s to be executed.', self._environment)
-        self._environment.run(self._alternative.get_overlay())
+        # self._environment.run(self._alternative.get_overlay())
         self._log.info(self.__class__.__name__, 'Setting up scenario for alternative %s.', self._alternative.get_name())
-        self._alternative.setting_up_scenario()
+        # self._alternative.setting_up_scenario()
 
+    '''
+    Execute extractors for all metrics
+    '''
+
+    def _execute_extractors(self):
         self._log.info(self.__class__.__name__, 'Preparing the execution of all extractors.')
         # At the end of the simulation, run extractor for each metric
         for metric in self._metrics:
@@ -156,6 +159,16 @@ class Simulation(Thread):
             self._log.debug(self.__class__.__name__, 'Extractor %s is now going in execution.', extractor.get_name())
             extractor.start()
             extractor.join()
+
+    '''
+    Run the simulation
+    '''
+
+    def run(self):
+        self._log.info(self.__class__.__name__, 'Preparing the execution of the simulation.')
+        # self._execute_collectors()
+        # self._start_environment_and_scenario()
+        # self._execute_extractors()
 
     '''
     This method is implemented in accord with Observer pattern. It observes the extractor: when all extractors ends

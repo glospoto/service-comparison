@@ -4,7 +4,6 @@ This class model a basic graph node. This object may be extended by other classe
 
 
 class Node(object):
-
     def __init__(self, name):
         self._name = name
 
@@ -14,5 +13,6 @@ class Node(object):
     '''
     Return the name of the node.
     '''
+
     def get_name(self):
         return self._name

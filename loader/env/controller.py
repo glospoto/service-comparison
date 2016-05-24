@@ -27,6 +27,7 @@ class ControllerStarter(object):
     '''
     Start the controller.
     '''
+
     def start(self):
         self._log.debug(self.__class__.__name__, 'Going into the controller\'s folder.')
         self._fs.cd(self._path)
@@ -37,6 +38,7 @@ class ControllerStarter(object):
     '''
     Stop the controller.
     '''
+
     def stop(self):
         self._log.info(self.__class__.__name__, 'Stopping controller.')
         # Create a psutil.Process starting from the pid

@@ -9,7 +9,6 @@ This class models a generic configurator.
 
 
 class Configurator(object):
-
     __metaclass__ = ABCMeta
 
     def __init__(self):
@@ -21,6 +20,7 @@ class Configurator(object):
     '''
     Return the name of this configurator.
     '''
+
     @abstractmethod
     def get_name(self):
         pass
