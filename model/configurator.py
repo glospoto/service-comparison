@@ -24,3 +24,11 @@ class Configurator(object):
     @abstractmethod
     def get_name(self):
         pass
+
+    '''
+    Configure the scenario based on the overlay
+    '''
+
+    @abstractmethod
+    def configure(self, overlay, scenario):
+        pass

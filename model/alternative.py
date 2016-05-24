@@ -15,6 +15,12 @@ class Alternative(object):
         self._log = Logger.get_instance()
         # The name of the alternative
         self._name = name
+        # The overlay for this alternative
+        self._overlay = None
+        # This is a string reference to the class that models the environment. This is NOT a reference to the object!
+        self._environment = None
+        # Metrics to consider for this alternative. This is a list of model.metric.Metric objects
+        self._metrics = []
 
     '''
     Return the name of the alternative.
@@ -24,27 +30,53 @@ class Alternative(object):
         return self._name
 
     '''
-    Create a scenario for this alternative.
+    Set the overlay for this alternative.
     '''
 
-    @abstractmethod
-    def create_overlay(self):
-        pass
+    def set_overlay(self, overlay):
+        self._overlay = overlay
 
     '''
     Return the overlay associated to this alternative.
     '''
 
-    @abstractmethod
     def get_overlay(self):
-        pass
+        return self._overlay
+
+    '''
+    Set the environment for this alternative.
+    '''
+
+    def set_environment(self, environment):
+        self._environment = environment
+
+    '''
+    Return the environment associated to this alternative.
+    '''
+
+    def get_environment(self):
+        return self._environment
+
+    '''
+    Add a metric to evaluate for this alternative.
+    '''
+
+    def add_metric(self, metric):
+        self._metrics.append(metric)
+
+    '''
+    Return all metrics associated to this alternative.
+    '''
+
+    def get_metrics(self):
+        return self._metrics
 
     '''
     Setting up the scenario for this alternative.
     '''
 
     @abstractmethod
-    def setting_up_scenario(self):
+    def create_scenario(self):
         pass
 
     '''
@@ -69,36 +101,4 @@ class Alternative(object):
 
     @abstractmethod
     def get_configurator(self):
-        pass
-
-    '''
-    Set the environment for this alternative.
-    '''
-
-    @abstractmethod
-    def set_environment(self, environment):
-        pass
-
-    '''
-    Return the environment associated to this alternative.
-    '''
-
-    @abstractmethod
-    def get_environment(self):
-        pass
-
-    '''
-    Add a metric to evaluate for this alternative.
-    '''
-
-    @abstractmethod
-    def add_metric(self, metric):
-        pass
-
-    '''
-    Return all metrics associated to this alternative.
-    '''
-
-    @abstractmethod
-    def get_metrics(self):
         pass

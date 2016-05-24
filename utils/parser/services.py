@@ -58,3 +58,11 @@ class ServiceParser(object):
     @abstractmethod
     def create_service(self):
         pass
+
+    '''
+    Load the scenario for a specific service
+    '''
+
+    @abstractmethod
+    def parse_scenario(self):
+        pass

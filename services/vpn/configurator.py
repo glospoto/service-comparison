@@ -104,7 +104,7 @@ class Rm3SdnVpnConfigurator(Configurator):
     This method has in charge the task of writing the configuration files for RM3 SDN VPN controller.
     '''
 
-    def write_configurations(self, overlay):
+    def configure(self, overlay):
         self._log.info(self.__class__.__name__, 'Starting to create the configuration file for the controller.')
         self._write_system_configuration()
         self._write_vpns_configuration(overlay)

@@ -22,7 +22,7 @@ class VpnOverlay(Overlay):
 
     def __repr__(self):
         return "Overlay[name=%s, #switches=%i, #links=%i, #hosts=%i]" \
-               % (self._name, len(self._switches), len(self._links) + len(self._links_host_pes), len(self._hosts))
+               % (self._name, len(self._switches), len(self._links), len(self._hosts))
 
     '''
     Return the name of this overlay.

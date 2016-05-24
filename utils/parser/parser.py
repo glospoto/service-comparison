@@ -126,6 +126,8 @@ class Parser(object):
             # from which retrieve other configuration information (like alternatives) and alternatives is the list
             # of alternatives declared in the [Service] section in the configuration file.
             self._handle_alternative_and_metric_for_service(service, service_block, alternatives, metrics)
+            # Delegate to the specific service parser the ability of parsing the specific scenario
+            self._service_parser.parse_scenario(service_block['scenario'])
 
             '''
             Service has been correctly created: add in to the list of all services
@@ -178,18 +180,18 @@ class Parser(object):
 
     def _handle_alternative_and_metric_for_service(self, service, service_block, alternatives, metrics):
         for alternative_name in alternatives:
-            # Load the specific scenario for the current alternative
-            scenario_parameters = service_block[alternative_name]
+            # Load the specific parameters for the current alternative
+            alternative_parameters = service_block[alternative_name]
             # For each alternative, take the adapter and create the alternative object (represented by adapter in
             # system.xml)
             # Take the adapter for the current alternative
             alternative_adapter = self._system_parser.get_alternative_adapter(alternative_name)
-            alternative = service.create_alternative(alternative_name, alternative_adapter, scenario_parameters)
+            alternative = service.create_alternative(alternative_name, alternative_adapter, alternative_parameters)
             self._log.info(self.__class__.__name__, 'Alternative %s has been created.', alternative_name)
 
             # Based on the content of self._environments parsed from configuration file, set the class name of the
             # environment to the alternative object
-            environment_name = scenario_parameters['environment']
+            environment_name = alternative_parameters['environment']
             # Check the correctness of the association between alternative and environment
             self._check_mapping_alternative_to_environment(alternative_name, environment_name)
             self._log.info(self.__class__.__name__,

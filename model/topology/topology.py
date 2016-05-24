@@ -33,7 +33,7 @@ class Topology(object):
     Return the topology read by a GraphML file.
     '''
 
-    def get_topology_from_graphml(self):
+    def get_topology(self):
         return nx.read_graphml(self._topology_as_graphml)
 
     '''

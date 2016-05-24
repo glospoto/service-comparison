@@ -43,3 +43,19 @@ class Service(object):
     @abstractmethod
     def create_alternative(self, alternative_name, alternative_adapter, scenario_parameters):
         pass
+
+    '''
+    Create the overlay for this service. This overlay will be used to evaluate all alternatives of this service.
+    '''
+
+    @abstractmethod
+    def create_overlay(self, topology):
+        pass
+
+    '''
+    Create the scenario for this service. All alternatives will run on the same scenario.
+    '''
+
+    @abstractmethod
+    def create_scenario(self):
+        pass

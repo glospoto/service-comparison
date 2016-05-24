@@ -139,9 +139,9 @@ class Simulation(Thread):
 
     def _start_environment_and_scenario(self):
         self._log.info(self.__class__.__name__, 'Preparing the environment %s to be executed.', self._environment)
-        # self._environment.run(self._alternative.get_overlay())
+        self._environment.run(self._alternative.get_overlay())
         self._log.info(self.__class__.__name__, 'Setting up scenario for alternative %s.', self._alternative.get_name())
-        # self._alternative.setting_up_scenario()
+        self._alternative.create_scenario()
 
     '''
     Execute extractors for all metrics

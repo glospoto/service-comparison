@@ -31,7 +31,7 @@ class Scenario(object):
     '''
 
     @abstractmethod
-    def start(self):
+    def create(self, overlay):
         pass
 
     '''

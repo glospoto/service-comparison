@@ -5,6 +5,101 @@ from subprocess import PIPE
 
 from loader.env.controller import ControllerStarter
 from model.scenario import Scenario
+from services.vpn.vpn import VirtualPrivateNetwork, Host, Link, Site
+from utils.generator import AddressGenerator
+
+"""
+This class implements the scenario for the VPN service. In this case, scenario simply consists of the number of VPNs in
+the network
+"""
+
+
+class VpnScenario(Scenario):
+    def __init__(self, number_of_vpns):
+        self._name = self.__class__.__name__
+        # The number of the VPNs in the network
+        self._number_of_vpns = number_of_vpns
+        # All VPNs in the network
+        self._vpns = {}
+
+    def __repr__(self):
+        return 'Scenario[name=%s, #VPNs=%s]' % (self._name, self._number_of_vpns)
+
+    '''
+    Return the name of the scenario
+    '''
+
+    def get_name(self):
+        return self._name
+
+    '''
+    Return all VPNs in the scenario
+    '''
+
+    def get_vpns(self):
+        return self._vpns
+
+    '''
+    Create the scenario
+    '''
+
+    def create(self, overlay):
+        # Create the VPNs
+        for i in range(0, self._number_of_vpns):
+            name = 'vpn-' + str(i)
+            vpn = VirtualPrivateNetwork(name)
+            self._log.debug(self.__class__.__name__, 'VPN %s has been created', name)
+            # Take two random PEs
+            pes = overlay.get_two_random_pes()
+            # Create sites
+            self._log.debug(self.__class__.__name__, 'Starting to creates the sites for VPN %s.', vpn.get_name())
+            vpn.add_site(self._create_site(vpn, pes[0], overlay, i))
+            vpn.add_site(self._create_site(vpn, pes[1], overlay, i))
+            self._log.debug(self.__class__.__name__, 'Sites have been correctly created.')
+
+            # Add VPN to the map of VPNs
+            self._vpns[name] = vpn
+        self._log.info(self.__class__.__name__, 'All VPNs have been created.')
+
+    '''
+    Create a site for a VPN
+    '''
+
+    def _create_site(self, vpn, pe, overlay, i):
+        # First of all, create an host for this site
+        # IP addresses for the hosts
+        self._log.debug(self.__class__.__name__, 'Starting to create a new site for VPN %s.', vpn.get_name())
+        self._log.debug(self.__class__.__name__, 'Generating IP address for the host.')
+        h_ip = AddressGenerator.generate_ip_address()
+        host = Host('h' + str(i) + '_' + pe.get_name(), h_ip)
+        self._log.debug(self.__class__.__name__, 'Host %s has been correctly generated.', host.get_name())
+        # Add host to the overlay
+        overlay.add_host(host)
+        self._log.debug(self.__class__.__name__, 'Host %s has been added to the overlay.', host.get_name())
+        host.set_pe(pe)
+        self._log.debug(self.__class__.__name__, 'Host %s has been connected to its PE.', host.get_name())
+        # Add this host to the VPN
+        vpn.add_host(host)
+        self._log.debug(self.__class__.__name__, 'Host %s has been added to the VPN %s.',
+                        host.get_name(), vpn.get_name())
+        pe_interface_name = pe.create_interface()
+        self._log.debug(self.__class__.__name__, 'A new interface has been generated for the PE %s.', pe.get_name())
+        # Finally, create a Link object between host and PE and add it to the overlay
+        link = Link(host, pe, host.get_interface_name(), pe_interface_name)
+        self._log.debug(self.__class__.__name__, 'Link %s has been created.', link)
+        overlay.add_link(link)
+        self._log.debug(self.__class__.__name__,
+                        'Link %s created and added to %s', link, overlay.get_name())
+
+        return Site(vpn, pe, pe_interface_name, AddressGenerator.get_subnet_from_ip(host.get_ip()))
+
+    '''
+    Destroy the scenario
+    '''
+
+    def destroy(self):
+        pass
+
 
 """
 This class models a scenario for Rm3SdnVpn alternative. It has in charge the task of running the controller.
@@ -12,14 +107,12 @@ This class models a scenario for Rm3SdnVpn alternative. It has in charge the tas
 
 
 class Rm3SdnVpnScenario(Scenario):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         Scenario.__init__(self)
         # The name of the scenario
         self._name = self.__class__.__name__
         # Take params from kwargs
         params = kwargs.get('scenario')
-        # Number of VPNs
-        self._number_of_vpns = int(params['number_of_vpns'])
         # Controller (actually, the path to the controller. ryu-manager is required.)
         self._controller_path = params['controller_path']
         # Command to run controller
@@ -48,6 +141,13 @@ class Rm3SdnVpnScenario(Scenario):
         return self._number_of_vpns
 
     '''
+    Return the VPNs in the scenario
+    '''
+
+    def get_vpns(self):
+        return self._vpns
+
+    '''
     Return the path in which the controller is placed.
     '''
 
@@ -65,7 +165,7 @@ class Rm3SdnVpnScenario(Scenario):
     This method allows the creation of this scenario.
     '''
 
-    def start(self):
+    def create(self):
         self._log.info(self.__class__.__name__, 'Preparing to start the scenario %s.', self._name)
         # Before starting controller, copy VPNs configuration file inside the controller conf folder.
         # In particular, copy tmp/system.conf and tmp/vpns.xml into controller conf folder.
@@ -108,7 +208,7 @@ This class models a scenario for Rm3SdnVpn alternative. It has in charge the tas
 
 
 class MplsBgpVpnScenario(Scenario):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         Scenario.__init__(self)
         # The name of the scenario
         self._name = self.__class__.__name__
