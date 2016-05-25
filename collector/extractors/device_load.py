@@ -87,7 +87,7 @@ class MininetDeviceLoad(DeviceLoad):
     def extract_data(self):
         # First of all, sleep for 1 minute
         self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
-        time.sleep(15)
+        time.sleep(60)
         self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
         switches = self._overlay.get_nodes()
         # Probably put here the creation of the folder which will contain all datapaths' flow tables.

@@ -2,6 +2,7 @@ import utils.class_for_name as Class
 
 from model.service import Service
 from services.vpn.overlay import VpnOverlay
+from services.vpn.scenario import VpnScenario
 from services.vpn.vpn import Switch, Link
 
 """
@@ -13,24 +14,10 @@ for this service.
 class VpnService(Service):
     def __init__(self, name):
         Service.__init__(self, name)
-        # The overlay for this service
-        self._overlay = None
-        # The scenario of the service
-        self._scenario = None
 
     '''
     Set the scenario for this service
     '''
-
-    def set_scenario(self, scenario):
-        self._scenario = scenario
-
-    '''
-    Return the scenario for this service
-    '''
-
-    def get_scenario(self):
-        return self._scenario
 
     '''
     Creating an alternative object starting from its adapter
@@ -53,7 +40,7 @@ class VpnService(Service):
     '''
 
     def create_overlay(self, topology):
-        # the VpnOverlay instance
+        # The VpnOverlay instance
         self._overlay = VpnOverlay()
 
         # For each node in the topology, create a Switch object in the VpnOverlay
@@ -88,6 +75,13 @@ class VpnService(Service):
     Create the scenario for this service. All alternatives will run on the same scenario
     '''
 
-    def create_scenario(self):
+    def create_scenario(self, scenario_params):
         self._log.debug(self.__class__.__name__, 'Starting to set up the scenario for service %s.', self._name)
+        self._scenario = VpnScenario(scenario_params)
+
+    '''
+    Build scenario based on the overlay.
+    '''
+
+    def build_scenario(self):
         self._scenario.create(self._overlay)

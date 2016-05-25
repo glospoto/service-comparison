@@ -73,21 +73,23 @@ class ComparisonFramework(object):
             # For each service, create the overlay. This overlay will be used for all alternatives of the given service
             self._log.debug(self.__class__.__name__, 'Creating overlay for service %s.', service.get_name())
             service.create_overlay(self._topology.get_topology())
-            self._log.info(self.__class__.__name__, 'Overlay %s for service %s has been successfully created.',
+            self._log.info(self.__class__.__name__, 'Overlay for service %s has been successfully created.',
                            service.get_name())
 
             # Create the scenario for the service
-            service.create_scenario()
+            self._log.info(self.__class__.__name__, 'Building scenario for service %s.', service.get_name())
+            service.build_scenario()
+            self._log.info(self.__class__.__name__, 'Scenario %s has been correctly built.', service.get_scenario())
 
             # For each alternative of this service, create a simulation
             for alternative in service.get_alternatives():
                 '''
                 Creating overlay and adding it to the topology object.
                 '''
-                self._log.info(self.__class__.__name__, 'Creating overlay for alternative %s.',
+                self._log.info(self.__class__.__name__, 'Deploying alternative %s.',
                                alternative.get_name())
                 # Setting the overlay for current alternative
-                alternative.deploy(service.get_scenario())
+                alternative.deploy(service.get_overlay(), service.get_scenario())
 
                 '''
                 Loading environment, creating the simulation and running it.

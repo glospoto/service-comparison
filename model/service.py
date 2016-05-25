@@ -16,7 +16,11 @@ class Service(object):
         self._log = Logger.get_instance()
         # The name of the service
         self._name = name
-        # self._overlay = None
+        # the overlay associated to this service
+        self._overlay = None
+        # The scenario associated to this service
+        self._scenario = None
+        # The list of alternatives for this scenario
         self._alternatives = []
 
     def __repr__(self):
@@ -28,6 +32,20 @@ class Service(object):
 
     def get_name(self):
         return self._name
+
+    '''
+    Return the overlay associated to this service
+    '''
+
+    def get_overlay(self):
+        return self._overlay
+
+    '''
+    Return the scenario associated to this service
+    '''
+
+    def get_scenario(self):
+        return self._scenario
 
     '''
     Return all alternatives defined for this service.
@@ -57,5 +75,13 @@ class Service(object):
     '''
 
     @abstractmethod
-    def create_scenario(self):
+    def create_scenario(self, scenario_params):
+        pass
+
+    '''
+    Build the scenario based on the overlay.
+    '''
+
+    @abstractmethod
+    def build_scenario(self):
         pass

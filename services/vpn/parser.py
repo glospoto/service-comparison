@@ -1,4 +1,3 @@
-from services.vpn.scenario import VpnScenario
 from services.vpn.service import VpnService
 from utils.parser.services import ServiceParser
 
@@ -31,10 +30,8 @@ class VpnServiceParser(ServiceParser):
     Parse specific scenario of this service
     '''
 
-    def parse_scenario(self, scenario):
-        self._log.debug(self.__class__.__name__, 'Starting to parse scenario for service %s.', self._service.get_name())
-        number_of_vpns = scenario['number_of_vpns']
-        scenario = VpnScenario(number_of_vpns)
-        self._service.set_scenario(scenario)
-        self._log.info(self.__class__.__name__, 'Scenario for service %s has been successfully parsed.',
+    def parse_scenario(self, scenario_params):
+        self._log.debug(self.__class__.__name__, 'Creating scenario for service %s.', self._service.get_name())
+        self._service.create_scenario(scenario_params)
+        self._log.info(self.__class__.__name__, 'Scenario for service %s has been successfully created.',
                        self._service.get_name())

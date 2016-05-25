@@ -76,7 +76,7 @@ class MininetTopology(object):
     def add_links(self):
         self._log.debug(self.__class__.__name__, 'Starting to add links to Mininet.')
         for link in self._overlay.get_links():
-            self._net.addLink(link.get_from().get_name(), link.get_to().get_name())
+            self._net.addLink(link.get_from_switch().get_name(), link.get_to_switch().get_name())
         self._log.info(self.__class__.__name__, 'All links have been correctly added.')
 
 

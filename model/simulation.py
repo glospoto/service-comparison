@@ -137,11 +137,9 @@ class Simulation(Thread):
     Start the environment and the alternative's scenario running on top of it
     '''
 
-    def _start_environment_and_scenario(self):
+    def _start_environment(self):
         self._log.info(self.__class__.__name__, 'Preparing the environment %s to be executed.', self._environment)
-        self._environment.run(self._alternative.get_overlay())
-        self._log.info(self.__class__.__name__, 'Setting up scenario for alternative %s.', self._alternative.get_name())
-        self._alternative.create_scenario()
+        self._environment.run(self._service.get_overlay())
 
     '''
     Execute extractors for all metrics
@@ -154,7 +152,7 @@ class Simulation(Thread):
             extractor = metric.get_extractor()
             self._log.debug(self.__class__.__name__, 'Extractor %s has been loaded.', extractor.get_name())
             extractor.set_simulation_path(self._simulation_path)
-            extractor.set_overlay(self._alternative.get_overlay())
+            extractor.set_overlay(self._service.get_overlay())
             extractor.add_observer(self)
             self._log.debug(self.__class__.__name__, 'Extractor %s is now going in execution.', extractor.get_name())
             extractor.start()
@@ -166,9 +164,9 @@ class Simulation(Thread):
 
     def run(self):
         self._log.info(self.__class__.__name__, 'Preparing the execution of the simulation.')
-        # self._execute_collectors()
-        # self._start_environment_and_scenario()
-        # self._execute_extractors()
+        self._execute_collectors()
+        self._start_environment()
+        self._execute_extractors()
 
     '''
     This method is implemented in accord with Observer pattern. It observes the extractor: when all extractors ends

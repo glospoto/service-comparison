@@ -15,10 +15,11 @@ the network
 
 
 class VpnScenario(Scenario):
-    def __init__(self, number_of_vpns):
+    def __init__(self, scenario_params):
+        Scenario.__init__(self)
         self._name = self.__class__.__name__
         # The number of the VPNs in the network
-        self._number_of_vpns = number_of_vpns
+        self._number_of_vpns = int(scenario_params['number_of_vpns'])
         # All VPNs in the network
         self._vpns = {}
 

@@ -159,7 +159,7 @@ class Switch(object):
     def create_interface(self):
         number_of_interface = len(self._interfaces)
         number_of_interface += 1
-        interface_name = 'eth' + str(number_of_interface)
+        interface_name = self._name + '-eth' + str(number_of_interface)
         self._interfaces.append(interface_name)
         return interface_name
 

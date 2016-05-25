@@ -15,8 +15,6 @@ class Alternative(object):
         self._log = Logger.get_instance()
         # The name of the alternative
         self._name = name
-        # The overlay for this alternative
-        self._overlay = None
         # This is a string reference to the class that models the environment. This is NOT a reference to the object!
         self._environment = None
         # Metrics to consider for this alternative. This is a list of model.metric.Metric objects
@@ -28,20 +26,6 @@ class Alternative(object):
 
     def get_name(self):
         return self._name
-
-    '''
-    Set the overlay for this alternative.
-    '''
-
-    def set_overlay(self, overlay):
-        self._overlay = overlay
-
-    '''
-    Return the overlay associated to this alternative.
-    '''
-
-    def get_overlay(self):
-        return self._overlay
 
     '''
     Set the environment for this alternative.
@@ -72,19 +56,11 @@ class Alternative(object):
         return self._metrics
 
     '''
-    Setting up the scenario for this alternative.
+    Deploy this alternative over a given scenario
     '''
 
     @abstractmethod
-    def create_scenario(self):
-        pass
-
-    '''
-    Return the scenario associated to this alternative.
-    '''
-
-    @abstractmethod
-    def get_scenario(self):
+    def deploy(self, overlay, scenario):
         pass
 
     '''
