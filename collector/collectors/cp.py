@@ -1,7 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
 from collector.collector import Collector
-from utils.fs import FileSystem
 from utils.network import Sniffer
 
 """
@@ -15,8 +14,6 @@ class ControlPlaneMessages(Collector):
     def __init__(self):
         Collector.__init__(self)
         self._sniffer = None
-        # Logger
-        self._fs = FileSystem.get_instance()
 
     '''
     Collect data for this metric.

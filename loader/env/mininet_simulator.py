@@ -42,7 +42,7 @@ class MininetTopology(object):
         return hex(dpid)[2:]
 
     '''
-    Return a referene to Mininet object.
+    Return a reference to Mininet object.
     '''
 
     def get_mininet_object(self):
@@ -57,7 +57,7 @@ class MininetTopology(object):
         self._log.debug(self.__class__.__name__, 'Starting to add switches to Mininet.')
         for switch in self._overlay.get_nodes().values():
             self._net.addSwitch(switch.get_name(), dpid=self._dpid(switch.get_dpid()))
-        self._log.info(self.__class__.__name__, 'All switches have been correctly added.')
+        self._log.info(self.__class__.__name__, 'All switches have been successfully added.')
 
     '''
     Add hosts to the Mininet object.
@@ -67,7 +67,7 @@ class MininetTopology(object):
         self._log.debug(self.__class__.__name__, 'Starting to add hosts to Mininet.')
         for host in self._overlay.get_hosts().values():
             self._net.addHost(host.get_name())
-        self._log.info(self.__class__.__name__, 'All hosts have been correctly added.')
+        self._log.info(self.__class__.__name__, 'All hosts have been successfully added.')
 
     '''
     Add links to the Mininet object.
@@ -77,7 +77,7 @@ class MininetTopology(object):
         self._log.debug(self.__class__.__name__, 'Starting to add links to Mininet.')
         for link in self._overlay.get_links():
             self._net.addLink(link.get_from_switch().get_name(), link.get_to_switch().get_name())
-        self._log.info(self.__class__.__name__, 'All links have been correctly added.')
+        self._log.info(self.__class__.__name__, 'All links have been successfully added.')
 
 
 """
@@ -101,7 +101,7 @@ class MininetStartSimulation(Thread):
         self._log.debug(self.__class__.__name__, 'Preparing to execute a Mininet instance.')
         net = self._mininet_topology.get_mininet_object()
         net.start()
-        self._log.info(self.__class__.__name__, 'Mininet has been correctly started.')
+        self._log.info(self.__class__.__name__, 'Mininet has been successfully started.')
 
     '''
     Stop the Mininet environment.
@@ -114,4 +114,4 @@ class MininetStartSimulation(Thread):
         # Run mn -c for cleaning virtual interfaces and bridges
         mininet_stop = Popen('sudo mn -c', shell=True, stdout=PIPE, stderr=PIPE)
         mininet_stop.wait()
-        self._log.debug(self.__class__.__name__, 'Mininet has been correctly stopped.')
+        self._log.debug(self.__class__.__name__, 'Mininet has been successfully stopped.')

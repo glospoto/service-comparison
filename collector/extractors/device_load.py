@@ -16,8 +16,8 @@ class DeviceLoad(Extractor):
 
     def __init__(self):
         Extractor.__init__(self)
-        # The FileSystem handler
-        self._fs = FileSystem.get_instance()
+        # Folder in which all extracted data will be stored
+        self._extractor_folder = 'device-load'
 
     '''
     Set the simulation path in which save the extracted data.
@@ -54,12 +54,6 @@ switch in the overlay, and it stores the output inside the extractor folder.
 class MininetDeviceLoad(DeviceLoad):
     def __init__(self):
         DeviceLoad.__init__(self)
-        # Folder in which all extracred data will be stored
-        self._extractor_folder = 'device-load'
-        # Simulation path for data extraction
-        self._simulation_path = None
-        # The overlay
-        self._overlay = None
 
     def __repr__(self):
         return self.__class__.__name__
@@ -71,7 +65,7 @@ class MininetDeviceLoad(DeviceLoad):
     def set_simulation_path(self, simulation_path):
         self._simulation_path = simulation_path
         # Create extractor's folder
-        os.makedirs(self._simulation_path + '/' + self._extractor_folder)
+        self._fs.make_dir(self._simulation_path + '/' + self._extractor_folder)
 
     '''
     Set the overlay which the simulation is running on.
@@ -107,7 +101,7 @@ class MininetDeviceLoad(DeviceLoad):
             os.fsync(output_file.fileno())
             # Wait for process termination
             extractor.wait()
-        self._log.info(self.__class__.__name__, 'All data has been correctly extracted.')
+        self._log.info(self.__class__.__name__, 'All data has been successfully extracted.')
         # Notify all observers
         self.notify_all()
 
@@ -129,12 +123,6 @@ information from routing tables.
 class DockerDeviceLoad(DeviceLoad):
     def __init__(self):
         DeviceLoad.__init__(self)
-        # Folder in which all extracred data will be stored
-        self._extractor_folder = 'device-load'
-        # Simulation path for data extraction
-        self._simulation_path = None
-        # The overlay
-        self._overlay = None
 
     def __repr__(self):
         return self.__class__.__name__
@@ -145,8 +133,8 @@ class DockerDeviceLoad(DeviceLoad):
 
     def set_simulation_path(self, simulation_path):
         self._simulation_path = simulation_path
-        # Create extractor's folder # Fixme Move into FileSystem
-        os.makedirs(self._simulation_path + '/' + self._extractor_folder)
+        # Create extractor's folder
+        self._fs.make_dir(self._simulation_path + '/' + self._extractor_folder)
 
     '''
     Set the overlay which the simulation is running on.
@@ -184,27 +172,14 @@ class DockerDeviceLoad(DeviceLoad):
             cmd_fib = 'sudo docker exec %s ip r s' % switch.get_name()
             extractor_fib = Popen(cmd_fib, shell=True, stdout=output_file)
             extractors.append(extractor_fib)
-            self._log.debug(self.__class__.__name__, 'FIB information have been correctly extracted.')
+            self._log.debug(self.__class__.__name__, 'FIB information have been successfully extracted.')
             # Write data on disk
             output_file.flush()
             os.fsync(output_file.fileno())
             # Wait for process termination
             for e in extractors:
                 e.wait()
-        # cmd = 'sudo ovs-ofctl -O OpenFlow13 dump-flows ' + switch.get_name()
-        #     # File into the simulation folder in which storing data
-        #     output_file_name = self._simulation_path + '/' + self._extractor_folder + '/' + switch.get_name() + '.data'
-        #     # Create a file starting from its name
-        #     output_file = open(output_file_name, 'w')
-        #     self._log.debug(self.__class__.__name__, 'Starting to write the convergence time into extractor folder.')
-        #     # Create a new subprocess whose output will be redirect into output_file
-        #     extractor = Popen(args=cmd, stdout=output_file, shell=True)
-        #     # Write data on disk
-        #     output_file.flush()
-        #     os.fsync(output_file.fileno())
-        #     # Wait for process termination
-        #     extractor.wait()
-        self._log.info(self.__class__.__name__, 'All data has been correctly extracted.')
+        self._log.info(self.__class__.__name__, 'All data has been successfully extracted.')
         # Notify all observers
         self.notify_all()
 

@@ -24,7 +24,7 @@ class VpnService(Service):
     '''
 
     def create_alternative(self, alternative_name, alternative_adapter, scenario_parameters):
-        self._log.info(self.__class__.__name__, 'Creating alternative %s.', alternative_name)
+        self._log.debug(self.__class__.__name__, 'Creating alternative %s.', alternative_name)
         # The pattern of params for the for_name method is: adapter, name of the alternative and all parameters defined
         # in the configuration file
         alternative = Class.for_name(alternative_adapter, name=alternative_name, scenario=scenario_parameters)
@@ -32,7 +32,7 @@ class VpnService(Service):
         self._alternatives.append(alternative)
         self._log.debug(self.__class__.__name__, 'Adding alternative %s to the list of alternatives of service %s.',
                         alternative_name, self._name)
-        self._log.info(self.__class__.__name__, 'Alternative %s has been correctly created.', alternative_name)
+        self._log.info(self.__class__.__name__, 'Alternative %s has been successfully created.', alternative_name)
         return alternative
 
     '''
@@ -42,6 +42,7 @@ class VpnService(Service):
     def create_overlay(self, topology):
         # The VpnOverlay instance
         self._overlay = VpnOverlay()
+        self._log.debug(self.__class__.__name__, 'Starting to create the overlay for the service %s', self._name)
 
         # For each node in the topology, create a Switch object in the VpnOverlay
         nodes = topology.nodes()
@@ -53,7 +54,7 @@ class VpnService(Service):
             switch = Switch(dpid, name, role)
             self._overlay.add_node(switch)
             self._log.debug(self.__class__.__name__,
-                            'Switch %s created and added to %s', switch, self._overlay.get_name())
+                            'Switch %s has been successfully created and added to %s', switch, self._overlay.get_name())
 
         # For each link in the topology, create a Link object in the VpnOverlay
         edges = topology.edges()
@@ -69,19 +70,24 @@ class VpnService(Service):
             link = Link(from_switch, to_switch, from_switch_interface, to_switch_interface)
             self._overlay.add_link(link)
             self._log.debug(self.__class__.__name__,
-                            'Link %s created and added to %s', link, self._overlay.get_name())
+                            'Link %s has been successfully created and added to %s', link, self._overlay.get_name())
+
+        self._log.info(self.__class__.__name__, 'Overlay %s has been successfully created', self._overlay.get_name())
 
     '''
     Create the scenario for this service. All alternatives will run on the same scenario
     '''
 
     def create_scenario(self, scenario_params):
-        self._log.debug(self.__class__.__name__, 'Starting to set up the scenario for service %s.', self._name)
+        self._log.debug(self.__class__.__name__, 'Starting to create the scenario for service %s.', self._name)
         self._scenario = VpnScenario(scenario_params)
+        self._log.info(self.__class__.__name__, 'Scenario for service %s has been successfully created.', self._name)
 
     '''
     Build scenario based on the overlay.
     '''
 
     def build_scenario(self):
+        self._log.debug(self.__class__.__name__, 'Starting to build the scenario for service %s.', self._name)
         self._scenario.create(self._overlay)
+        self._log.debug(self.__class__.__name__, 'Scenario for service %s has been successfully built.', self._name)

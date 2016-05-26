@@ -72,7 +72,7 @@ class MininetEnvironment(Environment):
     '''
 
     def run(self, overlay):
-        self._log.info(self.__class__.__name__, 'Initializing the environment')
+        self._log.info(self.__class__.__name__, 'Initializing the environment.')
         self._log.debug(self.__class__.__name__, 'Creating the topology in Mininet, starting from the current overlay.')
         # Create the network
         self._mininet_topology = MininetTopology(overlay)
@@ -89,7 +89,7 @@ class MininetEnvironment(Environment):
         self._log.debug(self.__class__.__name__, 'Starting a Mininet environment.')
         self._mininet_starter = MininetStartSimulation(self._mininet_topology)
         self._mininet_starter.start()
-        self._log.debug(self.__class__.__name__, 'Mininet is now correctly running.')
+        self._log.info(self.__class__.__name__, 'Mininet is now successfully running.')
 
     '''
     This method implements the steps for stopping this environment.

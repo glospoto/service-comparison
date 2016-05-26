@@ -2,6 +2,7 @@ from abc import ABCMeta, abstractmethod
 from threading import Thread
 
 import utils.class_for_name as Class
+from utils.fs import FileSystem
 from utils.log import Logger
 
 """
@@ -58,7 +59,7 @@ class FactoryCollector(object):
         self._log.debug(self.__class__.__name__, 'Creating a new instance for %s', collector_class_name)
         # Load an instance
         self._collector = Class.for_name(collector_class_name)
-        self._log.info(self.__class__.__name__, 'Collector %s has been created.', collector_class_name)
+        self._log.info(self.__class__.__name__, 'Collector %s has been successfully created.', collector_class_name)
         return self._collector
 
 
@@ -75,6 +76,8 @@ class Collector(Thread):
         Thread.__init__(self)
         # Logger
         self._log = Logger.get_instance()
+        # Logger
+        self._fs = FileSystem.get_instance()
 
     '''
     Return the name of this collector.

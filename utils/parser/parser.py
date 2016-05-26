@@ -98,7 +98,7 @@ class Parser(object):
             service_parser = self._system_parser.get_service_parser(service_name)
             self._service_parser = self._factory_service_parser.create_service_parser(service_parser, service_name)
             self._log.info(self.__class__.__name__,
-                           'Specialized service parser %s has been created.', self._service_parser)
+                           'Specialized service parser %s has been successfully created.', self._service_parser)
             # Create the service. Variable s contains an instance of class model.service.Service
             service = self._service_parser.create_service()
 
@@ -133,7 +133,7 @@ class Parser(object):
             Service has been correctly created: add in to the list of all services
             '''
             self._services.append(service)
-            self._log.info(self.__class__.__name__, 'New service has been created: %s.', s)
+            self._log.info(self.__class__.__name__, 'Service %s has been successfully created.', s)
 
     '''
     Check if all services' names are valid.
@@ -199,7 +199,8 @@ class Parser(object):
             environment = self._system_parser.get_environment_adapter(environment_name)
             alternative.set_environment(environment)
             self._log.info(self.__class__.__name__,
-                           'Environment %s has been associated to alternative %s.', environment_name, alternative_name)
+                           'Environment %s has been successfully associated to alternative %s.',
+                           environment_name, alternative_name)
 
             # Now, for each alternative, handle metrics
             self._handle_metrics_for_alternative(alternative, environment_name, metrics)
@@ -216,18 +217,19 @@ class Parser(object):
             extractor_adapter = self._system_parser.get_extractor_adapter(metric_name)
             # Load the actual adapter, based on this metric and the environment for the selected alternative
             extractor_class = self._factory_extractor.create_extractor(extractor_adapter, environment)
-            self._log.info(self.__class__.__name__, 'Extractor %s has been created.', extractor_adapter)
+            self._log.info(self.__class__.__name__, 'Extractor %s has been successfully created.', extractor_adapter)
             collector_adapter = self._system_parser.get_collector_adapter(metric_name)
             if collector_adapter is not None:
                 collector_class = self._factory_collector.create_collector(collector_adapter, environment)
-                self._log.info(self.__class__.__name__, 'Collector %s has been created.', collector_adapter)
+                self._log.info(self.__class__.__name__, 'Collector %s has been successfully created.',
+                               collector_adapter)
             else:
                 collector_class = None
                 self._log.info(self.__class__.__name__, 'Extractor %s does not need any collectors.', extractor_adapter)
             # Create the metric
             metric = Metric(metric_name, collector_class, extractor_class)
-            self._log.info(self.__class__.__name__, 'Metric %s has been created.', metric)
+            self._log.info(self.__class__.__name__, 'Metric %s has been successfully created.', metric)
             alternative.add_metric(metric)
             self._log.info(self.__class__.__name__,
-                           'Metric %s has been associated to the alternative %s.',
+                           'Metric %s has been successfully associated to the alternative %s.',
                            metric.get_name(), alternative.get_name())

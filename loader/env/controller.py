@@ -33,14 +33,14 @@ class ControllerStarter(object):
         self._fs.cd(self._path)
         self._log.debug(self.__class__.__name__, 'Starting the controller.')
         self._controller_process = Popen(self._cmd, shell=True, stdout=PIPE, stderr=PIPE)
-        self._log.info(self.__class__.__name__, 'Controller has been correctly started.')
+        self._log.info(self.__class__.__name__, 'Controller has been successfully started.')
 
     '''
     Stop the controller.
     '''
 
     def stop(self):
-        self._log.info(self.__class__.__name__, 'Stopping controller.')
+        self._log.debug(self.__class__.__name__, 'Stopping controller.')
         # Create a psutil.Process starting from the pid
         process = psutil.Process(self._controller_process.pid)
         self._log.debug(self.__class__.__name__, 'All child have been kept.')
@@ -53,4 +53,4 @@ class ControllerStarter(object):
         self._log.debug(self.__class__.__name__, 'Killing controller process.')
         # Finally, kill controller process
         self._controller_process.kill()
-        self._log.info(self.__class__.__name__, 'Controller has been correctly stopped.')
+        self._log.info(self.__class__.__name__, 'Controller has been successfully stopped.')

@@ -2,6 +2,7 @@ from abc import ABCMeta, abstractmethod
 from threading import Thread
 
 import utils.class_for_name as Class
+from utils.fs import FileSystem
 from utils.log import Logger
 from utils.patterns.observer import Observable
 
@@ -59,7 +60,7 @@ class FactoryExtractor(object):
         self._log.debug(self.__class__.__name__, 'Creating a new instance for %s', extractor_class_name)
         # Load an instance
         self._extractor = Class.for_name(extractor_class_name)
-        self._log.info(self.__class__.__name__, 'Extractor %s has been created.', extractor_class_name)
+        self._log.info(self.__class__.__name__, 'Extractor %s has been successfully created.', extractor_class_name)
         return self._extractor
 
 
@@ -80,6 +81,12 @@ class Extractor(Thread, Observable):
         Observable.__init__(self)
         # Logger
         self._log = Logger.get_instance()
+        # The FileSystem handler
+        self._fs = FileSystem.get_instance()
+        # The simulation path
+        self._simulation_path = None
+        # The overlay
+        self._overlay = None
 
     '''
     Return the name of this collector.

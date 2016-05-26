@@ -54,7 +54,7 @@ class Rm3SdnVpnConfigurator(Configurator):
     '''
 
     def configure(self, overlay, scenario):
-        self._log.info(self.__class__.__name__, 'Starting to create the configuration files for the controller.')
+        self._log.debug(self.__class__.__name__, 'Starting to create the configuration files for the controller.')
         self._write_system_configuration(scenario)
         self._write_vpns_configuration(overlay, scenario)
         self._log.info(self.__class__.__name__, 'Configuration files have been successfully created.')
@@ -84,7 +84,7 @@ class Rm3SdnVpnConfigurator(Configurator):
                         self.__SYS_CONG_FILE_NAME)
         # Write the file into tmp directory
         self._system_config.write(sys_conf_file)
-        self._log.info(self.__class__.__name__, '%s has been correctly generated.', self.__SYS_CONG_FILE_NAME)
+        self._log.info(self.__class__.__name__, '%s has been successfully generated.', self.__SYS_CONG_FILE_NAME)
 
     '''
     This method writes the XML VPN's configuration file.
@@ -130,7 +130,7 @@ class Rm3SdnVpnConfigurator(Configurator):
         xml_str = self._vpns_config.toprettyxml(indent="  ", encoding='UTF-8')
         with open(vpns_conf_file_str, 'w') as f:
             f.write(xml_str)
-        self._log.info(self.__class__.__name__, '%s has been correctly generated.', self.__VPNS_FILE_NAME)
+        self._log.info(self.__class__.__name__, '%s has been successfully generated.', self.__VPNS_FILE_NAME)
 
 
 """

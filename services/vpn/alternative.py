@@ -35,14 +35,18 @@ class Rm3SdnVpnAlternative(Alternative):
     '''
 
     def deploy(self, overlay, scenario):
+        self._log.debug(self.__class__.__name__, 'Starting to configure the alternative.')
         # Generate the configuration file
         self._configurator.configure(overlay, scenario)
+        self._log.debug(self.__class__.__name__, 'Passing the configuration files to the controller.')
         # TODO: move this instructions into FileSystem class
         shutil.copy('tmp/' + self._configurator.get_system_config_file(), os.path.expanduser(self._controller_path) + 'conf/')
         shutil.copy('tmp/' + self._configurator.get_vpns_config_file(), os.path.expanduser(self._controller_path) + 'conf/vpns/')
         # Start the controller
+        self._log.debug(self.__class__.__name__, 'Preparing to start the controller.')
         self._controller = ControllerStarter(self._controller_path, self._controller_cmd)
         self._controller.start()
+        self._log.info(self.__class__.__name__, 'Alternative %s has been successfully deployed.', self._name)
 
     '''
     Destroy the scenario associated to this alternative.
@@ -50,7 +54,9 @@ class Rm3SdnVpnAlternative(Alternative):
 
     def destroy(self):
         # Stop the controller
+        self._log.debug(self.__class__.__name__, 'Preparing to stop the controller.')
         self._controller.stop()
+        self._log.info(self.__class__.__name__, 'Alternative %s has been successfully stopped.')
 
     '''
     Return the configurator associated to this alternative.

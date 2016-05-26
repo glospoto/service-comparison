@@ -77,40 +77,48 @@ class ComparisonFramework(object):
                            service.get_name())
 
             # Create the scenario for the service
-            self._log.info(self.__class__.__name__, 'Building scenario for service %s.', service.get_name())
+            self._log.debug(self.__class__.__name__, 'Building scenario for service %s.', service.get_name())
             service.build_scenario()
             self._log.info(self.__class__.__name__, 'Scenario %s has been correctly built.', service.get_scenario())
 
             # For each alternative of this service, create a simulation
             for alternative in service.get_alternatives():
                 '''
-                Creating overlay and adding it to the topology object.
+                Deploying the alternative on the overlay and scenario for the current service.
                 '''
-                self._log.info(self.__class__.__name__, 'Deploying alternative %s.',
-                               alternative.get_name())
+                self._log.debug(self.__class__.__name__, 'Deploying alternative %s.', alternative.get_name())
                 # Setting the overlay for current alternative
                 alternative.deploy(service.get_overlay(), service.get_scenario())
+                self._log.debug(self.__class__.__name__,
+                                'Alternative %s has been successfully deployed on overlay %s and scenario %s.',
+                                alternative.get_name(), service.get_overlay().get_name(),
+                                service.get_scenario().get_name())
 
                 '''
                 Loading environment, creating the simulation and running it.
                 '''
-                self._log.info(self.__class__.__name__, 'Loading the environment for the alternative %s.',
-                               alternative)
+                self._log.debug(self.__class__.__name__, 'Loading the environment for the alternative %s.',
+                                alternative)
                 # Load an environment for the current alternative of this service
                 environment = self._loader.load(alternative.get_environment())
+                self._log.info(self.__class__.__name__,
+                               'Environment %s for the alternative %s has been successfully loaded.',
+                               environment, alternative.get_name())
                 # Create the simulation
+                self._log.debug(self.__class__.__name__,
+                               'Starting to create a simulation for service %s and alternative %s.',
+                               service.get_name(), alternative)
                 simulation = Simulation(self._topology, service, environment, alternative)
-                self._log.info(
-                    self.__class__.__name__,
-                    'A new simulation has been created for service %s and alternative %s.',
-                    service.get_name(), alternative)
+                self._log.info(self.__class__.__name__,
+                               'A new simulation has been created for service %s and alternative %s.',
+                               service.get_name(), alternative)
                 # Run the simulation
+                self._log.debug(self.__class__.__name__, 'Running the simulation.')
                 simulation.start()
                 simulation.join()
+                self._log.info(self.__class__.__name__, 'Simulation has been successfully run.')
 
-            self._log.info(self.__class__.__name__,
-                           'All alternatives for service %s have been successfully tested.',
+            self._log.info(self.__class__.__name__, 'All alternatives for service %s have been successfully tested.',
                            service.get_name())
 
-        self._log.info(self.__class__.__name__,
-                       'All services have been successfully tested; framework will stop.')
+        self._log.info(self.__class__.__name__, 'All services have been successfully tested; framework will stop.')

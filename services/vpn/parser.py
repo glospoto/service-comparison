@@ -22,7 +22,8 @@ class VpnServiceParser(ServiceParser):
     def create_service(self):
         self._log.debug(self.__class__.__name__, 'Creating service object for service %s.', self._service_name)
         service = VpnService(self._service_name)
-        self._log.info(self.__class__.__name__, 'Service object for service %s has been created.', self._service_name)
+        self._log.info(self.__class__.__name__, 'Service object for service %s has been successfully created.',
+                       self._service_name)
         self._service = service
         return service
 

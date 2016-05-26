@@ -5,7 +5,6 @@ from scapy.layers.inet import TCP
 from scapy.utils import rdpcap
 
 from collector.extractor import Extractor
-from utils.fs import FileSystem
 
 """
 This class implements an extractor for measuring the convergence time of an alternative.
@@ -17,8 +16,8 @@ class ControlPlaneConvergenceTime(Extractor):
 
     def __init__(self):
         Extractor.__init__(self)
-        # The FileSystem handler
-        self._fs = FileSystem.get_instance()
+        # Folder in which all extracted data will be stored
+        self._extractor_folder = 'cp-convergence-time'
 
     '''
     Set the simulation path in which save the extracted data.
@@ -55,12 +54,6 @@ reported in the sniffed packets.
 class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
     def __init__(self):
         ControlPlaneConvergenceTime.__init__(self)
-        # Folder in which all extracted data will be stored
-        self._extractor_folder = 'cp-convergence-time'
-        # Simulation path for data extraction
-        self._simulation_path = None
-        # The overlay
-        self._overlay = None
 
     def __repr__(self):
         return self.__class__.__name__
@@ -72,7 +65,7 @@ class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
     def set_simulation_path(self, simulation_path):
         self._simulation_path = simulation_path
         # Create extractor's folder
-        os.makedirs(self._simulation_path + '/' + self._extractor_folder)
+        self._fs.make_dir(self._simulation_path + '/' + self._extractor_folder)
 
     '''
     Set the overlay on which the simulation is running on.
@@ -115,7 +108,7 @@ class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
         output_file_name = self._simulation_path + '/' + self._extractor_folder + '/time.data'
         output_file = open(output_file_name, 'w')
         output_file.write('Convergence time (seconds): %s' % str(convergence_time))
-        self._log.info(self.__class__.__name__, 'All data has been correctly extracted.')
+        self._log.info(self.__class__.__name__, 'All data has been successfully extracted.')
         # Notify all observers
         self.notify_all()
 

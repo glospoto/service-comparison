@@ -85,7 +85,7 @@ class Topology(object):
             node = Node(name)
             # Add switch to the overlay
             overlay.add_vertex(node)
-        self._log.debug(self.__class__.__name__, 'Nodes added to %s.', overlay.get_name())
+        self._log.debug(self.__class__.__name__, 'Nodes have been added to %s.', overlay.get_name())
         # Add edge to the topology
         for edge in graph_topology.edges():
             from_node = overlay.get_node((edge[0]))
@@ -94,9 +94,9 @@ class Topology(object):
             edge = Edge(from_node, to_node)
             # Add the link to the list
             overlay.add_edge(edge)
-        self._log.debug(self.__class__.__name__, 'Edges added to %s.', overlay.get_name())
+        self._log.debug(self.__class__.__name__, 'Edges have been added to %s.', overlay.get_name())
         self._overlays[overlay.get_name()] = overlay
-        self._log.info(self.__class__.__name__, '%s correctly added.', overlay.get_name())
+        self._log.info(self.__class__.__name__, '%s successfully added.', overlay.get_name())
 
     '''
     Add an overlay to the topology.
