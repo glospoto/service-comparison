@@ -2,7 +2,7 @@ import subprocess
 from subprocess import PIPE
 
 """
-This class implements an instance of a docker container
+This class implements an instance of a docker container. In the framework, each docker instance represents a router.
 """
 
 
@@ -13,14 +13,14 @@ class Docker(object):
         self._opts = opts
 
     '''
-    Return the name of the Docker instance
+    Return the name of the Docker instance.
     '''
 
     def get_name(self):
         return self._name
 
     '''
-    This method runs docker create command
+    This method runs docker create command.
     '''
 
     def create(self):
@@ -29,7 +29,7 @@ class Docker(object):
         subprocess.Popen(cmd_debug, shell=True, stdout=PIPE, stderr=PIPE).communicate()
 
     '''
-    This method runs docker start command
+    This method runs docker start command.
     '''
 
     def start(self):
@@ -37,7 +37,13 @@ class Docker(object):
         subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
 
     '''
-    This method runs docker stop command
+    Add a new interface to this docker instance.
+    '''
+    def add_interface(self):
+        pass
+
+    '''
+    This method runs docker stop command.
     '''
 
     def stop(self):
@@ -45,9 +51,35 @@ class Docker(object):
         subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
 
     '''
-    This method runs docker rm command
+    This method runs docker rm command.
     '''
 
     def remove(self):
         cmd = 'sudo docker rm %s' % self._name
         subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
+
+
+"""
+This class models a linux bridge. It is used in the environment built on top of Docker to create link between each
+pair of router interfaces (remember that each docker instance represents a router).
+"""
+
+
+class Bridge(object):
+    def __init__(self, name):
+        # The name of the bridge
+        self._name = name
+
+    '''
+    Attach an interface to this bridge.
+    '''
+
+    def attach(self, interface):
+        pass
+
+    '''
+    Delete this bridge.
+    '''
+
+    def destroy(self):
+        pass
