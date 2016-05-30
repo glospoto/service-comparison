@@ -83,10 +83,8 @@ class Extractor(Thread, Observable):
         self._log = Logger.get_instance()
         # The FileSystem handler
         self._fs = FileSystem.get_instance()
-        # The simulation path
-        self._simulation_path = None
-        # The overlay
-        self._overlay = None
+        # The reference to the simulation
+        self._simulation = None
 
     '''
     Return the name of this collector.
@@ -94,6 +92,14 @@ class Extractor(Thread, Observable):
 
     def get_name(self):
         return self.__class__.__name__
+
+    '''
+    Set the simulation for this extractor.
+    '''
+
+    @abstractmethod
+    def set_simulation(self, simulation):
+        pass
 
     '''
     This method implements the strategy for collecting data.

@@ -89,9 +89,11 @@ class FileSystem(object):
     Join one or more paths into a single one. This one will become the current working directory.
     '''
 
-    def join(self, path, *paths):
-        self._current_working_path = os.path.join(path, *paths)
-        return self._current_working_path
+    @staticmethod
+    def join(path, *paths):
+        # self._current_working_path = os.path.join(path, *paths)
+        # return self._current_working_path
+        return os.path.join(path, *paths)
 
     '''
     Check whether a path exists

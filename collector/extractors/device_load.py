@@ -1,10 +1,10 @@
 from abc import ABCMeta, abstractmethod
-from subprocess import Popen, PIPE
+from subprocess import Popen
 import os
 import time
 
 from collector.extractor import Extractor
-from utils.fs import FileSystem
+from utils.file import File
 
 """
 This class models a device load extractor. This kind of extractor has in charge the task of dumping the routing tables.
@@ -17,22 +17,14 @@ class DeviceLoad(Extractor):
     def __init__(self):
         Extractor.__init__(self)
         # Folder in which all extracted data will be stored
-        self._extractor_folder = 'device-load'
+        self._extractor_folder_name = 'device-load'
 
     '''
     Set the simulation path in which save the extracted data.
     '''
 
     @abstractmethod
-    def set_simulation_path(self, simulation_path):
-        pass
-
-    '''
-    Set the overlay on which the simulation is running on.
-    '''
-
-    @abstractmethod
-    def set_overlay(self, overlay):
+    def set_simulation(self, simulation):
         pass
 
     '''
@@ -54,6 +46,8 @@ switch in the overlay, and it stores the output inside the extractor folder.
 class MininetDeviceLoad(DeviceLoad):
     def __init__(self):
         DeviceLoad.__init__(self)
+        # The abspath to the extraction folder
+        self._extractor_folder = None
 
     def __repr__(self):
         return self.__class__.__name__
@@ -62,17 +56,13 @@ class MininetDeviceLoad(DeviceLoad):
     Set the simulation path in which save the extracted data.
     '''
 
-    def set_simulation_path(self, simulation_path):
-        self._simulation_path = simulation_path
-        # Create extractor's folder
-        self._fs.make_dir(self._simulation_path + '/' + self._extractor_folder)
-
-    '''
-    Set the overlay which the simulation is running on.
-    '''
-
-    def set_overlay(self, overlay):
-        self._overlay = overlay
+    def set_simulation(self, simulation):
+        # Set the simulation
+        self._simulation = simulation
+        # The abspath to the extraction folder
+        self._extractor_folder = self._fs.join(simulation.get_simulation_path(), self._extractor_folder_name)
+        # Create extraction folder on the file system
+        self._fs.make_dir(self._extractor_folder)
 
     '''
     Start the process of extracting data.
@@ -81,24 +71,22 @@ class MininetDeviceLoad(DeviceLoad):
     def extract_data(self):
         # First of all, sleep for 1 minute
         self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
-        time.sleep(60)
+        time.sleep(10)
         self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
-        switches = self._overlay.get_nodes()
+        switches = self._simulation.get_overlay().get_nodes()
         # Probably put here the creation of the folder which will contain all datapaths' flow tables.
         for switch in switches.values():
             self._log.debug(self.__class__.__name__, 'Extracting routing table from %s', switch.get_name())
             # Command for extracting data
             cmd = 'sudo ovs-ofctl -O OpenFlow13 dump-flows ' + switch.get_name()
             # File into the simulation folder in which storing data
-            output_file_name = self._simulation_path + '/' + self._extractor_folder + '/' + switch.get_name() + '.data'
-            # Create a file starting from its name
-            output_file = open(output_file_name, 'w')
-            self._log.debug(self.__class__.__name__, 'Starting to write the convergence time into extractor folder.')
+            file_name = switch.get_name() + '.data'
+            output_file = File(self._extractor_folder, file_name)
+            self._log.debug(self.__class__.__name__, 'Starting to write FIB into extractor folder.')
             # Create a new subprocess whose output will be redirect into output_file
-            extractor = Popen(args=cmd, stdout=output_file, shell=True)
+            extractor = Popen(args=cmd, stdout=output_file.get_file(), shell=True)
             # Write data on disk
-            output_file.flush()
-            os.fsync(output_file.fileno())
+            output_file.save()
             # Wait for process termination
             extractor.wait()
         self._log.info(self.__class__.__name__, 'All data has been successfully extracted.')

@@ -5,6 +5,7 @@ from scapy.layers.inet import TCP
 from scapy.utils import rdpcap
 
 from collector.extractor import Extractor
+from utils.file import File
 from utils.fs import FileSystem
 
 """
@@ -18,23 +19,15 @@ class ControlPlaneOverhead(Extractor):
 
     def __init__(self):
         Extractor.__init__(self)
-        # The FileSystem handler
-        self._fs = FileSystem.get_instance()
+        # Folder in which all extracted data will be stored
+        self._extractor_folder_name = 'cp-overhead'
 
     '''
     Set the simulation path in which save the extracted data.
     '''
 
     @abstractmethod
-    def set_simulation_path(self, simulation_path):
-        pass
-
-    '''
-    Set the overlay on which the simulation is running on.
-    '''
-
-    @abstractmethod
-    def set_overlay(self, overlay):
+    def set_simulation(self, simulation):
         pass
 
     '''
@@ -54,14 +47,12 @@ the sniffed packets.
 
 
 class MininetControlPlaneOverhead(ControlPlaneOverhead):
-    def __init__(self):
+    def __init__(self, ):
         ControlPlaneOverhead.__init__(self)
-        # Folder in which all extracred data will be stored
-        self._extractor_folder = 'cp-overhead'
-        # Simulation path for data extraction
-        self._simulation_path = None
-        # The overlay
-        self._overlay = None
+        # The abspath to the extraction folder
+        self._extractor_folder = None
+        # The file name which contains extracted information
+        self._extractor_file_name = 'overhead.data'
 
     def __repr__(self):
         return self.__class__.__name__
@@ -70,17 +61,20 @@ class MininetControlPlaneOverhead(ControlPlaneOverhead):
     Set the simulation path in which save the extracted data.
     '''
 
-    def set_simulation_path(self, simulation_path):
-        self._simulation_path = simulation_path
-        # Create extractor's folder
-        os.makedirs(self._simulation_path + '/' + self._extractor_folder)
+    def set_simulation(self, simulation):
+        # Set the simulation
+        self._simulation = simulation
+        # The abspath to the extraction folder
+        self._extractor_folder = self._fs.join(simulation.get_simulation_path(), self._extractor_folder_name)
+        # Create extraction folder on the file system
+        self._fs.make_dir(self._extractor_folder)
 
-    '''
-    Set the overlay on which the simulation is running on.
-    '''
-
-    def set_overlay(self, overlay):
-        self._overlay = overlay
+    # '''
+    # Set the overlay on which the simulation is running on.
+    # '''
+    #
+    # def set_overlay(self, overlay):
+    #     self._overlay = overlay
 
     '''
     Start the process of extracting data.
@@ -104,9 +98,11 @@ class MininetControlPlaneOverhead(ControlPlaneOverhead):
                     count += 1
         self._log.debug(self.__class__.__name__, 'Starting to write the convergence time into extractor folder.')
         # Write it into a file inside the extractor folder
-        output_file_name = self._simulation_path + '/' + self._extractor_folder + '/overhead.data'
-        output_file = open(output_file_name, 'w')
+        output_file = File(self._extractor_folder, self._extractor_file_name)
+        # output_file_name = self._simulation_path + '/' + self._extractor_folder + '/overhead.data'
+        # output_file = open(output_file_name, 'w')
         output_file.write('Exchanged packets: %s' % str(count))
+        output_file.save()
         self._log.info(self.__class__.__name__, 'All data has been correctly extracted.')
         # Notify all observers
         self.notify_all()

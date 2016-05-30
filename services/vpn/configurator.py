@@ -142,14 +142,6 @@ class MplsBgpVpnConfigurator(Configurator):
     def __init__(self):
         Configurator.__init__(self)
         self._name = self.__class__.__name__
-        # All created VPNs
-        self._vpns = {}
-        # References to object for handling configuration files
-        self._system_config = ConfigParser.ConfigParser()
-        self._vpns_config = minidom.Document()
-        # Files names
-        self.__SYS_CONG_FILE_NAME = 'system.conf'
-        self.__VPNS_FILE_NAME = 'vpns.xml'
 
     def __repr__(self):
         return '%s' % self._name
@@ -174,27 +166,24 @@ class MplsBgpVpnConfigurator(Configurator):
         for node in overlay.get_nodes().values():
 
             self._log.info(self.__class__.__name__, 'Creating the Zebra configuration file.')
-            self._fs.join(self._fs.get_tmp_folder(), 'confs')
-            cmd_zebra = 'sudo docker cp %s/zebra.conf %s:/etc/quagga/' % (
-                self._fs.get_current_working_folder(), node.get_name())
+            confs = self._fs.join(self._fs.get_tmp_folder(), 'confs')
+            cmd_zebra = 'sudo docker cp %s/zebra.conf %s:/etc/quagga/' % (confs, node.get_name())
             subprocess.Popen(cmd_zebra, shell=True, stdout=PIPE, stderr=PIPE).communicate()
             self._log.debug(self.__class__.__name__, 'Zebra configuration file has been successfully created.')
 
             self._log.info(self.__class__.__name__, 'Creating the Quagga configuration file.')
-            self._fs.join(self._fs.get_tmp_folder(), 'confs')
-            cmd_quagga = 'sudo docker cp %s/daemons %s:/etc/quagga/' % (
-                self._fs.get_current_working_folder(), node.get_name())
+            confs = self._fs.join(self._fs.get_tmp_folder(), 'confs')
+            cmd_quagga = 'sudo docker cp %s/daemons %s:/etc/quagga/' % (confs, node.get_name())
             subprocess.Popen(cmd_quagga, shell=True, stdout=PIPE, stderr=PIPE).communicate()
             self._log.debug(self.__class__.__name__, 'Quagga configuration file has been successfully created.')
 
             # Switch to specific node configuration folder
-            self._fs.join(self._fs.get_tmp_folder(), 'confs', node.get_name())
+            node_folder = self._fs.join(self._fs.get_tmp_folder(), 'confs', node.get_name())
 
             if node.get_role() == 'PE':
                 self._log.info(self.__class__.__name__, 'Creating the GoBGP configuration file.')
                 # Copying all file in the current directory into the container
-                cmd_gobgp = 'sudo docker cp %s/gobgp.conf %s:/etc/quagga/' % (
-                    self._fs.get_current_working_folder(), node.get_name())
+                cmd_gobgp = 'sudo docker cp %s/gobgp.conf %s:/etc/quagga/' % (node_folder, node.get_name())
                 subprocess.Popen(cmd_gobgp, shell=True, stdout=PIPE, stderr=PIPE).communicate()
                 self._log.debug(self.__class__.__name__, 'GoBGP configuration file has been successfully created.')
 
@@ -205,8 +194,7 @@ class MplsBgpVpnConfigurator(Configurator):
                 self._log.debug(self.__class__.__name__, 'GoBGP routing daemon has been successfully started.')
 
                 self._log.info(self.__class__.__name__, 'Creating the BagPipiBGP configuration file.')
-                cmd_bagpipebgp = 'sudo docker cp %s/bgp.conf %s:/etc/bagpipe-bgp/' % (
-                    self._fs.get_current_working_folder(), node.get_name())
+                cmd_bagpipebgp = 'sudo docker cp %s/bgp.conf %s:/etc/bagpipe-bgp/' % (node_folder, node.get_name())
                 subprocess.Popen(cmd_bagpipebgp, shell=True, stdout=PIPE, stderr=PIPE).communicate()
                 self._log.debug(self.__class__.__name__, 'BagPipeBGP configuration file has been successfully created.')
 
@@ -217,8 +205,7 @@ class MplsBgpVpnConfigurator(Configurator):
                 self._log.debug(self.__class__.__name__, 'BagPipeBGP routing daemon has been successfully started.')
 
             self._log.info(self.__class__.__name__, 'Creating the OSPF configuration file.')
-            cmd_ospf = 'sudo docker cp %s/ospfd.conf %s:/etc/quagga/' % (
-                self._fs.get_current_working_folder(), node.get_name())
+            cmd_ospf = 'sudo docker cp %s/ospfd.conf %s:/etc/quagga/' % (node_folder, node.get_name())
             subprocess.Popen(cmd_ospf, shell=True, stdout=PIPE, stderr=PIPE).communicate()
             self._log.debug(self.__class__.__name__, 'OSPF configuration file has been successfully created.')
 

@@ -65,7 +65,7 @@ class Simulation(Thread):
         # Create a folder for this simulation (simulations/service/alternative/) up to the name of the alternative
         alternative_path = self._fs.join(
             self._root_simulation_path, self._service.get_name().lower(), self._alternative.get_name())
-        if not self._fs.exists(alternative_path):
+        if not self._fs.path_exists(alternative_path):
             self._log.debug(self.__class__.__name__,
                             'Creating a folder for simulating service %s.', self._service.get_name())
             self._fs.make_dir(alternative_path)
@@ -94,6 +94,13 @@ class Simulation(Thread):
 
     def get_service(self):
         return self._service
+
+    '''
+    Return the overlay which this simulation is running on.
+    '''
+
+    def get_overlay(self):
+        return self._service.get_overlay()
 
     '''
     Return the alternative under test.
@@ -158,8 +165,7 @@ class Simulation(Thread):
         for metric in self._metrics:
             extractor = metric.get_extractor()
             self._log.debug(self.__class__.__name__, 'Extractor %s has been loaded.', extractor.get_name())
-            extractor.set_simulation_path(self._simulation_path)
-            extractor.set_overlay(self._service.get_overlay())
+            extractor.set_simulation(self)
             extractor.add_observer(self)
             self._log.debug(self.__class__.__name__, 'Extractor %s is now going in execution.', extractor.get_name())
             extractor.start()
@@ -190,9 +196,9 @@ class Simulation(Thread):
             self._log.debug(self.__class__.__name__,
                             'All extractors done; starting to stop alternative %s and environment %s.',
                             self._alternative.get_name(), self._environment)
-            self._alternative.destroy()     # TODO check it!
+            self._alternative.destroy()  # TODO check it!
             self._log.debug(self.__class__.__name__, 'Alternative %s has been successfully stopped.',
-                           self._alternative.get_name())
+                            self._alternative.get_name())
             self._environment.stop()
             self._log.debug(self.__class__.__name__, 'Environment %s has been successfully stopped.', self._environment)
             self._extractor_count = 0

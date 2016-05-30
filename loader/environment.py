@@ -140,6 +140,8 @@ class DockerEnvironment(Environment):
                             instance.get_name())
         self._log.info(self.__class__.__name__, 'All Docker instances are now successfully running.')
 
+        # Create bridge
+
     '''
     This method implements the steps for stopping this environment.
     '''

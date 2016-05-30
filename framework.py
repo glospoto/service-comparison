@@ -84,17 +84,6 @@ class ComparisonFramework(object):
             # For each alternative of this service, create a simulation
             for alternative in service.get_alternatives():
                 '''
-                Deploying the alternative on the overlay and scenario for the current service.
-                '''
-                self._log.debug(self.__class__.__name__, 'Deploying alternative %s.', alternative.get_name())
-                # Setting the overlay for current alternative
-                alternative.deploy(service.get_overlay(), service.get_scenario())
-                self._log.debug(self.__class__.__name__,
-                                'Alternative %s has been successfully deployed on overlay %s and scenario %s.',
-                                alternative.get_name(), service.get_overlay().get_name(),
-                                service.get_scenario().get_name())
-
-                '''
                 Loading environment, creating the simulation and running it.
                 '''
                 self._log.debug(self.__class__.__name__, 'Loading the environment for the alternative %s.',
@@ -104,10 +93,22 @@ class ComparisonFramework(object):
                 self._log.info(self.__class__.__name__,
                                'Environment %s for the alternative %s has been successfully loaded.',
                                environment, alternative.get_name())
+
+                '''
+                    Deploying the alternative on the overlay and scenario for the current service.
+                    '''
+                self._log.debug(self.__class__.__name__, 'Deploying alternative %s.', alternative.get_name())
+                # Setting the overlay for current alternative
+                alternative.deploy(service.get_overlay(), service.get_scenario())
+                self._log.debug(self.__class__.__name__,
+                                'Alternative %s has been successfully deployed on overlay %s and scenario %s.',
+                                alternative.get_name(), service.get_overlay().get_name(),
+                                service.get_scenario().get_name())
+
                 # Create the simulation
                 self._log.debug(self.__class__.__name__,
-                               'Starting to create a simulation for service %s and alternative %s.',
-                               service.get_name(), alternative)
+                                'Starting to create a simulation for service %s and alternative %s.',
+                                service.get_name(), alternative)
                 simulation = Simulation(self._topology, service, environment, alternative)
                 self._log.info(self.__class__.__name__,
                                'A new simulation has been created for service %s and alternative %s.',

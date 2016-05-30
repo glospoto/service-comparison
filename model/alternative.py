@@ -1,5 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
+from utils.fs import FileSystem
 from utils.log import Logger
 
 """
@@ -13,6 +14,8 @@ class Alternative(object):
     def __init__(self, name):
         # Logger
         self._log = Logger.get_instance()
+        # FileSystem
+        self._fs = FileSystem.get_instance()
         # The name of the alternative
         self._name = name
         # This is a string reference to the class that models the environment. This is NOT a reference to the object!

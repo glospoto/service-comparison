@@ -5,6 +5,7 @@ from scapy.layers.inet import TCP
 from scapy.utils import rdpcap
 
 from collector.extractor import Extractor
+from utils.file import File
 
 """
 This class implements an extractor for measuring the convergence time of an alternative.
@@ -17,22 +18,14 @@ class ControlPlaneConvergenceTime(Extractor):
     def __init__(self):
         Extractor.__init__(self)
         # Folder in which all extracted data will be stored
-        self._extractor_folder = 'cp-convergence-time'
+        self._extractor_folder_name = 'cp-convergence-time'
 
     '''
     Set the simulation path in which save the extracted data.
     '''
 
     @abstractmethod
-    def set_simulation_path(self, simulation_path):
-        pass
-
-    '''
-    Set the overlay on which the simulation is running on.
-    '''
-
-    @abstractmethod
-    def set_overlay(self, overlay):
+    def set_simulation(self, simulation):
         pass
 
     '''
@@ -54,6 +47,10 @@ reported in the sniffed packets.
 class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
     def __init__(self):
         ControlPlaneConvergenceTime.__init__(self)
+        # The abspath to the extraction folder
+        self._extractor_folder = None
+        # The file name which contains extracted information
+        self._extractor_file_name = 'time.data'
 
     def __repr__(self):
         return self.__class__.__name__
@@ -62,17 +59,13 @@ class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
     Set the simulation path in which save the extracted data.
     '''
 
-    def set_simulation_path(self, simulation_path):
-        self._simulation_path = simulation_path
-        # Create extractor's folder
-        self._fs.make_dir(self._simulation_path + '/' + self._extractor_folder)
-
-    '''
-    Set the overlay on which the simulation is running on.
-    '''
-
-    def set_overlay(self, overlay):
-        self._overlay = overlay
+    def set_simulation(self, simulation):
+        # Set the simulation
+        self._simulation = simulation
+        # The abspath to the extraction folder
+        self._extractor_folder = self._fs.join(simulation.get_simulation_path(), self._extractor_folder_name)
+        # Create extraction folder on the file system
+        self._fs.make_dir(self._extractor_folder)
 
     '''
     Start the process of extracting data.
@@ -105,9 +98,9 @@ class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
         convergence_time = time_last_packet - time_first_packet
         self._log.debug(self.__class__.__name__, 'Starting to write the convergence time into extractor folder.')
         # Write it into a file inside the extractor folder
-        output_file_name = self._simulation_path + '/' + self._extractor_folder + '/time.data'
-        output_file = open(output_file_name, 'w')
+        output_file = File(self._extractor_folder, self._extractor_file_name)
         output_file.write('Convergence time (seconds): %s' % str(convergence_time))
+        output_file.save()
         self._log.info(self.__class__.__name__, 'All data has been successfully extracted.')
         # Notify all observers
         self.notify_all()
