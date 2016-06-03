@@ -1,6 +1,8 @@
 import subprocess
 from subprocess import PIPE
 
+from utils.process import Process
+
 """
 This class implements an instance of a docker container. In the framework, each docker instance represents a router.
 """
@@ -25,8 +27,11 @@ class Docker(object):
 
     def create(self):
         cmd = 'sudo docker create --name=%s %s -i %s' % (self._name, self._opts, self._image)
-        cmd_debug = 'sudo docker create --name=%s %s --tty --interactive -i %s' % (self._name, self._opts, self._image)
-        subprocess.Popen(cmd_debug, shell=True, stdout=PIPE, stderr=PIPE).communicate()
+        # cmd_debug = 'sudo docker create --name=%s %s --tty --interactive -i %s' % (self._name, self._opts, self._image)
+        process = Process()
+        process.execute(cmd)
+        process.communicate()
+        # subprocess.Popen(cmd_debug, shell=True, stdout=PIPE, stderr=PIPE).communicate()
 
     '''
     This method runs docker start command.
@@ -34,13 +39,10 @@ class Docker(object):
 
     def start(self):
         cmd = 'sudo docker start %s' % self._name
-        subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
-
-    '''
-    Add a new interface to this docker instance.
-    '''
-    def add_interface(self):
-        pass
+        process = Process()
+        process.execute(cmd)
+        process.communicate()
+        # subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
 
     '''
     This method runs docker stop command.
@@ -48,7 +50,10 @@ class Docker(object):
 
     def stop(self):
         cmd = 'sudo docker stop %s' % self._name
-        subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
+        process = Process()
+        process.execute(cmd)
+        process.communicate()
+        # subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
 
     '''
     This method runs docker rm command.
@@ -56,12 +61,15 @@ class Docker(object):
 
     def remove(self):
         cmd = 'sudo docker rm %s' % self._name
-        subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
+        process = Process()
+        process.execute(cmd)
+        process.communicate()
+        # subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
 
 
 """
-This class models a linux bridge. It is used in the environment built on top of Docker to create link between each
-pair of router interfaces (remember that each docker instance represents a router).
+This class wraps the "docker network" command. It is used in the environment built on top of Docker to create link
+between each pair of router interfaces (remember that each docker instance represents a router).
 """
 
 
@@ -71,10 +79,17 @@ class Bridge(object):
         self._name = name
 
     '''
-    Attach an interface to this bridge.
+    Create a new bridge (wraps docker network)
     '''
 
-    def attach(self, interface):
+    def create(self, subnet):
+        cmd = 'sudo docker network create -d bridge --subnet %s %s' % (subnet, self._name)
+
+    '''
+    Connect two Docker instances to this bridge (wraps docker connect)
+    '''
+
+    def connect(self, from_node, to_node):
         pass
 
     '''

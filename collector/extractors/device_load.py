@@ -111,6 +111,8 @@ information from routing tables.
 class DockerDeviceLoad(DeviceLoad):
     def __init__(self):
         DeviceLoad.__init__(self)
+        # The abspath to the extraction folder
+        self._extractor_folder = None
 
     def __repr__(self):
         return self.__class__.__name__
@@ -119,17 +121,13 @@ class DockerDeviceLoad(DeviceLoad):
     Set the simulation path in which save the extracted data.
     '''
 
-    def set_simulation_path(self, simulation_path):
-        self._simulation_path = simulation_path
-        # Create extractor's folder
-        self._fs.make_dir(self._simulation_path + '/' + self._extractor_folder)
-
-    '''
-    Set the overlay which the simulation is running on.
-    '''
-
-    def set_overlay(self, overlay):
-        self._overlay = overlay
+    def set_simulation(self, simulation):
+        # Set the simulation
+        self._simulation = simulation
+        # The abspath to the extraction folder
+        self._extractor_folder = self._fs.join(simulation.get_simulation_path(), self._extractor_folder_name)
+        # Create extraction folder on the file system
+        self._fs.make_dir(self._extractor_folder)
 
     '''
     Start the process of extracting data.

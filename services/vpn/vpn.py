@@ -181,6 +181,14 @@ class Link(object):
             self._from_switch, self._from_switch_interface, self._to_switch, self._to_switch_interface)
 
     '''
+    Return the name of the link. That name is created by composing the name of the source node and the name of the
+    destination node
+    '''
+
+    def get_name(self):
+        return self._from_switch.get_name() + '-' + self._to_switch.get_name()
+
+    '''
     Return the source switch of the link
     '''
 

@@ -3,6 +3,8 @@ from abc import ABCMeta, abstractmethod
 from loader.env.mininet_simulator import MininetTopology, MininetStartSimulation
 from loader.env.docker_simulator import Docker
 import utils.class_for_name as Class
+from services.vpn.vpn import Switch
+from utils.generator import AddressGenerator
 from utils.log import Logger
 
 """
@@ -108,6 +110,8 @@ docker container.
 class DockerEnvironment(Environment):
     def __init__(self):
         Environment.__init__(self)
+        # Prepare the set of subnets to use for connecting docker instances
+        self._ip_generator = AddressGenerator.get_instance()
         # Running instances
         self._running_docker_instances = []
 
@@ -120,6 +124,9 @@ class DockerEnvironment(Environment):
 
     def run(self, overlay):
         self._log.info(self.__class__.__name__, 'Initializing the environment.')
+        self._log.debug(self.__class__.__name__,
+                        'Starting to allocate /30 subnets for connecting the docker instances.')
+        self._ip_generator.create_subnets_for_p2p_links()
         self._log.info(self.__class__.__name__, 'Starting to create a Docker instance for each node in the overlay.')
         # Create the network
         for node in overlay.get_nodes().values():
@@ -130,6 +137,17 @@ class DockerEnvironment(Environment):
             instance.create()
             self._log.debug(self.__class__.__name__, 'Container for node %s has been correctly created.',
                             node.get_name())
+
+        # Add hosts to the network
+        for host in overlay.get_hosts().values():
+            self._log.debug(self.__class__.__name__, 'Creating Docker container for host %s.', host.get_name())
+            instance = Docker(host.get_name(), 'scf:v2', '--privileged=True')
+            # Add the instance to those running
+            self._running_docker_instances.append(instance)
+            instance.create()
+            self._log.debug(self.__class__.__name__, 'Container for host %s has been correctly created.',
+                            host.get_name())
+
         self._log.info(self.__class__.__name__, 'All Docker instances are now successfully created.')
         # Run all docker instances
         self._log.info(self.__class__.__name__, 'Starting all Docker instances.')
@@ -140,7 +158,9 @@ class DockerEnvironment(Environment):
                             instance.get_name())
         self._log.info(self.__class__.__name__, 'All Docker instances are now successfully running.')
 
-        # Create bridge
+        # Create bridge for each link in the network
+        for link in overlay.get_links():
+            print '######################', link.get_name()
 
     '''
     This method implements the steps for stopping this environment.
