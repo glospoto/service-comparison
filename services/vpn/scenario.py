@@ -3,7 +3,6 @@ import shutil
 import subprocess
 from subprocess import PIPE
 
-from loader.env.controller import ControllerStarter
 from model.scenario import Scenario
 from services.vpn.vpn import VirtualPrivateNetwork, Host, Link, Site
 from utils.generator import AddressGenerator
@@ -67,11 +66,13 @@ class VpnScenario(Scenario):
     '''
 
     def _create_site(self, vpn, pe, overlay, i):
+        # IP generator
+        ip_generator = AddressGenerator.get_instance()
         # First of all, create an host for this site
         # IP addresses for the hosts
         self._log.debug(self.__class__.__name__, 'Starting to create a new site for VPN %s.', vpn.get_name())
         self._log.debug(self.__class__.__name__, 'Generating IP address for the host.')
-        h_ip = AddressGenerator.generate_ip_address()
+        h_ip = ip_generator.generate_ip_address()
         host = Host('h' + str(i) + '_' + pe.get_name(), h_ip)
         self._log.debug(self.__class__.__name__, 'Host %s has been successfully generated.', host.get_name())
         # Add host to the overlay
@@ -86,12 +87,12 @@ class VpnScenario(Scenario):
         pe_interface_name = pe.create_interface()
         self._log.debug(self.__class__.__name__, 'A new interface has been generated for the PE %s.', pe.get_name())
         # Finally, create a Link object between host and PE and add it to the overlay
-        link = Link(host, pe, host.get_interface_name(), pe_interface_name)
+        link = Link(host, pe, host.get_interface_name(), pe_interface_name, ip_generator.get_next_subnet())
         self._log.debug(self.__class__.__name__, 'Link %s has been created.', link)
         overlay.add_link(link)
         self._log.debug(self.__class__.__name__,
                         'Link %s created and added to %s', link, overlay.get_name())
-        site = Site(vpn, pe, pe_interface_name, AddressGenerator.get_subnet_from_ip(host.get_ip()))
+        site = Site(vpn, pe, pe_interface_name, ip_generator.get_subnet_from_ip(host.get_ip()))
         self._log.info(self.__class__.__name__, 'Site %s has been successfully created.', site)
 
         return site

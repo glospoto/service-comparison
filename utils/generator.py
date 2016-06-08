@@ -9,6 +9,9 @@ class AddressGenerator(object):
     __instance = None
 
     def __init__(self):
+        # Flag indicating whether the /30 subnets have been already generated
+        self._subnets_already_generated = False
+        # The list with all the /30 subnets for p2p link
         self._subnets_for_p2p_links = []
 
     '''
@@ -24,11 +27,15 @@ class AddressGenerator(object):
     '''
     Create a /30 set of subnets starting from a /16 subnets. Those subnets will be used for p2p links
     '''
-    def create_subnets_for_p2p_links(self):
+    def _create_subnets_for_p2p_links(self):
         subnet = IPNetwork('10.0.0.0/20')
         self._subnets_for_p2p_links = list(subnet.subnet(30))
+        # Subnets have been successfully generated
+        self._subnets_already_generated = True
 
     def get_next_subnet(self):
+        if not self._subnets_already_generated:
+            self._create_subnets_for_p2p_links()
         if len(self._subnets_for_p2p_links) > 0:
             return self._subnets_for_p2p_links.pop(0)
 

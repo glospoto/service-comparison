@@ -27,9 +27,9 @@ class Docker(object):
 
     def create(self):
         cmd = 'sudo docker create --name=%s %s -i %s' % (self._name, self._opts, self._image)
-        # cmd_debug = 'sudo docker create --name=%s %s --tty --interactive -i %s' % (self._name, self._opts, self._image)
+        cmd_debug = 'sudo docker create --name=%s %s --tty --interactive -i %s' % (self._name, self._opts, self._image)
         process = Process()
-        process.execute(cmd)
+        process.execute(cmd_debug)
         process.communicate()
         # subprocess.Popen(cmd_debug, shell=True, stdout=PIPE, stderr=PIPE).communicate()
 
@@ -79,18 +79,37 @@ class Bridge(object):
         self._name = name
 
     '''
+    Return the name of this bridge
+    '''
+
+    def get_name(self):
+        return self._name
+
+    '''
     Create a new bridge (wraps docker network)
     '''
 
     def create(self, subnet):
         cmd = 'sudo docker network create -d bridge --subnet %s %s' % (subnet, self._name)
+        process = Process()
+        process.execute(cmd)
+        process.communicate()
 
     '''
-    Connect two Docker instances to this bridge (wraps docker connect)
+    Connect two Docker instances to this bridge (wraps docker connect).
     '''
 
-    def connect(self, from_node, to_node):
-        pass
+    def connect(self, source_node, destination_node):
+        cmd_source_node = 'sudo docker network connect %s %s' % (self._name, source_node)
+        cmd_destination_node = 'sudo docker network connect %s %s' % (self._name, destination_node)
+
+        process_source = Process()
+        process_source.execute(cmd_source_node)
+        process_source.communicate()
+
+        process_destination = Process()
+        process_destination.execute(cmd_destination_node)
+        process_destination.communicate()
 
     '''
     Delete this bridge.

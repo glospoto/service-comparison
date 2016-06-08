@@ -170,11 +170,13 @@ This class models a link in the network. An edge is an object with a start end a
 
 
 class Link(object):
-    def __init__(self, from_switch, to_switch, from_switch_interface, to_switch_interface):
+    def __init__(self, from_switch, to_switch, from_switch_interface, to_switch_interface, subnet):
         self._from_switch = from_switch
         self._to_switch = to_switch
         self._from_switch_interface = from_switch_interface
         self._to_switch_interface = to_switch_interface
+        # It is used for MplsBpg implementation
+        self._subnet = subnet
 
     def __repr__(self):
         return 'Link[from=%s:%s, to=%s:%s]' % (
@@ -215,6 +217,13 @@ class Link(object):
 
     def get_to_switch_interface(self):
         return self._to_switch_interface
+
+    '''
+    Return the IP subnet associated to this link
+    '''
+
+    def get_subnet(self):
+        return self._subnet
 
 
 """

@@ -1,10 +1,8 @@
 from abc import ABCMeta, abstractmethod
 
 from loader.env.mininet_simulator import MininetTopology, MininetStartSimulation
-from loader.env.docker_simulator import Docker
+from loader.env.docker_simulator import Docker, Bridge
 import utils.class_for_name as Class
-from services.vpn.vpn import Switch
-from utils.generator import AddressGenerator
 from utils.log import Logger
 
 """
@@ -110,10 +108,10 @@ docker container.
 class DockerEnvironment(Environment):
     def __init__(self):
         Environment.__init__(self)
-        # Prepare the set of subnets to use for connecting docker instances
-        self._ip_generator = AddressGenerator.get_instance()
         # Running instances
         self._running_docker_instances = []
+        # Active bridges
+        self._active_bridges = []
 
     def __repr__(self):
         return self.__class__.__name__
@@ -126,7 +124,6 @@ class DockerEnvironment(Environment):
         self._log.info(self.__class__.__name__, 'Initializing the environment.')
         self._log.debug(self.__class__.__name__,
                         'Starting to allocate /30 subnets for connecting the docker instances.')
-        self._ip_generator.create_subnets_for_p2p_links()
         self._log.info(self.__class__.__name__, 'Starting to create a Docker instance for each node in the overlay.')
         # Create the network
         for node in overlay.get_nodes().values():
@@ -160,7 +157,17 @@ class DockerEnvironment(Environment):
 
         # Create bridge for each link in the network
         for link in overlay.get_links():
-            print '######################', link.get_name()
+            self._log.debug(self.__class__.__name__, 'Creating bridge for link %s.', link.get_name())
+
+            bridge = Bridge(link.get_name())
+            # Create the Docker bridge
+            bridge.create(link.get_subnet())
+            # Connect the Docker instances of this link to the Docker bridge (remember to pass the name of the switches)
+            bridge.connect(link.get_from_switch().get_name(), link.get_to_switch().get_name())
+            # Add the bridge to the list active ones
+            self._active_bridges.append(bridge)
+            self._log.debug(self.__class__.__name__, 'Bridge %s has been successfully created.', bridge.get_name())
+        self._log.info(self.__class__.__name__, 'Bridges have been successfully created.')
 
     '''
     This method implements the steps for stopping this environment.
@@ -168,6 +175,12 @@ class DockerEnvironment(Environment):
 
     def stop(self):
         self._log.info(self.__class__.__name__, 'Stopping the environment.')
+        # Remove all bridges
+        for bridge in self._active_bridges:
+            bridge.destroy()
+            self._log.debug(self.__class__.__name__, 'Bridge %s has been correctly deleted.', bridge.get_name())
+
+        # Remove all instances
         for instance in self._running_docker_instances:
             instance.stop()
             instance.remove()

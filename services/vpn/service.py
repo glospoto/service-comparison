@@ -4,6 +4,7 @@ from model.service import Service
 from services.vpn.overlay import VpnOverlay
 from services.vpn.scenario import VpnScenario
 from services.vpn.vpn import Switch, Link
+from utils.generator import AddressGenerator
 
 """
 This class specializes class Service for VPN service. It has in charge the task of creating the alternatives under test
@@ -42,6 +43,8 @@ class VpnService(Service):
     def create_overlay(self, topology):
         # The VpnOverlay instance
         self._overlay = VpnOverlay()
+        # IP generator instance, used to assign subnet to the link
+        ip_generator = AddressGenerator.get_instance()
         self._log.debug(self.__class__.__name__, 'Starting to create the overlay for the service %s', self._name)
 
         # For each node in the topology, create a Switch object in the VpnOverlay
@@ -67,7 +70,9 @@ class VpnService(Service):
             from_switch_interface = from_switch.create_interface()
             to_switch = self._overlay.get_node(int(edge[1]) + 1)
             to_switch_interface = to_switch.create_interface()
-            link = Link(from_switch, to_switch, from_switch_interface, to_switch_interface)
+            # Take a subnet for the link
+            subnet = ip_generator.get_next_subnet()
+            link = Link(from_switch, to_switch, from_switch_interface, to_switch_interface, subnet)
             self._overlay.add_link(link)
             self._log.debug(self.__class__.__name__,
                             'Link %s has been successfully created and added to %s', link, self._overlay.get_name())
