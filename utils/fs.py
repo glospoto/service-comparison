@@ -14,9 +14,11 @@ class FileSystem(object):
         # Root folder
         self._root_folder = os.getcwd()
         # Simulations folder
-        self._simulations_folder = os.path.abspath("simulations/")
+        self._simulations_folder = os.path.abspath('simulations/')
+        # The template folder
+        self._template_folder = os.path.abspath('template/')
         # TMP folder
-        self._tmp_folder = os.path.abspath("tmp/")
+        self._tmp_folder = os.path.abspath('tmp/')
         # Current simulation folder
         self._current_simulation_folder = None
         # Current working directory
@@ -47,6 +49,13 @@ class FileSystem(object):
 
     def get_simulations_folder(self):
         return self._simulations_folder
+
+    '''
+    Return the template folder.
+    '''
+
+    def get_template_folder(self):
+        return self._template_folder
 
     '''
     Return the path to the framewok temporary folder.

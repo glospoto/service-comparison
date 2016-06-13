@@ -156,6 +156,20 @@ class Simulation(Thread):
         self._log.debug(self.__class__.__name__, 'Environment %s has been successfully started.', self._environment)
 
     '''
+    Deploy alternative based on scenario and overlay.
+    '''
+
+    def _deploy_alternative(self):
+        # Deploying the alternative on the overlay and scenario for the current service.
+        self._log.debug(self.__class__.__name__, 'Deploying alternative %s.', self._alternative.get_name())
+        # Setting the overlay for current alternative
+        self._alternative.deploy(self._service.get_overlay(), self._service.get_scenario())
+        self._log.debug(self.__class__.__name__,
+                        'Alternative %s has been successfully deployed on overlay %s and scenario %s.',
+                        self._alternative.get_name(), self._service.get_overlay().get_name(),
+                        self._service.get_scenario().get_name())
+
+    '''
     Execute extractors for all metrics
     '''
 
@@ -181,7 +195,8 @@ class Simulation(Thread):
     def run(self):
         self._log.debug(self.__class__.__name__, 'Preparing the execution of the simulation.')
         # self._execute_collectors()
-        self._start_environment()
+        #self._start_environment()
+        self._deploy_alternative()
         # self._execute_extractors()
         self._log.info(self.__class__.__name__, 'Simulation has been successfully started.')
 

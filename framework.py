@@ -94,17 +94,6 @@ class ComparisonFramework(object):
                                'Environment %s for the alternative %s has been successfully loaded.',
                                environment, alternative.get_name())
 
-                '''
-                    Deploying the alternative on the overlay and scenario for the current service.
-                    '''
-                self._log.debug(self.__class__.__name__, 'Deploying alternative %s.', alternative.get_name())
-                # Setting the overlay for current alternative
-                alternative.deploy(service.get_overlay(), service.get_scenario())
-                self._log.debug(self.__class__.__name__,
-                                'Alternative %s has been successfully deployed on overlay %s and scenario %s.',
-                                alternative.get_name(), service.get_overlay().get_name(),
-                                service.get_scenario().get_name())
-
                 # Create the simulation
                 self._log.debug(self.__class__.__name__,
                                 'Starting to create a simulation for service %s and alternative %s.',

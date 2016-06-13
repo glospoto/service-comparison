@@ -91,7 +91,7 @@ class MplsBgpVpnAlternative(Alternative):
     def deploy(self, overlay, scenario):
         self._log.debug(self.__class__.__name__, 'Starting to configure the alternative.')
         # Generate the configuration file
-        # self._configurator.configure(overlay, scenario)
+        self._configurator.configure(overlay, scenario)
         self._log.info(self.__class__.__name__, 'Alternative %s has been successfully deployed.', self._name)
 
     '''

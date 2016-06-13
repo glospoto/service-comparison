@@ -84,8 +84,13 @@ class VpnScenario(Scenario):
         vpn.add_host(host)
         self._log.debug(self.__class__.__name__, 'Host %s has been added to the VPN %s.',
                         host.get_name(), vpn.get_name())
+        # Create a new interface for this switch
         pe_interface_name = pe.create_interface()
-        self._log.debug(self.__class__.__name__, 'A new interface has been generated for the PE %s.', pe.get_name())
+        self._log.debug(self.__class__.__name__, 'A new interface for %s has been successfully created.', pe.get_name())
+        # Being a PE node, also set the loopback address
+        pe.set_loopback(ip_generator.get_next_loopback())
+        self._log.debug(self.__class__.__name__, 'A loopback address has been successfully associated to switch %s.',
+                        pe.get_name())
         # Finally, create a Link object between host and PE and add it to the overlay
         link = Link(host, pe, host.get_interface_name(), pe_interface_name, ip_generator.get_next_subnet())
         self._log.debug(self.__class__.__name__, 'Link %s has been created.', link)

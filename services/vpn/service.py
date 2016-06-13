@@ -72,6 +72,9 @@ class VpnService(Service):
             to_switch_interface = to_switch.create_interface()
             # Take a subnet for the link
             subnet = ip_generator.get_next_subnet()
+            # Add this subnet to the two switches; it will be useful during the generation of the configuration
+            from_switch.add_subnet(subnet)
+            to_switch.add_subnet(subnet)
             link = Link(from_switch, to_switch, from_switch_interface, to_switch_interface, subnet)
             self._overlay.add_link(link)
             self._log.debug(self.__class__.__name__,

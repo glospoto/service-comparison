@@ -77,6 +77,22 @@ class VpnOverlay(Overlay):
         return self._links
 
     '''
+    Return a Link starting from the host connected to it.
+    '''
+
+    def get_host_link(self, host):
+        for link in self._links:
+            if link.get_from_switch().get_name() == host.get_name() or link.get_to_switch().get_name() == host.get_name():
+                return link
+
+    '''
+    Return a host.
+    '''
+
+    def get_host(self, host):
+        return self._hosts.get(host.get_name())
+
+    '''
     Return all hosts in this overlay.
     '''
 

@@ -9,10 +9,14 @@ class AddressGenerator(object):
     __instance = None
 
     def __init__(self):
+        # Flag indicating whether the /32 loopback addresses have been already generated
+        self._loopback_addresses_already_generated = False
+        # The list with all the loopback addresses
+        self._loopback_addresses = None
         # Flag indicating whether the /30 subnets have been already generated
         self._subnets_already_generated = False
         # The list with all the /30 subnets for p2p link
-        self._subnets_for_p2p_links = []
+        self._subnets_for_p2p_links = None
 
     '''
     Return an instance of this class in accord with the Singleton pattern.
@@ -25,13 +29,41 @@ class AddressGenerator(object):
         return cls.__instance
 
     '''
-    Create a /30 set of subnets starting from a /16 subnets. Those subnets will be used for p2p links
+    Create a set of loopback addresses starting from a /24 subnet
     '''
+
+    def _create_loopback_addresses(self):
+        subnet = IPNetwork('192.168.0.0/24')
+        self._loopback_addresses = list(subnet.subnet(32))
+        # Remove the first and the last element (.0 and .255)
+        self._loopback_addresses.pop(0)
+        self._loopback_addresses.pop()
+        # Subnets have been successfully generated
+        self._loopback_addresses_already_generated = True
+
+    '''
+    Return the next available loopback address
+    '''
+
+    def get_next_loopback(self):
+        if not self._loopback_addresses_already_generated:
+            self._create_loopback_addresses()
+        if len(self._loopback_addresses) > 0:
+            return self._loopback_addresses.pop(0).ip
+
+    '''
+    Create a /30 set of subnets starting from a /20 subnets. Those subnets will be used for p2p links
+    '''
+
     def _create_subnets_for_p2p_links(self):
         subnet = IPNetwork('10.0.0.0/20')
-        self._subnets_for_p2p_links = list(subnet.subnet(30))
+        self._subnets_for_p2p_links = list(subnet.subnet(29))
         # Subnets have been successfully generated
         self._subnets_already_generated = True
+
+    '''
+    Return the next available subnet to use for p2p links
+    '''
 
     def get_next_subnet(self):
         if not self._subnets_already_generated:

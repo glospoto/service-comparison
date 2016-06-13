@@ -146,6 +146,7 @@ class DockerEnvironment(Environment):
                             host.get_name())
 
         self._log.info(self.__class__.__name__, 'All Docker instances are now successfully created.')
+
         # Run all docker instances
         self._log.info(self.__class__.__name__, 'Starting all Docker instances.')
         for instance in self._running_docker_instances:

@@ -33,6 +33,26 @@ class VirtualPrivateNetwork(object):
         self._sites.append(site)
 
     '''
+    Check whether this vpn has a site with a given PE.
+    '''
+
+    def has_site_with_pe(self, pe):
+        has = False
+        for site in self._sites:
+            if site.get_pe().get_name() == pe.get_name():
+                has = True
+        return has
+
+    '''
+    Return the list of remote site of a given site.
+    '''
+
+    def get_remote_pe(self, pe):
+        for site in self._sites:
+            if site.get_pe().get_name() != pe.get_name():
+                return site.get_pe()
+
+    '''
     Return the sites of this VPN
     '''
 
@@ -45,6 +65,13 @@ class VirtualPrivateNetwork(object):
 
     def add_host(self, host):
         self._hosts[host.get_name()] = host
+
+    '''
+    Return all hosts for this VPN
+    '''
+
+    def get_hosts(self):
+        return self._hosts
 
     '''
     Return a host of this VPN
@@ -112,6 +139,10 @@ class Switch(object):
         # self._variable_name = self._name.lower()
         self._vrf_role = role
         self._interfaces = []
+        # This loopback is used in the traditional alternative for BGP connection between PE
+        self._loopback = None
+        # These subnets are used in the traditional alternative
+        self._subnets = []
 
     def __repr__(self):
         return 'Switch[dpid=%s, name=%s, role=%s]' % (self._dpid, self._name, self._vrf_role)
@@ -162,6 +193,34 @@ class Switch(object):
         interface_name = self._name + '-eth' + str(number_of_interface)
         self._interfaces.append(interface_name)
         return interface_name
+
+    '''
+    Set the loopback address to this switch.
+    '''
+
+    def set_loopback(self, loopback):
+        self._loopback = loopback
+
+    '''
+    Return the loopback address of this switch.
+    '''
+
+    def get_loopback(self):
+        return self._loopback
+
+    '''
+    Add a subnet which this switch is involved in.
+    '''
+
+    def add_subnet(self, subnet):
+        self._subnets.append(subnet)
+
+    '''
+    Return all subnets which this switch is involved in.
+    '''
+
+    def get_subnets(self):
+        return self._subnets
 
 
 """

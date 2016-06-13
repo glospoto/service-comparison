@@ -43,3 +43,4 @@ class File(object):
     def save(self):
         self._file.flush()
         os.fsync(self._file.fileno())
+        self._file.close()
