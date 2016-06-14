@@ -46,7 +46,7 @@ class VpnScenario(Scenario):
     def create(self, overlay):
         # Create the VPNs
         for i in range(0, self._number_of_vpns):
-            name = 'vpn-' + str(i)
+            name = 'vpn-' + str(i+1)
             vpn = VirtualPrivateNetwork(name)
             self._log.debug(self.__class__.__name__, 'VPN %s has been created', name)
             # Take two random PEs

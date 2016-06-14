@@ -194,10 +194,10 @@ class Simulation(Thread):
 
     def run(self):
         self._log.debug(self.__class__.__name__, 'Preparing the execution of the simulation.')
-        # self._execute_collectors()
-        #self._start_environment()
+        #self._execute_collectors()
+        self._start_environment()
         self._deploy_alternative()
-        # self._execute_extractors()
+        #self._execute_extractors()
         self._log.info(self.__class__.__name__, 'Simulation has been successfully started.')
 
     '''
