@@ -178,7 +178,8 @@ class MplsBgpVpnConfigurator(Configurator):
             # Start all protocols
             self._start_protocols(node, process)
 
-        time.sleep(30)
+        self._log.info(self.__class__.__name__, 'Waiting for GoBGP convergence before starting BagPipeBGP.')
+        time.sleep(180)
         self._start_bagpipe_on_hosts(scenario, overlay, process)
 
         self._log.info(self.__class__.__name__, 'Configurations have been correctly created.')
@@ -342,7 +343,8 @@ class MplsBgpVpnConfigurator(Configurator):
                 process.execute(cmd_bagpipebgp_daemon)
                 process.communicate()
                 self._log.debug(self.__class__.__name__, 'BagPipeBGP routing daemon has been successfully started.')
-
+                # Wait before attaching client to BagPipe
+                time.sleep(20)
                 # Attaching
                 self._log.info(self.__class__.__name__, 'Attaching client to %s.', host.get_pe().get_name())
                 host_ip = list(overlay.get_host_link(host).get_subnet())[2]
@@ -350,7 +352,9 @@ class MplsBgpVpnConfigurator(Configurator):
                 cmd_customer = \
                     'sudo docker exec -d %s bagpipe-rest-attach --attach --port netns --ip %s ' \
                     '--network-type evpn --vpn-instance-id test --rt 64512:%s' % (host.get_name(), host_ip, vpn_number)
+
                 process.execute(cmd_customer)
+                process.communicate()
                 self._log.debug(self.__class__.__name__, 'Client has been successfully attached to %s.',
                                 host.get_name())
         self._log.debug(self.__class__.__name__, 'All client has been successfully configured.')
