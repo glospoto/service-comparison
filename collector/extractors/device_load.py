@@ -5,6 +5,7 @@ import time
 
 from collector.extractor import Extractor
 from utils.file import File
+from utils.process import Process
 
 """
 This class models a device load extractor. This kind of extractor has in charge the task of dumping the routing tables.
@@ -135,36 +136,48 @@ class DockerDeviceLoad(DeviceLoad):
 
     def extract_data(self):
         extractors = []
-        # First of all, sleep for 1 minute
+        # First of all, sleep for 4 minute
         self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
-        time.sleep(120)
+        time.sleep(240)
         self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
-        switches = self._overlay.get_nodes()
-        # Probably put here the creation of the folder which will contain all datapaths' flow tables.
+        switches = self._simulation.get_overlay().get_nodes()
+        hosts = self._simulation.get_overlay().get_hosts()
+        # Extracting data from all switches, namely nodes in which routing protocols are running
         for switch in switches.values():
             self._log.debug(self.__class__.__name__, 'Extracting routing table from %s', switch.get_name())
             # File into the simulation folder in which storing data
-            output_file_name = self._simulation_path + '/' + self._extractor_folder + '/' + switch.get_name() + '.data'
-            # Create a file starting from its name
-            output_file = open(output_file_name, 'wa')
+            file_name = switch.get_name() + '.data'
+            output_file = File(self._extractor_folder, file_name)
             # Command for extracting data
-            if switch.get_role() == 'PE':
-                self._log.debug(self.__class__.__name__, 'Starting to extract VRF information.')
-                cmd_vrf = 'sudo docker exec %s bagpipe-looking-glass vpns instances test routes' % switch.get_name()
-                extractor_customer = Popen(cmd_vrf, shell=True, stdout=output_file)
-                extractors.append(extractor_customer)
-                self._log.debug(self.__class__.__name__, 'VRF information have been correctly extracted.')
             self._log.debug(self.__class__.__name__, 'Starting to extract FIB information.')
             cmd_fib = 'sudo docker exec %s ip r s' % switch.get_name()
-            extractor_fib = Popen(cmd_fib, shell=True, stdout=output_file)
+            extractor_fib = Process()
+            extractor_fib.execute(cmd_fib, stdout=output_file.get_file())
+            # extractor_fib = Popen(cmd_fib, shell=True, stdout=output_file)
             extractors.append(extractor_fib)
             self._log.debug(self.__class__.__name__, 'FIB information have been successfully extracted.')
             # Write data on disk
-            output_file.flush()
-            os.fsync(output_file.fileno())
-            # Wait for process termination
-            for e in extractors:
-                e.wait()
+            output_file.save()
+
+        # Extracting data from hosts, namaly nodes in which BagPipeBGP is running
+        for host in hosts.values():
+            self._log.debug(self.__class__.__name__, 'Extracting routing table from %s', host.get_name())
+            # File into the simulation folder in which storing data
+            file_name = host.get_name() + '.data'
+            output_file = File(self._extractor_folder, file_name)
+            # Command for extracting data
+            self._log.debug(self.__class__.__name__, 'Starting to extract FIB information.')
+            cmd_vrf = 'sudo docker exec %s bagpipe-looking-glass vpns instances test routes' % host.get_name()
+            extractor_customer = Process()
+            extractor_customer.execute(cmd_vrf, stdout=output_file.get_file())
+            # extractor_customer = Popen(cmd_vrf, shell=True, stdout=output_file)
+            extractors.append(extractor_customer)
+            self._log.debug(self.__class__.__name__, 'VRF information have been correctly extracted.')
+            # Write data on disk
+            output_file.save()
+        # Wait for process termination
+        for e in extractors:
+            e.wait()
         self._log.info(self.__class__.__name__, 'All data has been successfully extracted.')
         # Notify all observers
         self.notify_all()

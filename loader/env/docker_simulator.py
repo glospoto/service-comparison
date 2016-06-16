@@ -116,4 +116,8 @@ class Bridge(object):
     '''
 
     def destroy(self):
-        pass
+        cmd = 'sudo docker network rm %s' % self._name
+
+        process = Process()
+        process.execute(cmd)
+        process.communicate()

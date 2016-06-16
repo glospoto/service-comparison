@@ -46,6 +46,13 @@ class Process(object):
         self._process.communicate()
 
     '''
+    Wait the end of the command.
+    '''
+
+    def wait(self):
+        self._process.wait()
+
+    '''
     Kill a process by pid.
     '''
 

@@ -176,6 +176,12 @@ class DockerEnvironment(Environment):
 
     def stop(self):
         self._log.info(self.__class__.__name__, 'Stopping the environment.')
+        # Stop all instances
+        for instance in self._running_docker_instances:
+            instance.stop()
+            self._log.debug(self.__class__.__name__, 'Container for node %s has been correctly stopped.',
+                            instance.get_name())
+
         # Remove all bridges
         for bridge in self._active_bridges:
             bridge.destroy()
@@ -183,8 +189,7 @@ class DockerEnvironment(Environment):
 
         # Remove all instances
         for instance in self._running_docker_instances:
-            instance.stop()
             instance.remove()
-            self._log.debug(self.__class__.__name__, 'Container for node %s has been correctly stopped.',
+            self._log.debug(self.__class__.__name__, 'Container for node %s has been correctly removed.',
                             instance.get_name())
         self._log.info(self.__class__.__name__, 'All Docker instances are now successfully stopped.')

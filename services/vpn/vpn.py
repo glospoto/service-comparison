@@ -155,7 +155,7 @@ class Switch(object):
     def _parse_name(name):
         name.replace(' ', '_')
         name.replace(',', '')
-        switch_name = name  # [:5]
+        switch_name = name[:5]
         if switch_name.endswith('_'):
             switch_name = switch_name.replace('_', '')
         return switch_name

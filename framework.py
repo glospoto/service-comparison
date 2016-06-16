@@ -65,7 +65,7 @@ class ComparisonFramework(object):
     def run(self):
         self._init()
 
-        # Run simulation: for each service to evaluate, create a simulation and delegate to the loader 
+        # Run simulation: for each service to evaluate, create a simulation and delegate to the loader
         # objects the decision about the environment to load based on the alternatives
         services = self._parser.get_services()
 
@@ -107,6 +107,9 @@ class ComparisonFramework(object):
                 simulation.start()
                 simulation.join()
                 self._log.info(self.__class__.__name__, 'Simulation has been successfully run.')
+
+                self._log.info(self.__class__.__name__, 'Alternative %s for service %s has been successfully tested.',
+                               service.get_name(), alternative.get_name())
 
             self._log.info(self.__class__.__name__, 'All alternatives for service %s have been successfully tested.',
                            service.get_name())
