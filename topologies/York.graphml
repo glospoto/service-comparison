@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -24,35 +25,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Carlisle</data>
+      <data key="d4">Carlisl</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Northampton</data>
+      <data key="d4">Northam</data>
     </node>
     <node id="0">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Leicester</data>
+      <data key="d4">Leicest</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Nottingham</data>
+      <data key="d4">Notting</data>
     </node>
     <node id="2">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sheffield</data>
+      <data key="d4">Sheffie</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -80,7 +81,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Milton Keynes</data>
+      <data key="d4">MiltonK</data>
     </node>
     <node id="9">
       <data key="d0">PE</data>
@@ -108,7 +109,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Brighton</data>
+      <data key="d4">Brighto</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -122,7 +123,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Birmingham</data>
+      <data key="d4">Birming</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
@@ -136,35 +137,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Manchester</data>
+      <data key="d4">Manches</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Newcastle</data>
+      <data key="d4">Newcast</data>
     </node>
     <node id="16">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Edinburgh</data>
+      <data key="d4">Edinbur</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Harrogate</data>
+      <data key="d4">Harroga</data>
     </node>
     <node id="18">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Middlesborough</data>
+      <data key="d4">Middles</data>
     </node>
     <edge source="20" target="19" />
     <edge source="20" target="18" />

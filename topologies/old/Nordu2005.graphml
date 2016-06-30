@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="label" attr.type="string" for="node" id="d4" />
+  <key attr.name="device_type" attr.type="string" for="node" id="d3" />
+  <key attr.name="asn" attr.type="string" for="node" id="d2" />
+  <key attr.name="ibgp_role" attr.type="string" for="node" id="d1" />
+  <key attr.name="vrf_role" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="1">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Stockholm</data>
+    </node>
+    <node id="0">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">NETNOD</data>
+    </node>
+    <node id="3">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Copenhagen</data>
+    </node>
+    <node id="2">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Helsinki</data>
+    </node>
+    <node id="5">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">GEANT</data>
+    </node>
+    <node id="4">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Reykjavik</data>
+    </node>
+    <node id="7">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">St Petersburg</data>
+    </node>
+    <node id="6">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">General Internet</data>
+    </node>
+    <node id="8">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Oslo</data>
+    </node>
+    <edge source="1" target="0" />
+    <edge source="1" target="3" />
+    <edge source="1" target="2" />
+    <edge source="1" target="5" />
+    <edge source="1" target="7" />
+    <edge source="1" target="6" />
+    <edge source="1" target="8" />
+    <edge source="3" target="8" />
+    <edge source="3" target="4" />
+  </graph>
+</graphml>

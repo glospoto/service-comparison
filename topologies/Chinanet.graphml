@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hangzhou</data>
+      <data key="d4">Hangzho</data>
     </node>
     <node id="25">
       <data key="d0">P</data>
@@ -38,14 +39,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">International Link 4</data>
+      <data key="d4">Interna</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">International Link 3</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="22">
       <data key="d0">P</data>
@@ -59,14 +60,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hong Kong</data>
+      <data key="d4">HongKon</data>
     </node>
     <node id="28">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Guangzhou</data>
+      <data key="d4">Guangzh</data>
     </node>
     <node id="29">
       <data key="d0">P</data>
@@ -87,7 +88,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Yinchuan</data>
+      <data key="d4">Yinchua</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -108,7 +109,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Shiquanhe</data>
+      <data key="d4">Shiquan</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
@@ -136,7 +137,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Shilazhuang</data>
+      <data key="d4">Shilazh</data>
     </node>
     <node id="6">
       <data key="d0">P</data>
@@ -157,35 +158,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Shanghai</data>
-    </node>
-    <node id="13">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Changsha</data>
-    </node>
-    <node id="12">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Nanning</data>
-    </node>
-    <node id="11">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">International Link 2</data>
-    </node>
-    <node id="10">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">International Link 1</data>
+      <data key="d4">Shangha</data>
     </node>
     <node id="39">
       <data key="d0">P</data>
@@ -201,12 +174,40 @@
       <data key="d3">router</data>
       <data key="d4">Tianjin</data>
     </node>
+    <node id="11">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Custom2</data>
+    </node>
+    <node id="10">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Custom3</data>
+    </node>
+    <node id="13">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Changsh</data>
+    </node>
+    <node id="12">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Nanning</data>
+    </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Chongqing</data>
+      <data key="d4">Chongqi</data>
     </node>
     <node id="14">
       <data key="d0">PE</data>
@@ -234,7 +235,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zhengzhou</data>
+      <data key="d4">Zhengzh</data>
     </node>
     <node id="18">
       <data key="d0">P</data>
@@ -248,7 +249,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Nandhang</data>
+      <data key="d4">Nandhan</data>
     </node>
     <node id="30">
       <data key="d0">PE</data>
@@ -269,14 +270,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Shenyang</data>
+      <data key="d4">Shenyan</data>
     </node>
     <node id="35">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Changchun</data>
+      <data key="d4">Changch</data>
     </node>
     <node id="34">
       <data key="d0">PE</data>
@@ -351,7 +352,6 @@
     <edge source="8" target="39" />
     <edge source="8" target="38" />
     <edge source="8" target="11" />
-    <edge source="10" target="39" />
     <edge source="39" target="19" />
     <edge source="39" target="18" />
     <edge source="39" target="36" />
@@ -360,6 +360,7 @@
     <edge source="39" target="34" />
     <edge source="39" target="33" />
     <edge source="39" target="32" />
+    <edge source="39" target="10" />
     <edge source="38" target="37" />
     <edge source="15" target="16" />
     <edge source="14" target="16" />

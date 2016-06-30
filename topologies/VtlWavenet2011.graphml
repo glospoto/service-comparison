@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,35 +11,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Leers-Nord Estampuis</data>
+      <data key="d4">LeersNo</data>
     </node>
     <node id="25">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Antoing (NMBS)</data>
+      <data key="d4">Antoing</data>
     </node>
     <node id="26">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Thourotte</data>
+      <data key="d4">Thourot</data>
     </node>
     <node id="27">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Courrieres</data>
+      <data key="d4">Courrie</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Azy-sur-Marne</data>
+      <data key="d4">AzysurM</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
@@ -59,7 +60,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Conde-sur-Marne</data>
+      <data key="d4">Condesu</data>
     </node>
     <node id="28">
       <data key="d0">PE</data>
@@ -94,7 +95,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sault Brenaz</data>
+      <data key="d4">SaultBr</data>
     </node>
     <node id="59">
       <data key="d0">P</data>
@@ -115,7 +116,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Nambsheim</data>
+      <data key="d4">Nambshe</data>
     </node>
     <node id="54">
       <data key="d0">PE</data>
@@ -129,42 +130,42 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Veretz (Tours)</data>
+      <data key="d4">Veretz(</data>
     </node>
     <node id="56">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Availles (Poiters)</data>
+      <data key="d4">Availle</data>
     </node>
     <node id="51">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Brussels Tollaan</data>
+      <data key="d4">Brussel</data>
     </node>
     <node id="50">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Rotterdam</data>
+      <data key="d4">Rotterd</data>
     </node>
     <node id="53">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bon-Encontre</data>
+      <data key="d4">BonEnco</data>
     </node>
     <node id="52">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Grisolles</data>
+      <data key="d4">Grisoll</data>
     </node>
     <node id="88">
       <data key="d0">PE</data>
@@ -178,35 +179,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Dernbach</data>
+      <data key="d4">Dernbac</data>
     </node>
     <node id="82">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Xouxange</data>
+      <data key="d4">Xouxang</data>
     </node>
     <node id="83">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Troussey</data>
+      <data key="d4">Trousse</data>
     </node>
     <node id="80">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cayeux-sur-Mer</data>
+      <data key="d4">Cayeuxs</data>
     </node>
     <node id="81">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Polegate</data>
+      <data key="d4">Polegat</data>
     </node>
     <node id="86">
       <data key="d0">P</data>
@@ -234,7 +235,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Leersum/Doorn??</data>
+      <data key="d4">Leersum</data>
     </node>
     <node id="3">
       <data key="d0">PE</data>
@@ -248,21 +249,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Belleville</data>
+      <data key="d4">Bellevi</data>
     </node>
     <node id="39">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Internexion</data>
+      <data key="d4">Interne</data>
     </node>
     <node id="38">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Frankfurt</data>
+      <data key="d4">Frankfu</data>
     </node>
     <node id="33">
       <data key="d0">PE</data>
@@ -283,7 +284,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Monte Carasso</data>
+      <data key="d4">MonteCa</data>
     </node>
     <node id="30">
       <data key="d0">PE</data>
@@ -297,14 +298,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mannheim</data>
+      <data key="d4">Mannhei</data>
     </node>
     <node id="36">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Strasbourg</data>
+      <data key="d4">Strasbo</data>
     </node>
     <node id="35">
       <data key="d0">P</data>
@@ -332,21 +333,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">St-Christophe</data>
+      <data key="d4">StChris</data>
     </node>
     <node id="62">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Andancette</data>
+      <data key="d4">Andance</data>
     </node>
     <node id="63">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Dusseldorf</data>
+      <data key="d4">Dusseld</data>
     </node>
     <node id="64">
       <data key="d0">PE</data>
@@ -360,7 +361,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Montelimar</data>
+      <data key="d4">Monteli</data>
     </node>
     <node id="66">
       <data key="d0">P</data>
@@ -388,7 +389,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sete (Montpellier)</data>
+      <data key="d4">Sete(Mo</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
@@ -402,7 +403,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Charolles</data>
+      <data key="d4">Charoll</data>
     </node>
     <node id="91">
       <data key="d0">PE</data>
@@ -437,42 +438,42 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Antwerp (NMBS)</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="12">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Montfaucon</data>
+      <data key="d4">Montfau</data>
     </node>
     <node id="15">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Brussels MIDI (NMBS)</data>
+      <data key="d4">Custom2</data>
     </node>
     <node id="14">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Toulouse</data>
+      <data key="d4">Toulous</data>
     </node>
     <node id="17">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bordeaux</data>
+      <data key="d4">Bordeau</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Marseille</data>
+      <data key="d4">Marseil</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>
@@ -507,7 +508,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Paris (35Rdj)</data>
+      <data key="d4">Paris(3</data>
     </node>
     <node id="47">
       <data key="d0">P</data>
@@ -521,14 +522,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lowestoft</data>
+      <data key="d4">Lowesto</data>
     </node>
     <node id="45">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Amsterdam (Schipluidlaan/Deflandlaan)</data>
+      <data key="d4">Amsterd</data>
     </node>
     <node id="42">
       <data key="d0">PE</data>
@@ -542,14 +543,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">London Telehouse North</data>
+      <data key="d4">LondonT</data>
     </node>
     <node id="40">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Paris La Defense</data>
+      <data key="d4">ParisLa</data>
     </node>
     <node id="41">
       <data key="d0">PE</data>
@@ -591,56 +592,56 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zandvoort</data>
+      <data key="d4">Zandvoo</data>
     </node>
     <node id="75">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pakenham</data>
+      <data key="d4">Pakenha</data>
     </node>
     <node id="74">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Snow Hill</data>
+      <data key="d4">SnowHil</data>
     </node>
     <node id="73">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">St-Martin</data>
+      <data key="d4">StMarti</data>
     </node>
     <node id="72">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Artenay (Orleans)</data>
+      <data key="d4">Artenay</data>
     </node>
     <node id="71">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Marseillette</data>
+      <data key="d4">Custom3</data>
     </node>
     <node id="70">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Avignonet</data>
+      <data key="d4">Avignon</data>
     </node>
     <node id="79">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">L'Isle Adam</data>
+      <data key="d4">L'IsleA</data>
     </node>
     <node id="78">
       <data key="d0">PE</data>

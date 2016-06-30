@@ -1,37 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
   <key attr.name="ibgp_role" attr.type="string" for="node" id="d1" />
   <key attr.name="vrf_role" attr.type="string" for="node" id="d0" />
   <graph edgedefault="undirected">
-    <node id="58">
+    <node id="56">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sakarya</data>
+      <data key="d4">Eskiseh</data>
     </node>
-    <node id="30">
+    <node id="54">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hakkari</data>
+      <data key="d4">Kastamo</data>
     </node>
-    <node id="28">
+    <node id="42">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bilecik</data>
+      <data key="d4">Sirnak</data>
     </node>
-    <node id="29">
+    <node id="48">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Giresun</data>
+      <data key="d4">Gaziant</data>
+    </node>
+    <node id="43">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Diyarba</data>
     </node>
     <node id="60">
       <data key="d0">P</data>
@@ -59,7 +67,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zonguldak</data>
+      <data key="d4">Zonguld</data>
     </node>
     <node id="64">
       <data key="d0">P</data>
@@ -73,21 +81,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">S. Urfa</data>
+      <data key="d4">S.Urfa</data>
     </node>
     <node id="66">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Internet</data>
+      <data key="d4">Interne</data>
     </node>
     <node id="67">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Internet</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="68">
       <data key="d0">P</data>
@@ -108,14 +116,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Canakkale</data>
+      <data key="d4">Canakka</data>
     </node>
     <node id="81">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Balikesin</data>
+      <data key="d4">Balikes</data>
+    </node>
+    <node id="53">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Cankiri</data>
     </node>
     <node id="24">
       <data key="d0">P</data>
@@ -159,19 +174,19 @@
       <data key="d3">router</data>
       <data key="d4">Mersin</data>
     </node>
-    <node id="48">
+    <node id="22">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Gaziantep</data>
+      <data key="d4">Karaman</data>
     </node>
     <node id="49">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kirikkale</data>
+      <data key="d4">Kirikka</data>
     </node>
     <node id="46">
       <data key="d0">P</data>
@@ -201,19 +216,19 @@
       <data key="d3">router</data>
       <data key="d4">Kayseri</data>
     </node>
-    <node id="42">
+    <node id="28">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sirnak</data>
+      <data key="d4">Bilecik</data>
     </node>
-    <node id="43">
+    <node id="29">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Diyarbakir</data>
+      <data key="d4">Giresun</data>
     </node>
     <node id="40">
       <data key="d0">PE</data>
@@ -283,7 +298,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Afyonkarahisar</data>
+      <data key="d4">Afyonka</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
@@ -299,47 +314,26 @@
       <data key="d3">router</data>
       <data key="d4">Batman</data>
     </node>
-    <node id="32">
+    <node id="52">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ardahan</data>
+      <data key="d4">Kirsehi</data>
     </node>
-    <node id="18">
+    <node id="39">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Erzurum</data>
-    </node>
-    <node id="35">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Bingol</data>
-    </node>
-    <node id="13">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Tokat</data>
-    </node>
-    <node id="34">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Corum</data>
+      <data key="d4">Ordu</data>
     </node>
     <node id="77">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kirklareli</data>
+      <data key="d4">Kirklar</data>
     </node>
     <node id="76">
       <data key="d0">P</data>
@@ -355,12 +349,12 @@
       <data key="d3">router</data>
       <data key="d4">iZMiR</data>
     </node>
-    <node id="12">
+    <node id="38">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Amasya</data>
+      <data key="d4">Agri</data>
     </node>
     <node id="73">
       <data key="d0">P</data>
@@ -374,7 +368,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Erzincan</data>
+      <data key="d4">Erzinca</data>
     </node>
     <node id="71">
       <data key="d0">P</data>
@@ -390,12 +384,19 @@
       <data key="d3">router</data>
       <data key="d4">Manisa</data>
     </node>
-    <node id="15">
+    <node id="59">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hatay</data>
+      <data key="d4">Bitlis</data>
+    </node>
+    <node id="47">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Nevsehi</data>
     </node>
     <node id="79">
       <data key="d0">P</data>
@@ -409,7 +410,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Tekirdag</data>
+      <data key="d4">Tekirda</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
@@ -423,35 +424,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Gazimagusa</data>
+      <data key="d4">Gazimag</data>
     </node>
-    <node id="39">
+    <node id="13">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ordu</data>
+      <data key="d4">Tokat</data>
     </node>
-    <node id="38">
+    <node id="12">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Agri</data>
+      <data key="d4">Amasya</data>
     </node>
-    <node id="59">
+    <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bitlis</data>
+      <data key="d4">Hatay</data>
     </node>
-    <node id="22">
+    <node id="58">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Karaman</data>
+      <data key="d4">Sakarya</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
@@ -465,7 +466,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Adiyaman</data>
+      <data key="d4">Adiyama</data>
     </node>
     <node id="19">
       <data key="d0">P</data>
@@ -474,12 +475,12 @@
       <data key="d3">router</data>
       <data key="d4">Bartin</data>
     </node>
-    <node id="54">
+    <node id="32">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kastamonu</data>
+      <data key="d4">Ardahan</data>
     </node>
     <node id="31">
       <data key="d0">P</data>
@@ -488,12 +489,12 @@
       <data key="d3">router</data>
       <data key="d4">Elazig</data>
     </node>
-    <node id="56">
+    <node id="30">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Eskisehir</data>
+      <data key="d4">Hakkari</data>
     </node>
     <node id="51">
       <data key="d0">P</data>
@@ -509,19 +510,19 @@
       <data key="d3">router</data>
       <data key="d4">Van</data>
     </node>
-    <node id="53">
+    <node id="35">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cankiri</data>
+      <data key="d4">Bingol</data>
     </node>
-    <node id="52">
-      <data key="d0">P</data>
+    <node id="34">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kirsehir</data>
+      <data key="d4">Corum</data>
     </node>
     <node id="33">
       <data key="d0">P</data>
@@ -542,28 +543,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Istanbul</data>
+      <data key="d4">Istanbu</data>
     </node>
     <node id="37">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Osmaniye</data>
+      <data key="d4">Osmaniy</data>
     </node>
-    <node id="47">
+    <node id="18">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Nevsehir</data>
+      <data key="d4">Erzurum</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">K. Maras</data>
+      <data key="d4">K.Maras</data>
     </node>
     <node id="57">
       <data key="d0">PE</data>
@@ -579,10 +580,11 @@
       <data key="d3">router</data>
       <data key="d4">Kilis</data>
     </node>
-    <edge source="58" target="74" />
-    <edge source="30" target="76" />
-    <edge source="28" target="74" />
-    <edge source="29" target="76" />
+    <edge source="56" target="76" />
+    <edge source="54" target="76" />
+    <edge source="42" target="76" />
+    <edge source="48" target="76" />
+    <edge source="43" target="76" />
     <edge source="60" target="74" />
     <edge source="61" target="76" />
     <edge source="62" target="76" />
@@ -595,13 +597,14 @@
     <edge source="69" target="76" />
     <edge source="80" target="74" />
     <edge source="81" target="75" />
+    <edge source="53" target="76" />
     <edge source="24" target="76" />
     <edge source="25" target="76" />
     <edge source="26" target="76" />
     <edge source="27" target="76" />
     <edge source="20" target="76" />
     <edge source="21" target="76" />
-    <edge source="48" target="76" />
+    <edge source="22" target="76" />
     <edge source="49" target="76" />
     <edge source="49" target="37" />
     <edge source="46" target="76" />
@@ -609,8 +612,8 @@
     <edge source="44" target="76" />
     <edge source="44" target="40" />
     <edge source="45" target="76" />
-    <edge source="42" target="76" />
-    <edge source="43" target="76" />
+    <edge source="28" target="74" />
+    <edge source="29" target="76" />
     <edge source="41" target="76" />
     <edge source="1" target="75" />
     <edge source="0" target="75" />
@@ -622,43 +625,41 @@
     <edge source="6" target="75" />
     <edge source="9" target="76" />
     <edge source="8" target="76" />
-    <edge source="32" target="76" />
-    <edge source="18" target="76" />
-    <edge source="35" target="76" />
-    <edge source="13" target="76" />
-    <edge source="34" target="76" />
-    <edge source="34" target="39" />
+    <edge source="52" target="76" />
+    <edge source="39" target="34" />
     <edge source="77" target="74" />
+    <edge source="76" target="30" />
+    <edge source="76" target="47" />
     <edge source="76" target="75" />
     <edge source="76" target="74" />
     <edge source="76" target="73" />
     <edge source="76" target="72" />
+    <edge source="76" target="59" />
+    <edge source="76" target="10" />
+    <edge source="76" target="13" />
+    <edge source="76" target="12" />
     <edge source="76" target="15" />
     <edge source="76" target="14" />
-    <edge source="76" target="10" />
-    <edge source="76" target="12" />
-    <edge source="76" target="59" />
-    <edge source="76" target="22" />
     <edge source="76" target="17" />
     <edge source="76" target="16" />
     <edge source="76" target="19" />
-    <edge source="76" target="54" />
+    <edge source="76" target="32" />
     <edge source="76" target="31" />
-    <edge source="76" target="56" />
     <edge source="76" target="36" />
-    <edge source="76" target="53" />
-    <edge source="76" target="52" />
+    <edge source="76" target="35" />
+    <edge source="76" target="34" />
     <edge source="76" target="33" />
     <edge source="76" target="55" />
-    <edge source="76" target="47" />
+    <edge source="76" target="18" />
     <edge source="76" target="50" />
     <edge source="75" target="70" />
     <edge source="75" target="71" />
     <edge source="75" target="74" />
-    <edge source="72" target="38" />
+    <edge source="38" target="72" />
     <edge source="79" target="74" />
     <edge source="78" target="74" />
     <edge source="11" target="74" />
+    <edge source="58" target="74" />
     <edge source="51" target="74" />
     <edge source="74" target="57" />
   </graph>

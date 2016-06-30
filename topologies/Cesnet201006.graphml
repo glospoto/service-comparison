@@ -1,65 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
   <key attr.name="ibgp_role" attr.type="string" for="node" id="d1" />
   <key attr.name="vrf_role" attr.type="string" for="node" id="d0" />
   <graph edgedefault="undirected">
-    <node id="30">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Znojmo</data>
-    </node>
-    <node id="28">
+    <node id="42">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vodnany</data>
+      <data key="d4">NIX</data>
     </node>
-    <node id="48">
+    <node id="43">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Praha</data>
+      <data key="d4">Interne</data>
     </node>
-    <node id="29">
+    <node id="49">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">AMS-IX</data>
+      <data key="d4">Liberec</data>
     </node>
     <node id="24">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jablonec n N</data>
+      <data key="d4">Jablone</data>
     </node>
     <node id="25">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Litomysl</data>
+      <data key="d4">Litomys</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Uherske Hradiste</data>
+      <data key="d4">Uherske</data>
     </node>
     <node id="27">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Prostejov</data>
+      <data key="d4">Prostej</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
@@ -80,14 +74,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ondrejov</data>
+      <data key="d4">Ondrejo</data>
     </node>
-    <node id="49">
+    <node id="23">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Liberec</data>
+      <data key="d4">Humpole</data>
     </node>
     <node id="46">
       <data key="d0">P</data>
@@ -101,7 +95,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Usti nad Labem</data>
+      <data key="d4">Ustinad</data>
     </node>
     <node id="44">
       <data key="d0">PE</data>
@@ -117,19 +111,19 @@
       <data key="d3">router</data>
       <data key="d4">Plzen</data>
     </node>
-    <node id="42">
+    <node id="28">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NIX</data>
+      <data key="d4">Vodnany</data>
     </node>
-    <node id="43">
+    <node id="29">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Internet</data>
+      <data key="d4">AMSIX</data>
     </node>
     <node id="40">
       <data key="d0">P</data>
@@ -150,28 +144,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ceska Trebova</data>
+      <data key="d4">CeskaTr</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hradec Kralove</data>
+      <data key="d4">HradecK</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pardubice</data>
+      <data key="d4">Pardubi</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jindrichuv Hradec</data>
+      <data key="d4">Jindric</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -213,7 +207,42 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Breclav,Lednice</data>
+      <data key="d4">Breclav</data>
+    </node>
+    <node id="39">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Rez</data>
+    </node>
+    <node id="38">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">KutnaHo</data>
+    </node>
+    <node id="14">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Beroun</data>
+    </node>
+    <node id="11">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Letohra</data>
+    </node>
+    <node id="10">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Turnov</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -229,54 +258,26 @@
       <data key="d3">router</data>
       <data key="d4">PIONIER</data>
     </node>
-    <node id="11">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Letohrad</data>
-    </node>
-    <node id="10">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Turnov</data>
-    </node>
-    <node id="39">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Rez</data>
-    </node>
-    <node id="38">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Kutna Hora</data>
-    </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Marlanske Lazne</data>
+      <data key="d4">Marlans</data>
     </node>
-    <node id="14">
+    <node id="48">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Beroun</data>
+      <data key="d4">Praha</data>
     </node>
     <node id="17">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Dvur Kralove</data>
+      <data key="d4">DvurKra</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
@@ -304,21 +305,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Nove Hrady</data>
+      <data key="d4">NoveHra</data>
     </node>
-    <node id="23">
-      <data key="d0">P</data>
+    <node id="30">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Humpolec</data>
+      <data key="d4">Znojmo</data>
     </node>
     <node id="51">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ceske Budejovice</data>
+      <data key="d4">CeskeBu</data>
     </node>
     <node id="36">
       <data key="d0">P</data>
@@ -346,7 +347,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kostelec n C.L</data>
+      <data key="d4">Kostele</data>
     </node>
     <node id="37">
       <data key="d0">PE</data>
@@ -367,57 +368,50 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Podebrady</data>
+      <data key="d4">Podebra</data>
     </node>
-    <edge source="30" target="20" />
-    <edge source="28" target="51" />
-    <edge source="48" target="51" />
-    <edge source="48" target="39" />
-    <edge source="48" target="15" />
-    <edge source="48" target="14" />
-    <edge source="48" target="22" />
-    <edge source="48" target="49" />
-    <edge source="48" target="33" />
-    <edge source="48" target="47" />
-    <edge source="48" target="45" />
-    <edge source="48" target="42" />
-    <edge source="48" target="43" />
-    <edge source="48" target="40" />
-    <edge source="48" target="29" />
-    <edge source="48" target="0" />
-    <edge source="48" target="3" />
-    <edge source="48" target="35" />
-    <edge source="48" target="7" />
-    <edge source="48" target="41" />
-    <edge source="48" target="50" />
-    <edge source="24" target="49" />
+    <edge source="42" target="48" />
+    <edge source="43" target="48" />
+    <edge source="49" target="24" />
+    <edge source="49" target="47" />
+    <edge source="49" target="10" />
+    <edge source="49" target="48" />
+    <edge source="49" target="0" />
     <edge source="25" target="3" />
     <edge source="26" target="5" />
     <edge source="27" target="7" />
     <edge source="20" target="2" />
+    <edge source="20" target="30" />
     <edge source="20" target="7" />
     <edge source="21" target="7" />
-    <edge source="49" target="47" />
-    <edge source="49" target="0" />
-    <edge source="49" target="10" />
+    <edge source="22" target="48" />
+    <edge source="23" target="7" />
     <edge source="46" target="47" />
     <edge source="46" target="16" />
+    <edge source="47" target="48" />
     <edge source="47" target="16" />
     <edge source="44" target="15" />
     <edge source="44" target="16" />
-    <edge source="45" target="15" />
     <edge source="45" target="51" />
+    <edge source="45" target="15" />
+    <edge source="45" target="48" />
+    <edge source="28" target="51" />
+    <edge source="29" target="48" />
+    <edge source="40" target="48" />
+    <edge source="41" target="48" />
     <edge source="1" target="11" />
     <edge source="0" target="11" />
     <edge source="0" target="3" />
     <edge source="0" target="17" />
+    <edge source="0" target="48" />
     <edge source="3" target="38" />
+    <edge source="3" target="48" />
     <edge source="2" target="51" />
     <edge source="5" target="7" />
     <edge source="5" target="6" />
     <edge source="4" target="7" />
     <edge source="7" target="13" />
-    <edge source="7" target="23" />
+    <edge source="7" target="48" />
     <edge source="7" target="19" />
     <edge source="7" target="32" />
     <edge source="7" target="6" />
@@ -428,7 +422,14 @@
     <edge source="9" target="12" />
     <edge source="9" target="37" />
     <edge source="9" target="36" />
+    <edge source="39" target="48" />
+    <edge source="14" target="48" />
     <edge source="11" target="36" />
+    <edge source="15" target="48" />
+    <edge source="48" target="33" />
+    <edge source="48" target="51" />
+    <edge source="48" target="35" />
+    <edge source="48" target="50" />
     <edge source="31" target="51" />
     <edge source="51" target="34" />
     <edge source="36" target="18" />

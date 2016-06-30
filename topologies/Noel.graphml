@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,35 +11,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vancouver</data>
+      <data key="d4">Vancouv</data>
     </node>
     <node id="10">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ellensburg</data>
+      <data key="d4">Ellensb</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mt Vernon</data>
+      <data key="d4">MtVerno</data>
     </node>
     <node id="12">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bellingham</data>
+      <data key="d4">Belling</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Westin - Seattle</data>
+      <data key="d4">WestinS</data>
     </node>
     <node id="14">
       <data key="d0">PE</data>
@@ -66,14 +67,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Portland</data>
+      <data key="d4">Portlan</data>
     </node>
     <node id="1">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Coeur d'Alene</data>
+      <data key="d4">Coeurd'</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
@@ -94,7 +95,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Wenatchee</data>
+      <data key="d4">Wenatch</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -108,14 +109,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Walla Walla</data>
+      <data key="d4">WallaWa</data>
     </node>
     <node id="7">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lewiston</data>
+      <data key="d4">Lewisto</data>
     </node>
     <node id="6">
       <data key="d0">P</data>
@@ -136,7 +137,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kennewick</data>
+      <data key="d4">Kennewi</data>
     </node>
     <edge source="11" target="12" />
     <edge source="11" target="15" />

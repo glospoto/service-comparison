@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,21 +11,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kretinga</data>
+      <data key="d4">Kreting</data>
     </node>
     <node id="24">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Visaginas</data>
+      <data key="d4">Visagin</data>
     </node>
     <node id="25">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pasvalys</data>
+      <data key="d4">Pasvaly</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
@@ -38,21 +39,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kedainiai</data>
+      <data key="d4">Kedaini</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Druskininkai</data>
+      <data key="d4">Druskin</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Salcininkai</data>
+      <data key="d4">Salcini</data>
     </node>
     <node id="22">
       <data key="d0">P</data>
@@ -73,7 +74,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Raseiniai</data>
+      <data key="d4">Raseini</data>
     </node>
     <node id="29">
       <data key="d0">P</data>
@@ -101,7 +102,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Panevezys</data>
+      <data key="d4">Panevez</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
@@ -115,14 +116,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kupiskis</data>
+      <data key="d4">Kupiski</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Rokiskis</data>
+      <data key="d4">Rokiski</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -150,14 +151,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Radviliskis</data>
+      <data key="d4">Radvili</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zemaiciu Naumiestis</data>
+      <data key="d4">Zemaici</data>
     </node>
     <node id="8">
       <data key="d0">P</data>
@@ -166,19 +167,19 @@
       <data key="d3">router</data>
       <data key="d4">Taurage</data>
     </node>
-    <node id="13">
+    <node id="39">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ukmerge</data>
+      <data key="d4">Siaulia</data>
     </node>
-    <node id="12">
+    <node id="38">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ignalina</data>
+      <data key="d4">Birzai</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
@@ -194,40 +195,40 @@
       <data key="d3">router</data>
       <data key="d4">Prienai</data>
     </node>
-    <node id="39">
+    <node id="13">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Siauliai</data>
+      <data key="d4">Ukmerge</data>
     </node>
-    <node id="38">
+    <node id="12">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Birzai</data>
+      <data key="d4">Ignalin</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jurbarkas</data>
+      <data key="d4">Jurbark</data>
     </node>
     <node id="14">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sirvintos</data>
+      <data key="d4">Sirvint</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vilkaviskis</data>
+      <data key="d4">Vilkavi</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
@@ -248,7 +249,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Marijampole</data>
+      <data key="d4">Marijam</data>
     </node>
     <node id="31">
       <data key="d0">PE</data>
@@ -262,28 +263,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Anyksciai</data>
+      <data key="d4">Anyksci</data>
     </node>
     <node id="37">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Joniskis</data>
+      <data key="d4">Joniski</data>
     </node>
     <node id="36">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">N.Akmene</data>
+      <data key="d4">N.Akmen</data>
     </node>
     <node id="35">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mazeikiai</data>
+      <data key="d4">Mazeiki</data>
     </node>
     <node id="34">
       <data key="d0">PE</data>
@@ -297,7 +298,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Klaipeda</data>
+      <data key="d4">Klaiped</data>
     </node>
     <node id="32">
       <data key="d0">P</data>
@@ -340,13 +341,13 @@
     <edge source="6" target="39" />
     <edge source="9" target="33" />
     <edge source="8" target="33" />
-    <edge source="13" target="32" />
-    <edge source="12" target="32" />
-    <edge source="11" target="32" />
     <edge source="39" target="33" />
     <edge source="39" target="37" />
     <edge source="39" target="36" />
     <edge source="39" target="35" />
+    <edge source="11" target="32" />
+    <edge source="13" target="32" />
+    <edge source="12" target="32" />
     <edge source="14" target="32" />
     <edge source="34" target="33" />
   </graph>

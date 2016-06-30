@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Velika Plana</data>
+      <data key="d4">VelikaP</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
@@ -45,7 +46,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kosovska Mitrovica</data>
+      <data key="d4">Kosovsk</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
@@ -59,14 +60,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Krustevac</data>
+      <data key="d4">Krustev</data>
     </node>
     <node id="2">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Novi Pazar</data>
+      <data key="d4">NoviPaz</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -87,7 +88,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Leskovac</data>
+      <data key="d4">Leskova</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
@@ -101,28 +102,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Novi Sad</data>
+      <data key="d4">NoviSad</data>
     </node>
     <node id="8">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kragujevac</data>
+      <data key="d4">Kraguje</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HUNGARNET</data>
+      <data key="d4">HUNGARN</data>
     </node>
     <node id="10">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bosnia and Herzegovina</data>
+      <data key="d4">Bosniaa</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -143,21 +144,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kraljevo</data>
+      <data key="d4">Kraljev</data>
     </node>
     <node id="14">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Telekom Serbia</data>
+      <data key="d4">Telekom</data>
     </node>
     <node id="17">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Subotica</data>
+      <data key="d4">Subotic</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
@@ -171,7 +172,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zrenjanin</data>
+      <data key="d4">Zrenjan</data>
     </node>
     <node id="18">
       <data key="d0">PE</data>
@@ -189,8 +190,8 @@
     <edge source="22" target="23" />
     <edge source="1" target="12" />
     <edge source="0" target="5" />
-    <edge source="3" target="5" />
     <edge source="3" target="15" />
+    <edge source="3" target="5" />
     <edge source="2" target="16" />
     <edge source="5" target="7" />
     <edge source="5" target="6" />

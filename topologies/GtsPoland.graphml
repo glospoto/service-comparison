@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -31,21 +32,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Koszalin</data>
+      <data key="d4">Koszali</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bratislava</data>
+      <data key="d4">Bratisl</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Frankfurt</data>
+      <data key="d4">Frankfu</data>
     </node>
     <node id="22">
       <data key="d0">P</data>
@@ -59,28 +60,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bydgoszcz</data>
+      <data key="d4">Bydgosz</data>
     </node>
     <node id="28">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kolobrzeg</data>
+      <data key="d4">Kolobrz</data>
     </node>
     <node id="29">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Szczecin</data>
+      <data key="d4">Szczeci</data>
     </node>
     <node id="1">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bialystok</data>
+      <data key="d4">Bialyst</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
@@ -101,7 +102,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Wlocawek</data>
+      <data key="d4">Wlocawe</data>
     </node>
     <node id="5">
       <data key="d0">PE</data>
@@ -171,7 +172,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zielona Gora</data>
+      <data key="d4">Zielona</data>
     </node>
     <node id="15">
       <data key="d0">PE</data>
@@ -199,7 +200,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kalowice</data>
+      <data key="d4">Kalowic</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>
@@ -227,7 +228,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Gorzow Wilkp</data>
+      <data key="d4">GorzowW</data>
     </node>
     <node id="32">
       <data key="d0">PE</data>
@@ -271,7 +272,7 @@
     <edge source="13" target="14" />
     <edge source="12" target="31" />
     <edge source="17" target="18" />
-    <edge source="31" target="30" />
     <edge source="31" target="32" />
+    <edge source="31" target="30" />
   </graph>
 </graphml>

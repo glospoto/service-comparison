@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -17,42 +18,42 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Little Rock</data>
+      <data key="d4">LittleR</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Las Vegas</data>
+      <data key="d4">LasVega</data>
     </node>
     <node id="27">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Colorado Springs</data>
+      <data key="d4">Colorad</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Charlotte</data>
+      <data key="d4">Charlot</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Columbia</data>
+      <data key="d4">Columbi</data>
     </node>
     <node id="22">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Greenville</data>
+      <data key="d4">Greenvi</data>
     </node>
     <node id="23">
       <data key="d0">P</data>
@@ -66,7 +67,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Albuquerque</data>
+      <data key="d4">Albuque</data>
     </node>
     <node id="29">
       <data key="d0">PE</data>
@@ -80,21 +81,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lexington</data>
+      <data key="d4">Lexingt</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Baltimore</data>
+      <data key="d4">Baltimo</data>
     </node>
     <node id="3">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kansas City</data>
+      <data key="d4">KansasC</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
@@ -122,42 +123,42 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Nashville</data>
+      <data key="d4">Nashvil</data>
     </node>
     <node id="6">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Louisville</data>
+      <data key="d4">Louisvi</data>
     </node>
     <node id="9">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Baton Rouge</data>
+      <data key="d4">BatonRo</data>
     </node>
     <node id="8">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lake Charles</data>
+      <data key="d4">LakeCha</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Fort Lauderdale</data>
+      <data key="d4">FortLau</data>
     </node>
     <node id="10">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jacksonville</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -178,28 +179,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Greensboro</data>
+      <data key="d4">Greensb</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Columbus</data>
+      <data key="d4">Columbu</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Montgomery</data>
+      <data key="d4">Montgom</data>
     </node>
     <node id="16">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Birmingham</data>
+      <data key="d4">Birming</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>
@@ -213,21 +214,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">New Orleans</data>
+      <data key="d4">NewOrle</data>
     </node>
     <node id="31">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Fort Worth</data>
+      <data key="d4">FortWor</data>
     </node>
     <node id="30">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">El Paso</data>
+      <data key="d4">ElPaso</data>
     </node>
     <node id="33">
       <data key="d0">PE</data>
@@ -241,7 +242,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">San Antonio</data>
+      <data key="d4">SanAnto</data>
     </node>
     <edge source="24" target="33" />
     <edge source="24" target="13" />

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -17,7 +18,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Clydenet</data>
+      <data key="d4">Clydene</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
@@ -115,7 +116,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kentish MAN</data>
+      <data key="d4">Kentish</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
@@ -150,14 +151,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sco-locate</data>
+      <data key="d4">Scoloca</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Warrington</data>
+      <data key="d4">Warring</data>
     </node>
     <node id="12">
       <data key="d0">P</data>
@@ -171,7 +172,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Telehouse</data>
+      <data key="d4">Telehou</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
@@ -192,7 +193,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Telecity</data>
+      <data key="d4">Telecit</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>

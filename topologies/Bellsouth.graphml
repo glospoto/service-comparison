@@ -1,37 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
   <key attr.name="ibgp_role" attr.type="string" for="node" id="d1" />
   <key attr.name="vrf_role" attr.type="string" for="node" id="d0" />
   <graph edgedefault="undirected">
-    <node id="30">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Charleston</data>
-    </node>
-    <node id="28">
+    <node id="42">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Augusta</data>
+      <data key="d4">BocaRat</data>
     </node>
-    <node id="48">
+    <node id="43">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Orlando</data>
+      <data key="d4">Mobile</data>
     </node>
-    <node id="29">
+    <node id="49">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Florence</data>
+      <data key="d4">Miami</data>
     </node>
     <node id="24">
       <data key="d0">P</data>
@@ -45,7 +39,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Charlotte</data>
+      <data key="d4">Charlot</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
@@ -59,21 +53,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Columbia</data>
+      <data key="d4">Columbi</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Louisville</data>
+      <data key="d4">Louisvi</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Georgetown</data>
+      <data key="d4">Georget</data>
     </node>
     <node id="22">
       <data key="d0">PE</data>
@@ -82,82 +76,82 @@
       <data key="d3">router</data>
       <data key="d4">?</data>
     </node>
-    <node id="49">
+    <node id="23">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Miami</data>
+      <data key="d4">Greensb</data>
     </node>
     <node id="46">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Stone Mt?</data>
+      <data key="d4">StoneMt</data>
     </node>
     <node id="47">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Wilmington</data>
+      <data key="d4">Wilming</data>
     </node>
     <node id="44">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Greenville</data>
+      <data key="d4">Greenvi</data>
     </node>
     <node id="45">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Spartanburg</data>
+      <data key="d4">Spartan</data>
     </node>
-    <node id="42">
+    <node id="28">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Boca Raton</data>
+      <data key="d4">Augusta</data>
     </node>
-    <node id="43">
+    <node id="29">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mobile</data>
+      <data key="d4">Florenc</data>
     </node>
     <node id="40">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Birmingham</data>
+      <data key="d4">Birming</data>
     </node>
     <node id="41">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ft Lauderdale</data>
+      <data key="d4">FtLaude</data>
     </node>
     <node id="1">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Daytona Beach</data>
+      <data key="d4">Daytona</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cocoa Beach</data>
+      <data key="d4">CocoaBe</data>
     </node>
     <node id="3">
       <data key="d0">PE</data>
@@ -171,35 +165,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">West Palm Beach</data>
+      <data key="d4">WestPal</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Savannah</data>
+      <data key="d4">Savanna</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jacksonville</data>
+      <data key="d4">Jackson</data>
     </node>
     <node id="7">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Gainesville</data>
+      <data key="d4">Gainesv</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Panama City</data>
+      <data key="d4">PanamaC</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
@@ -215,82 +209,89 @@
       <data key="d3">router</data>
       <data key="d4">Albany</data>
     </node>
-    <node id="13">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">New Orleans?</data>
-    </node>
-    <node id="12">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Knoxville</data>
-    </node>
-    <node id="11">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Nashville</data>
-    </node>
-    <node id="10">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Stone Mt?</data>
-    </node>
     <node id="39">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Montgomery</data>
+      <data key="d4">Montgom</data>
     </node>
     <node id="38">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pensacola</data>
-    </node>
-    <node id="15">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Baton Rouge</data>
+      <data key="d4">Pensaco</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lafayette</data>
+      <data key="d4">Lafayet</data>
+    </node>
+    <node id="11">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Nashvil</data>
+    </node>
+    <node id="10">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Custom1</data>
+    </node>
+    <node id="13">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">NewOrle</data>
+    </node>
+    <node id="12">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Knoxvil</data>
+    </node>
+    <node id="15">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">BatonRo</data>
+    </node>
+    <node id="48">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Orlando</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jackson</data>
+      <data key="d4">Custom2</data>
     </node>
     <node id="16">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Shreveport</data>
+      <data key="d4">Shrevep</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Owensboro</data>
+      <data key="d4">Owensbo</data>
     </node>
     <node id="32">
       <data key="d0">P</data>
@@ -304,14 +305,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">New Orleans</data>
+      <data key="d4">Custom3</data>
     </node>
-    <node id="23">
-      <data key="d0">P</data>
+    <node id="30">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Greensboro</data>
+      <data key="d4">Charles</data>
     </node>
     <node id="37">
       <data key="d0">P</data>
@@ -339,14 +340,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Chatanooga</data>
+      <data key="d4">Chatano</data>
     </node>
     <node id="33">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Huntsville</data>
+      <data key="d4">Huntsvi</data>
     </node>
     <node id="18">
       <data key="d0">PE</data>
@@ -362,32 +363,33 @@
       <data key="d3">router</data>
       <data key="d4">Miami?</data>
     </node>
-    <edge source="30" target="27" />
-    <edge source="28" target="27" />
-    <edge source="48" target="0" />
-    <edge source="48" target="35" />
-    <edge source="48" target="7" />
-    <edge source="48" target="49" />
-    <edge source="29" target="27" />
+    <edge source="42" target="2" />
+    <edge source="42" target="50" />
+    <edge source="43" target="31" />
+    <edge source="43" target="35" />
+    <edge source="49" target="35" />
+    <edge source="49" target="31" />
+    <edge source="49" target="4" />
+    <edge source="49" target="48" />
+    <edge source="49" target="50" />
     <edge source="24" target="26" />
     <edge source="25" target="31" />
     <edge source="25" target="35" />
     <edge source="25" target="22" />
     <edge source="26" target="47" />
-    <edge source="26" target="6" />
-    <edge source="26" target="35" />
     <edge source="26" target="23" />
+    <edge source="26" target="35" />
+    <edge source="26" target="6" />
     <edge source="27" target="31" />
+    <edge source="27" target="30" />
+    <edge source="27" target="28" />
+    <edge source="27" target="29" />
     <edge source="27" target="35" />
     <edge source="20" target="19" />
     <edge source="20" target="31" />
     <edge source="20" target="21" />
     <edge source="20" target="35" />
     <edge source="22" target="31" />
-    <edge source="49" target="50" />
-    <edge source="49" target="31" />
-    <edge source="49" target="4" />
-    <edge source="49" target="35" />
     <edge source="46" target="9" />
     <edge source="46" target="8" />
     <edge source="46" target="5" />
@@ -396,37 +398,36 @@
     <edge source="44" target="38" />
     <edge source="44" target="45" />
     <edge source="44" target="35" />
-    <edge source="42" target="2" />
-    <edge source="42" target="50" />
-    <edge source="43" target="31" />
-    <edge source="43" target="35" />
     <edge source="40" target="33" />
     <edge source="40" target="31" />
     <edge source="40" target="35" />
     <edge source="41" target="50" />
     <edge source="1" target="4" />
+    <edge source="0" target="48" />
     <edge source="3" target="50" />
     <edge source="4" target="35" />
+    <edge source="7" target="48" />
     <edge source="6" target="31" />
+    <edge source="39" target="10" />
+    <edge source="39" target="31" />
+    <edge source="38" target="31" />
+    <edge source="14" target="15" />
+    <edge source="11" target="31" />
+    <edge source="11" target="35" />
+    <edge source="10" target="15" />
+    <edge source="10" target="35" />
     <edge source="13" target="15" />
     <edge source="12" target="31" />
     <edge source="12" target="35" />
-    <edge source="11" target="31" />
-    <edge source="11" target="35" />
-    <edge source="10" target="39" />
-    <edge source="10" target="15" />
-    <edge source="10" target="35" />
-    <edge source="39" target="31" />
-    <edge source="38" target="31" />
-    <edge source="15" target="14" />
     <edge source="15" target="16" />
+    <edge source="48" target="35" />
     <edge source="17" target="31" />
     <edge source="17" target="35" />
     <edge source="32" target="31" />
     <edge source="31" target="37" />
     <edge source="31" target="18" />
-    <edge source="31" target="34" />
     <edge source="31" target="35" />
+    <edge source="31" target="34" />
     <edge source="35" target="34" />
   </graph>
 </graphml>

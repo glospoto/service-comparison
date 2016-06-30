@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">ADSL (via Tango)</data>
+      <data key="d4">ADSL(vi</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
@@ -24,7 +25,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Rollingergrund</data>
+      <data key="d4">Rolling</data>
     </node>
     <node id="12">
       <data key="d0">P</data>
@@ -38,35 +39,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Esch-sur-Alzette</data>
+      <data key="d4">Eschsur</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Campus Geesseknaeppchen</data>
+      <data key="d4">CampusG</data>
     </node>
     <node id="17">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Luxembourg</data>
+      <data key="d4">Luxembo</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bettembourg</data>
+      <data key="d4">Bettemb</data>
     </node>
     <node id="18">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Limpertsberg</data>
+      <data key="d4">Limpert</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -80,35 +81,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Walferdange</data>
+      <data key="d4">Walferd</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Diekirch</data>
+      <data key="d4">Diekirc</data>
     </node>
     <node id="2">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ettelbruck</data>
+      <data key="d4">Ettelbr</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Internet via Bruxelles (BE)</data>
+      <data key="d4">Interne</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">GEANT Paris (FR)</data>
+      <data key="d4">GEANTPa</data>
     </node>
     <node id="7">
       <data key="d0">PE</data>
@@ -122,7 +123,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">ADSL (via EPT)</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
@@ -136,7 +137,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">GEANT Frankfurt (DE)</data>
+      <data key="d4">GEANTFr</data>
     </node>
     <edge source="11" target="10" />
     <edge source="10" target="18" />

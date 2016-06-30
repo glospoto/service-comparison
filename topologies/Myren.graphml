@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Monash Malaysia</data>
+      <data key="d4">MonashM</data>
     </node>
     <node id="25">
       <data key="d0">P</data>
@@ -73,7 +74,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cyberjaya PoP (NOC)</data>
+      <data key="d4">Cyberja</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -143,7 +144,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Nottingham Malaysia</data>
+      <data key="d4">Notting</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
@@ -220,21 +221,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">South PoP (UTM)</data>
+      <data key="d4">SouthPo</data>
     </node>
     <node id="30">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Border Router</data>
+      <data key="d4">BorderR</data>
     </node>
     <node id="36">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Commodity Internet</data>
+      <data key="d4">Commodi</data>
     </node>
     <node id="35">
       <data key="d0">PE</data>
@@ -248,21 +249,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">KL PoP (UM)</data>
+      <data key="d4">KLPoP(U</data>
     </node>
     <node id="33">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">North PoP (USM)</data>
+      <data key="d4">NorthPo</data>
     </node>
     <node id="32">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">East Coast PoP (UMP)</data>
+      <data key="d4">EastCoa</data>
     </node>
     <edge source="24" target="29" />
     <edge source="25" target="29" />

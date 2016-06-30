@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Winnipeg</data>
+      <data key="d4">Winnipe</data>
     </node>
     <node id="21">
       <data key="d0">PE</data>
@@ -24,7 +25,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kitchener</data>
+      <data key="d4">Kitchen</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -38,14 +39,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Montreal</data>
+      <data key="d4">Montrea</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">internetMCI T3</data>
+      <data key="d4">interne</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
@@ -73,21 +74,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Saint John</data>
+      <data key="d4">SaintJo</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sherbrooke</data>
+      <data key="d4">Sherbro</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Yarmouth</data>
+      <data key="d4">Yarmout</data>
     </node>
     <node id="8">
       <data key="d0">PE</data>
@@ -101,14 +102,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">internetMCI T3</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">ANS CO+RE T1</data>
+      <data key="d4">ANSCO+R</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -122,21 +123,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Victoria</data>
+      <data key="d4">Victori</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vancouver</data>
+      <data key="d4">Vancouv</data>
     </node>
     <node id="14">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hamilton</data>
+      <data key="d4">Hamilto</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
@@ -150,21 +151,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">ANS CO+RE T1</data>
+      <data key="d4">Custom2</data>
     </node>
     <node id="19">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lethbridge</data>
+      <data key="d4">Lethbri</data>
     </node>
     <node id="18">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Edmonton</data>
+      <data key="d4">Edmonto</data>
     </node>
     <edge source="20" target="21" />
     <edge source="21" target="15" />
@@ -172,9 +173,9 @@
     <edge source="21" target="0" />
     <edge source="22" target="13" />
     <edge source="1" target="0" />
+    <edge source="0" target="4" />
     <edge source="0" target="13" />
     <edge source="0" target="6" />
-    <edge source="0" target="4" />
     <edge source="3" target="13" />
     <edge source="2" target="13" />
     <edge source="5" target="9" />

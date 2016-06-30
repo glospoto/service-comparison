@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,21 +11,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Melbourne</data>
+      <data key="d4">Melbour</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Adelaide</data>
+      <data key="d4">Adelaid</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Canberra</data>
+      <data key="d4">Canberr</data>
     </node>
     <node id="12">
       <data key="d0">P</data>
@@ -38,21 +39,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kalgoorlie</data>
+      <data key="d4">Kalgoor</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Brisbane</data>
+      <data key="d4">Brisban</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Port Augusta</data>
+      <data key="d4">PortAug</data>
     </node>
     <node id="1">
       <data key="d0">PE</data>
@@ -87,7 +88,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Newcastle</data>
+      <data key="d4">Newcast</data>
     </node>
     <node id="4">
       <data key="d0">PE</data>
@@ -108,7 +109,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Coff's Harbour</data>
+      <data key="d4">Coff'sH</data>
     </node>
     <node id="9">
       <data key="d0">PE</data>
@@ -122,7 +123,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Shepparton</data>
+      <data key="d4">Sheppar</data>
     </node>
     <edge source="11" target="8" />
     <edge source="11" target="4" />
@@ -130,8 +131,8 @@
     <edge source="10" target="9" />
     <edge source="10" target="7" />
     <edge source="10" target="16" />
-    <edge source="13" target="12" />
     <edge source="13" target="2" />
+    <edge source="13" target="12" />
     <edge source="13" target="4" />
     <edge source="12" target="5" />
     <edge source="15" target="9" />

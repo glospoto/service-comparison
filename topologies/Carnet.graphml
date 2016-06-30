@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,14 +11,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Virovitica</data>
+      <data key="d4">Virovit</data>
     </node>
-    <node id="29">
+    <node id="43">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">GEANT</data>
+      <data key="d4">Osijek</data>
     </node>
     <node id="24">
       <data key="d0">P</data>
@@ -31,7 +32,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">M. Losinj</data>
+      <data key="d4">M.Losin</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
@@ -82,26 +83,26 @@
       <data key="d3">router</data>
       <data key="d4">Cakovec</data>
     </node>
-    <node id="43">
+    <node id="29">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Osijek</data>
+      <data key="d4">GEANT</data>
     </node>
     <node id="40">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Krizevci</data>
+      <data key="d4">Krizevc</data>
     </node>
     <node id="41">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bjelovar</data>
+      <data key="d4">Bjelova</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -115,7 +116,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Stara Gradnifska</data>
+      <data key="d4">StaraGr</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
@@ -129,14 +130,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Slavonski</data>
+      <data key="d4">Slavons</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Karlovac</data>
+      <data key="d4">Karlova</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
@@ -150,7 +151,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Petrinja</data>
+      <data key="d4">Petrinj</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
@@ -164,14 +165,42 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">GEANT</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="8">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jastrebarsko</data>
+      <data key="d4">Jastreb</data>
+    </node>
+    <node id="39">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Varazdi</data>
+    </node>
+    <node id="38">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Samobor</data>
+    </node>
+    <node id="11">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Dubrovn</data>
+    </node>
+    <node id="10">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Hvar</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -186,34 +215,6 @@
       <data key="d2">1</data>
       <data key="d3">router</data>
       <data key="d4">Rovinj</data>
-    </node>
-    <node id="11">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Dubrovnik</data>
-    </node>
-    <node id="10">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Hvar</data>
-    </node>
-    <node id="39">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Varazdin</data>
-    </node>
-    <node id="38">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Samobor</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
@@ -255,7 +256,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zenumik D</data>
+      <data key="d4">Zenumik</data>
     </node>
     <node id="31">
       <data key="d0">P</data>
@@ -276,7 +277,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zabresic</data>
+      <data key="d4">Zabresi</data>
     </node>
     <node id="36">
       <data key="d0">P</data>
@@ -304,17 +305,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">BIHarnet</data>
+      <data key="d4">BIHarne</data>
     </node>
     <node id="32">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vinkovci</data>
+      <data key="d4">Vinkovc</data>
     </node>
     <edge source="42" target="36" />
-    <edge source="29" target="36" />
+    <edge source="43" target="3" />
+    <edge source="43" target="2" />
+    <edge source="43" target="36" />
+    <edge source="43" target="35" />
+    <edge source="43" target="34" />
     <edge source="24" target="26" />
     <edge source="24" target="12" />
     <edge source="25" target="26" />
@@ -335,11 +340,7 @@
     <edge source="27" target="22" />
     <edge source="27" target="36" />
     <edge source="28" target="39" />
-    <edge source="43" target="3" />
-    <edge source="43" target="2" />
-    <edge source="43" target="36" />
-    <edge source="43" target="35" />
-    <edge source="43" target="34" />
+    <edge source="29" target="36" />
     <edge source="40" target="36" />
     <edge source="41" target="36" />
     <edge source="1" target="36" />

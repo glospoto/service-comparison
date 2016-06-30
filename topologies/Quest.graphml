@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,14 +11,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sydney 2</data>
+      <data key="d4">Sydney2</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Melbourne</data>
+      <data key="d4">Melbour</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -38,7 +39,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Philippines 1</data>
+      <data key="d4">Philipp</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
@@ -52,14 +53,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Singapore/Malaysia</data>
+      <data key="d4">Singapo</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hong Kong</data>
+      <data key="d4">HongKon</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>
@@ -73,7 +74,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Thailand</data>
+      <data key="d4">Thailan</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -87,56 +88,56 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Auckland 2</data>
+      <data key="d4">Aucklan</data>
     </node>
     <node id="3">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Auckland 1</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="2">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sydney 1</data>
+      <data key="d4">Sydney1</data>
     </node>
     <node id="5">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Los Angeles</data>
+      <data key="d4">LosAnge</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sacramento</data>
+      <data key="d4">Sacrame</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hawaii 2</data>
+      <data key="d4">Hawaii2</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hawaii 1</data>
+      <data key="d4">Hawaii1</data>
     </node>
     <node id="9">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Philippines 2</data>
+      <data key="d4">Custom2</data>
     </node>
     <node id="8">
       <data key="d0">P</data>
@@ -149,11 +150,11 @@
     <edge source="11" target="2" />
     <edge source="10" target="19" />
     <edge source="10" target="2" />
-    <edge source="13" target="6" />
+    <edge source="13" target="16" />
     <edge source="13" target="12" />
     <edge source="13" target="4" />
     <edge source="13" target="14" />
-    <edge source="13" target="16" />
+    <edge source="13" target="6" />
     <edge source="12" target="8" />
     <edge source="15" target="9" />
     <edge source="15" target="8" />

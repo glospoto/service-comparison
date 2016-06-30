@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -17,14 +18,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kalavrita</data>
+      <data key="d4">Kalavri</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Korinthos</data>
+      <data key="d4">Korinth</data>
     </node>
     <node id="27">
       <data key="d0">P</data>
@@ -52,7 +53,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Karlovassi</data>
+      <data key="d4">Karlova</data>
     </node>
     <node id="23">
       <data key="d0">PE</data>
@@ -66,7 +67,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ioannina</data>
+      <data key="d4">Ioannin</data>
     </node>
     <node id="29">
       <data key="d0">PE</data>
@@ -87,7 +88,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Karditsa</data>
+      <data key="d4">Kardits</data>
     </node>
     <node id="3">
       <data key="d0">PE</data>
@@ -115,7 +116,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mytilini</data>
+      <data key="d4">Mytilin</data>
     </node>
     <node id="7">
       <data key="d0">PE</data>
@@ -129,7 +130,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Igoumenitsa</data>
+      <data key="d4">Igoumen</data>
     </node>
     <node id="9">
       <data key="d0">PE</data>
@@ -143,7 +144,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ermoupoli</data>
+      <data key="d4">Ermoupo</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
@@ -157,7 +158,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mesologgi</data>
+      <data key="d4">Mesolog</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -178,7 +179,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Heraklio</data>
+      <data key="d4">Herakli</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
@@ -199,7 +200,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Rethymno</data>
+      <data key="d4">Rethymn</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>
@@ -213,7 +214,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kalamata</data>
+      <data key="d4">Kalamat</data>
     </node>
     <node id="31">
       <data key="d0">P</data>
@@ -227,21 +228,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Thessaloniki</data>
+      <data key="d4">Thessal</data>
     </node>
     <node id="36">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Alexandroupoli</data>
+      <data key="d4">Alexand</data>
     </node>
     <node id="35">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Komotini</data>
+      <data key="d4">Komotin</data>
     </node>
     <node id="34">
       <data key="d0">P</data>
@@ -262,13 +263,13 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kastoria</data>
+      <data key="d4">Kastori</data>
     </node>
-    <edge source="24" target="28" />
     <edge source="24" target="10" />
     <edge source="24" target="20" />
-    <edge source="24" target="18" />
     <edge source="24" target="25" />
+    <edge source="24" target="18" />
+    <edge source="24" target="28" />
     <edge source="26" target="20" />
     <edge source="26" target="23" />
     <edge source="27" target="4" />
@@ -295,10 +296,10 @@
     <edge source="5" target="4" />
     <edge source="7" target="6" />
     <edge source="9" target="8" />
-    <edge source="8" target="15" />
     <edge source="8" target="34" />
-    <edge source="15" target="14" />
+    <edge source="8" target="15" />
     <edge source="15" target="16" />
+    <edge source="15" target="14" />
     <edge source="17" target="18" />
     <edge source="31" target="32" />
     <edge source="31" target="30" />

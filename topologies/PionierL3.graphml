@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Geant2/Internet</data>
+      <data key="d4">Geant2/</data>
     </node>
     <node id="25">
       <data key="d0">P</data>
@@ -38,7 +39,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Czechtochowa</data>
+      <data key="d4">Czechto</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
@@ -73,7 +74,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lithuania</data>
+      <data key="d4">Lithuan</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -87,14 +88,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Warszawa</data>
+      <data key="d4">Warszaw</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bialystok</data>
+      <data key="d4">Bialyst</data>
     </node>
     <node id="2">
       <data key="d0">PE</data>
@@ -164,14 +165,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Gorzow Wlkp</data>
+      <data key="d4">GorzowW</data>
     </node>
     <node id="12">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sochaczew</data>
+      <data key="d4">Sochacz</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
@@ -185,14 +186,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">SURFnet/NORDUnet</data>
+      <data key="d4">SURFnet</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Internet</data>
+      <data key="d4">Interne</data>
     </node>
     <node id="16">
       <data key="d0">PE</data>
@@ -213,14 +214,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bielsko-Biala</data>
+      <data key="d4">Bielsko</data>
     </node>
     <node id="31">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Koszalin</data>
+      <data key="d4">Koszali</data>
     </node>
     <node id="30">
       <data key="d0">PE</data>
@@ -248,7 +249,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bydgoszcz</data>
+      <data key="d4">Bydgosz</data>
     </node>
     <node id="34">
       <data key="d0">P</data>
@@ -262,14 +263,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zielona gora</data>
+      <data key="d4">Zielona</data>
     </node>
     <node id="32">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Szczecin</data>
+      <data key="d4">Szczeci</data>
     </node>
     <edge source="24" target="34" />
     <edge source="25" target="33" />
@@ -290,8 +291,8 @@
     <edge source="1" target="0" />
     <edge source="1" target="7" />
     <edge source="0" target="3" />
-    <edge source="0" target="6" />
     <edge source="0" target="34" />
+    <edge source="0" target="6" />
     <edge source="3" target="11" />
     <edge source="3" target="2" />
     <edge source="5" target="19" />

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Nove Mest nad Vahom</data>
+      <data key="d4">NoveMes</data>
     </node>
     <node id="25">
       <data key="d0">P</data>
@@ -31,14 +32,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Banska Bystrica</data>
+      <data key="d4">BanskaB</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Prievidza</data>
+      <data key="d4">Prievid</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
@@ -52,21 +53,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">None</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="23">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Piestany</data>
+      <data key="d4">Piestan</data>
     </node>
     <node id="28">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bratislava</data>
+      <data key="d4">Bratisl</data>
     </node>
     <node id="29">
       <data key="d0">P</data>
@@ -80,21 +81,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">None</data>
+      <data key="d4">Custom2</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ruzombernk</data>
+      <data key="d4">Ruzombe</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Liptovdky Mikulas</data>
+      <data key="d4">Liptovd</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
@@ -122,7 +123,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Namestovo</data>
+      <data key="d4">Namesto</data>
     </node>
     <node id="6">
       <data key="d0">P</data>
@@ -143,14 +144,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Rimavska Sobota</data>
+      <data key="d4">Rimavsk</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Brno Warsaw</data>
+      <data key="d4">BrnoWar</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
@@ -171,21 +172,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Prague Frankfurt</data>
+      <data key="d4">PragueF</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Nove Zamky</data>
+      <data key="d4">NoveZam</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Gyor Budapest</data>
+      <data key="d4">GyorBud</data>
     </node>
     <node id="17">
       <data key="d0">PE</data>
@@ -213,14 +214,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Topolcany</data>
+      <data key="d4">Topolca</data>
     </node>
     <node id="31">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bardejov</data>
+      <data key="d4">Bardejo</data>
     </node>
     <node id="30">
       <data key="d0">P</data>
@@ -234,7 +235,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Michalovce</data>
+      <data key="d4">Michalo</data>
     </node>
     <node id="33">
       <data key="d0">P</data>
@@ -275,10 +276,10 @@
     <edge source="28" target="18" />
     <edge source="28" target="16" />
     <edge source="28" target="29" />
+    <edge source="28" target="10" />
     <edge source="28" target="12" />
     <edge source="28" target="17" />
     <edge source="28" target="14" />
-    <edge source="28" target="10" />
     <edge source="29" target="33" />
     <edge source="29" target="32" />
     <edge source="29" target="30" />

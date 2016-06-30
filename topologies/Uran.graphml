@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -10,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pereyaslav</data>
+      <data key="d4">Pereyas</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
@@ -38,7 +39,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mykolaiv</data>
+      <data key="d4">Mykolai</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
@@ -52,35 +53,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Simferopol</data>
+      <data key="d4">Simfero</data>
     </node>
     <node id="2">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sevastopol</data>
+      <data key="d4">Sevasto</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Khmelnitsky</data>
+      <data key="d4">Khmelni</data>
     </node>
     <node id="4">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vinnitsa</data>
+      <data key="d4">Vinnits</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kamianets-Podilsky</data>
+      <data key="d4">Kamiane</data>
     </node>
     <node id="6">
       <data key="d0">P</data>
@@ -94,56 +95,56 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Poznan (GEANT &amp; Internet)</data>
+      <data key="d4">Poznan(</data>
     </node>
     <node id="8">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Frankfurt (Internet)</data>
+      <data key="d4">Frankfu</data>
     </node>
     <node id="11">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Odessa-IX</data>
+      <data key="d4">OdessaI</data>
     </node>
     <node id="10">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cherkassy</data>
+      <data key="d4">Cherkas</data>
     </node>
     <node id="13">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UA-IX</data>
+      <data key="d4">UAIX</data>
     </node>
     <node id="12">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kharkiv-IX</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Dnipropetrovsk</data>
+      <data key="d4">Dniprop</data>
     </node>
     <node id="14">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zaporizhia</data>
+      <data key="d4">Zaporiz</data>
     </node>
     <node id="17">
       <data key="d0">PE</data>
@@ -171,7 +172,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zhitomir</data>
+      <data key="d4">Zhitomi</data>
     </node>
     <edge source="20" target="19" />
     <edge source="21" target="19" />
@@ -180,8 +181,8 @@
     <edge source="22" target="12" />
     <edge source="23" target="15" />
     <edge source="1" target="0" />
-    <edge source="1" target="10" />
     <edge source="1" target="6" />
+    <edge source="1" target="10" />
     <edge source="0" target="3" />
     <edge source="3" target="2" />
     <edge source="5" target="4" />

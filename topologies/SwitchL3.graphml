@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -17,14 +18,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Martigny</data>
+      <data key="d4">Martign</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Grenchen</data>
+      <data key="d4">Grenche</data>
     </node>
     <node id="27">
       <data key="d0">P</data>
@@ -52,42 +53,42 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Neuchatel</data>
+      <data key="d4">Neuchat</data>
     </node>
     <node id="23">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">IXEurope Zurich</data>
+      <data key="d4">IXEurop</data>
     </node>
     <node id="28">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Liechtenstein</data>
+      <data key="d4">Liechte</data>
     </node>
     <node id="29">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Rapperswil</data>
+      <data key="d4">Rappers</data>
     </node>
     <node id="40">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Rueschlikon</data>
+      <data key="d4">Rueschl</data>
     </node>
     <node id="41">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Winterthur</data>
+      <data key="d4">Wintert</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -101,7 +102,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Fribourg</data>
+      <data key="d4">Fribour</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
@@ -115,35 +116,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Delemont</data>
+      <data key="d4">Delemon</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">St. Gallen</data>
+      <data key="d4">St.Gall</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kreuzlingen</data>
+      <data key="d4">Kreuzli</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zurich (ETH)</data>
+      <data key="d4">Zurich(</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Villigen PSI</data>
+      <data key="d4">Villige</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
@@ -157,7 +158,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Buchs SG</data>
+      <data key="d4">BuchsSG</data>
+    </node>
+    <node id="39">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Birmens</data>
+    </node>
+    <node id="38">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Yverdon</data>
+    </node>
+    <node id="11">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Custom1</data>
+    </node>
+    <node id="10">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">GBLX</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -171,35 +200,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Swisscom</data>
-    </node>
-    <node id="11">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Swisscom</data>
-    </node>
-    <node id="10">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">GBLX</data>
-    </node>
-    <node id="39">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Birmensdorf</data>
-    </node>
-    <node id="38">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Yverdon</data>
+      <data key="d4">Swissco</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
@@ -213,7 +214,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">SwissIX</data>
+      <data key="d4">Custom2</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
@@ -234,7 +235,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">AMS-IX</data>
+      <data key="d4">AMSIX</data>
     </node>
     <node id="18">
       <data key="d0">PE</data>
@@ -248,7 +249,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zurich (University)</data>
+      <data key="d4">Custom3</data>
     </node>
     <node id="30">
       <data key="d0">P</data>
@@ -262,7 +263,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lausanne (EPFL)</data>
+      <data key="d4">Lausann</data>
     </node>
     <node id="36">
       <data key="d0">PE</data>
@@ -276,14 +277,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lausanne (University)</data>
+      <data key="d4">Custom4</data>
     </node>
     <node id="34">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">CERN</data>
+      <data key="d4">Custom5</data>
     </node>
     <node id="33">
       <data key="d0">PE</data>
@@ -346,9 +347,9 @@
     <edge source="7" target="35" />
     <edge source="7" target="6" />
     <edge source="9" target="8" />
+    <edge source="38" target="37" />
     <edge source="11" target="34" />
     <edge source="10" target="34" />
-    <edge source="38" target="37" />
     <edge source="17" target="34" />
     <edge source="19" target="34" />
     <edge source="18" target="34" />

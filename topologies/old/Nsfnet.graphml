@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="label" attr.type="string" for="node" id="d4" />
+  <key attr.name="device_type" attr.type="string" for="node" id="d3" />
+  <key attr.name="asn" attr.type="string" for="node" id="d2" />
+  <key attr.name="ibgp_role" attr.type="string" for="node" id="d1" />
+  <key attr.name="vrf_role" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="11">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">NCSA, University of Illinois, Champaign</data>
+    </node>
+    <node id="10">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">MIDnet, Lincoln, NE</data>
+    </node>
+    <node id="12">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Merit Univ of Michigan, Ann Arbor</data>
+    </node>
+    <node id="1">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Jon Von Neumann Center, Princeton, NJ</data>
+    </node>
+    <node id="0">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">SEQSUINET, Rice University, Houston</data>
+    </node>
+    <node id="3">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Pittsburgh Supercomputer Center</data>
+    </node>
+    <node id="2">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">SURANET, Georgia Tech, Atlanta</data>
+    </node>
+    <node id="5">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">NorthWestNet, Seattle</data>
+    </node>
+    <node id="4">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Cornell Theory Center, Ithaca NY</data>
+    </node>
+    <node id="7">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">San Diego Supercomputer Center</data>
+    </node>
+    <node id="6">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">BARRnet, Palo Alto</data>
+    </node>
+    <node id="9">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">NCAR, Boulder</data>
+    </node>
+    <node id="8">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Westnet, Salt Lake City</data>
+    </node>
+    <edge source="11" target="9" />
+    <edge source="11" target="0" />
+    <edge source="11" target="12" />
+    <edge source="11" target="10" />
+    <edge source="12" target="3" />
+    <edge source="12" target="4" />
+    <edge source="12" target="6" />
+    <edge source="1" target="2" />
+    <edge source="1" target="4" />
+    <edge source="0" target="2" />
+    <edge source="0" target="7" />
+    <edge source="5" target="9" />
+    <edge source="5" target="6" />
+    <edge source="7" target="6" />
+    <edge source="9" target="8" />
+  </graph>
+</graphml>

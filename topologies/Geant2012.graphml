@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
@@ -145,19 +146,19 @@
       <data key="d3">router</data>
       <data key="d4">CH</data>
     </node>
-    <node id="13">
+    <node id="39">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">RO</data>
+      <data key="d4">LV</data>
     </node>
-    <node id="12">
-      <data key="d0">P</data>
+    <node id="38">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">BG</data>
+      <data key="d4">EE</data>
     </node>
     <node id="11">
       <data key="d0">PE</data>
@@ -173,19 +174,19 @@
       <data key="d3">router</data>
       <data key="d4">UA</data>
     </node>
-    <node id="39">
+    <node id="13">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">LV</data>
+      <data key="d4">RO</data>
     </node>
-    <node id="38">
-      <data key="d0">PE</data>
+    <node id="12">
+      <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">EE</data>
+      <data key="d4">BG</data>
     </node>
     <node id="15">
       <data key="d0">PE</data>
@@ -327,19 +328,19 @@
     <edge source="4" target="31" />
     <edge source="4" target="6" />
     <edge source="4" target="8" />
-    <edge source="7" target="6" />
-    <edge source="7" target="8" />
     <edge source="7" target="34" />
+    <edge source="7" target="8" />
+    <edge source="7" target="6" />
+    <edge source="9" target="8" />
     <edge source="9" target="15" />
     <edge source="9" target="18" />
-    <edge source="9" target="8" />
-    <edge source="13" target="11" />
+    <edge source="39" target="30" />
+    <edge source="39" target="38" />
+    <edge source="11" target="13" />
     <edge source="13" target="12" />
     <edge source="13" target="14" />
     <edge source="12" target="15" />
     <edge source="12" target="14" />
-    <edge source="39" target="30" />
-    <edge source="39" target="38" />
     <edge source="17" target="30" />
     <edge source="16" target="34" />
     <edge source="37" target="36" />

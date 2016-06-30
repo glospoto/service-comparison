@@ -1,37 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
   <key attr.name="ibgp_role" attr.type="string" for="node" id="d1" />
   <key attr.name="vrf_role" attr.type="string" for="node" id="d0" />
   <graph edgedefault="undirected">
-    <node id="58">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Ogre</data>
-    </node>
-    <node id="30">
+    <node id="56">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Riga</data>
+      <data key="d4">Ozolnie</data>
     </node>
-    <node id="28">
-      <data key="d0">PE</data>
+    <node id="54">
+      <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jumprava</data>
+      <data key="d4">Vangazi</data>
     </node>
-    <node id="29">
-      <data key="d0">PE</data>
+    <node id="42">
+      <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kegums</data>
+      <data key="d4">Jelgava</data>
+    </node>
+    <node id="48">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Sigulda</data>
+    </node>
+    <node id="43">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Kalncie</data>
     </node>
     <node id="60">
       <data key="d0">P</data>
@@ -66,14 +74,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pusmucova</data>
+      <data key="d4">Pusmuco</data>
     </node>
     <node id="65">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Zvigzdene</data>
+      <data key="d4">Zvigzde</data>
     </node>
     <node id="66">
       <data key="d0">P</data>
@@ -96,26 +104,33 @@
       <data key="d3">router</data>
       <data key="d4">Zilupe</data>
     </node>
-    <node id="34">
+    <node id="52">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Liepaja</data>
+      <data key="d4">Aizpute</data>
+    </node>
+    <node id="53">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Ragona</data>
     </node>
     <node id="24">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Skriveri</data>
+      <data key="d4">Skriver</data>
     </node>
     <node id="25">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Valmiera</data>
+      <data key="d4">Valmier</data>
     </node>
     <node id="26">
       <data key="d0">PE</data>
@@ -129,7 +144,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Carnikava</data>
+      <data key="d4">Carnika</data>
     </node>
     <node id="20">
       <data key="d0">PE</data>
@@ -145,12 +160,12 @@
       <data key="d3">router</data>
       <data key="d4">Pociems</data>
     </node>
-    <node id="48">
+    <node id="22">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sigulda</data>
+      <data key="d4">Limbazi</data>
     </node>
     <node id="49">
       <data key="d0">P</data>
@@ -164,7 +179,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Livberze</data>
+      <data key="d4">Livberz</data>
     </node>
     <node id="23">
       <data key="d0">P</data>
@@ -187,19 +202,19 @@
       <data key="d3">router</data>
       <data key="d4">GEANT2</data>
     </node>
-    <node id="42">
-      <data key="d0">P</data>
+    <node id="28">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jelgava</data>
+      <data key="d4">Jumprav</data>
     </node>
-    <node id="43">
-      <data key="d0">P</data>
+    <node id="29">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kalnciems</data>
+      <data key="d4">Kegums</data>
     </node>
     <node id="40">
       <data key="d0">P</data>
@@ -213,7 +228,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jekabpils</data>
+      <data key="d4">Jekabpi</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -241,7 +256,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kraslava</data>
+      <data key="d4">Kraslav</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -283,49 +298,35 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Krimulda</data>
+      <data key="d4">Krimuld</data>
     </node>
-    <node id="18">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Aloja</data>
-    </node>
-    <node id="35">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Ulbroka</data>
-    </node>
-    <node id="13">
+    <node id="39">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Aizkroukle</data>
+      <data key="d4">Salaspi</data>
     </node>
-    <node id="12">
+    <node id="47">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Viesite</data>
+      <data key="d4">Ledurga</data>
     </node>
-    <node id="15">
+    <node id="38">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Gulbene</data>
+      <data key="d4">Ikskile</data>
     </node>
-    <node id="32">
+    <node id="59">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ventspits</data>
+      <data key="d4">Preili</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
@@ -348,40 +349,40 @@
       <data key="d3">router</data>
       <data key="d4">Saldus</data>
     </node>
-    <node id="39">
+    <node id="13">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Salaspils</data>
+      <data key="d4">Aizkrou</data>
     </node>
-    <node id="38">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">Ikskile</data>
-    </node>
-    <node id="59">
+    <node id="12">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Preili</data>
+      <data key="d4">Viesite</data>
     </node>
-    <node id="22">
+    <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Limbazi</data>
+      <data key="d4">Gulbene</data>
+    </node>
+    <node id="58">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">Ogre</data>
     </node>
     <node id="17">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Salagriva</data>
+      <data key="d4">Salagri</data>
     </node>
     <node id="16">
       <data key="d0">PE</data>
@@ -395,28 +396,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mazsalaca</data>
+      <data key="d4">Mazsala</data>
     </node>
-    <node id="54">
-      <data key="d0">P</data>
+    <node id="18">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vangazi</data>
+      <data key="d4">Aloja</data>
     </node>
     <node id="31">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Daugapils</data>
+      <data key="d4">Daugapi</data>
     </node>
-    <node id="56">
+    <node id="30">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ozolnieki</data>
+      <data key="d4">Riga</data>
     </node>
     <node id="51">
       <data key="d0">P</data>
@@ -432,19 +433,19 @@
       <data key="d3">router</data>
       <data key="d4">Olaine</data>
     </node>
-    <node id="53">
-      <data key="d0">P</data>
+    <node id="35">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ragona</data>
+      <data key="d4">Ulbroka</data>
     </node>
-    <node id="52">
+    <node id="34">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Aizpute</data>
+      <data key="d4">Liepaja</data>
     </node>
     <node id="33">
       <data key="d0">PE</data>
@@ -465,14 +466,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lielvarde</data>
+      <data key="d4">Lielvar</data>
     </node>
-    <node id="47">
+    <node id="32">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ledurga</data>
+      <data key="d4">Ventspi</data>
     </node>
     <node id="57">
       <data key="d0">PE</data>
@@ -488,79 +489,79 @@
       <data key="d3">router</data>
       <data key="d4">Tukums</data>
     </node>
-    <edge source="58" target="38" />
-    <edge source="30" target="36" />
-    <edge source="30" target="61" />
-    <edge source="30" target="62" />
-    <edge source="30" target="34" />
-    <edge source="30" target="24" />
-    <edge source="30" target="25" />
-    <edge source="30" target="26" />
-    <edge source="30" target="27" />
-    <edge source="30" target="22" />
-    <edge source="30" target="49" />
-    <edge source="30" target="44" />
-    <edge source="30" target="45" />
-    <edge source="30" target="42" />
-    <edge source="30" target="40" />
-    <edge source="30" target="0" />
-    <edge source="30" target="3" />
-    <edge source="30" target="2" />
-    <edge source="30" target="59" />
-    <edge source="30" target="14" />
-    <edge source="30" target="10" />
-    <edge source="30" target="39" />
-    <edge source="30" target="15" />
-    <edge source="30" target="48" />
-    <edge source="30" target="16" />
-    <edge source="30" target="55" />
-    <edge source="30" target="31" />
-    <edge source="30" target="51" />
-    <edge source="30" target="50" />
-    <edge source="30" target="35" />
-    <edge source="30" target="52" />
-    <edge source="28" target="13" />
-    <edge source="28" target="37" />
-    <edge source="29" target="38" />
-    <edge source="29" target="37" />
+    <edge source="56" target="42" />
+    <edge source="56" target="36" />
+    <edge source="54" target="48" />
+    <edge source="42" target="30" />
+    <edge source="42" target="46" />
+    <edge source="42" target="43" />
+    <edge source="42" target="7" />
+    <edge source="42" target="6" />
+    <edge source="48" target="23" />
+    <edge source="48" target="47" />
+    <edge source="48" target="30" />
+    <edge source="48" target="53" />
+    <edge source="48" target="8" />
     <edge source="60" target="41" />
+    <edge source="61" target="30" />
     <edge source="62" target="63" />
+    <edge source="62" target="30" />
     <edge source="63" target="64" />
     <edge source="65" target="66" />
     <edge source="66" target="68" />
     <edge source="66" target="26" />
     <edge source="66" target="67" />
-    <edge source="34" target="11" />
-    <edge source="34" target="33" />
+    <edge source="52" target="30" />
+    <edge source="24" target="30" />
+    <edge source="25" target="30" />
     <edge source="25" target="20" />
     <edge source="26" target="31" />
+    <edge source="26" target="30" />
     <edge source="27" target="55" />
+    <edge source="27" target="30" />
     <edge source="21" target="18" />
-    <edge source="48" target="23" />
-    <edge source="48" target="54" />
-    <edge source="48" target="53" />
-    <edge source="48" target="47" />
-    <edge source="48" target="8" />
-    <edge source="46" target="42" />
+    <edge source="22" target="9" />
+    <edge source="22" target="18" />
+    <edge source="22" target="30" />
+    <edge source="22" target="23" />
+    <edge source="49" target="30" />
     <edge source="23" target="17" />
-    <edge source="23" target="22" />
-    <edge source="42" target="56" />
-    <edge source="42" target="43" />
-    <edge source="42" target="7" />
-    <edge source="42" target="6" />
+    <edge source="44" target="30" />
+    <edge source="45" target="30" />
+    <edge source="28" target="13" />
+    <edge source="28" target="37" />
+    <edge source="29" target="38" />
+    <edge source="29" target="37" />
+    <edge source="40" target="30" />
     <edge source="41" target="12" />
     <edge source="1" target="6" />
+    <edge source="0" target="30" />
+    <edge source="3" target="30" />
+    <edge source="2" target="30" />
     <edge source="5" target="10" />
     <edge source="4" target="7" />
     <edge source="6" target="57" />
-    <edge source="9" target="22" />
-    <edge source="18" target="19" />
-    <edge source="18" target="22" />
-    <edge source="13" target="12" />
-    <edge source="32" target="50" />
+    <edge source="39" target="30" />
     <edge source="39" target="38" />
+    <edge source="38" target="58" />
     <edge source="59" target="31" />
+    <edge source="59" target="30" />
+    <edge source="14" target="30" />
+    <edge source="11" target="34" />
+    <edge source="10" target="30" />
+    <edge source="13" target="12" />
+    <edge source="15" target="30" />
     <edge source="16" target="19" />
-    <edge source="56" target="36" />
+    <edge source="16" target="30" />
+    <edge source="19" target="18" />
+    <edge source="31" target="30" />
+    <edge source="30" target="50" />
+    <edge source="30" target="55" />
+    <edge source="30" target="51" />
+    <edge source="30" target="36" />
+    <edge source="30" target="35" />
+    <edge source="30" target="34" />
+    <edge source="34" target="33" />
+    <edge source="32" target="50" />
   </graph>
 </graphml>

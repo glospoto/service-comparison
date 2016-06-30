@@ -1,128 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key attr.name="label" attr.type="string" for="node" id="d4" />
   <key attr.name="device_type" attr.type="string" for="node" id="d3" />
   <key attr.name="asn" attr.type="string" for="node" id="d2" />
   <key attr.name="ibgp_role" attr.type="string" for="node" id="d1" />
   <key attr.name="vrf_role" attr.type="string" for="node" id="d0" />
   <graph edgedefault="undirected">
-    <node id="58">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">UMB As</data>
-    </node>
-    <node id="30">
+    <node id="56">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NRS Andoya</data>
+      <data key="d4">HiOSarp</data>
     </node>
-    <node id="28">
+    <node id="54">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Longyearbyen Skole</data>
+      <data key="d4">HVELarv</data>
     </node>
-    <node id="29">
+    <node id="42">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HiAAles</data>
+    </node>
+    <node id="48">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiH Harstad</data>
+      <data key="d4">UiToKar</data>
+    </node>
+    <node id="43">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HSFFord</data>
     </node>
     <node id="60">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NyAlesund</data>
+      <data key="d4">NyAlesu</data>
     </node>
     <node id="61">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HSF Sandane</data>
+      <data key="d4">HSFSand</data>
     </node>
     <node id="62">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NPolar Svalbard</data>
+      <data key="d4">NPolarS</data>
     </node>
     <node id="63">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiNe Mo i Rana</data>
+      <data key="d4">HiNeMoi</data>
     </node>
     <node id="64">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HH Hamar</data>
+      <data key="d4">HHHamar</data>
     </node>
     <node id="65">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiL Lillehammer</data>
+      <data key="d4">HiLLill</data>
     </node>
     <node id="66">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NTNU Hovedbygget</data>
+      <data key="d4">NTNUHov</data>
     </node>
     <node id="67">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NTNU Realfagbygget</data>
+      <data key="d4">NTNURea</data>
     </node>
     <node id="68">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UNINETT Teknobyen</data>
+      <data key="d4">UNINETT</data>
     </node>
     <node id="69">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HH Tynset</data>
+      <data key="d4">HHTynse</data>
     </node>
-    <node id="34">
-      <data key="d0">P</data>
+    <node id="52">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiNT Steinkjer</data>
+      <data key="d4">HiAKKje</data>
+    </node>
+    <node id="53">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HRPHald</data>
     </node>
     <node id="24">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">VetHS Sandnes</data>
+      <data key="d4">VetHSSa</data>
     </node>
     <node id="25">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HSH Haugesund</data>
+      <data key="d4">HSHHaug</data>
     </node>
     <node id="26">
       <data key="d0">PE</data>
@@ -136,91 +151,91 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HVE Eik</data>
+      <data key="d4">HVEEik</data>
     </node>
     <node id="20">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hit Rauland</data>
+      <data key="d4">HitRaul</data>
     </node>
     <node id="21">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiA Grimstad</data>
+      <data key="d4">UiAGrim</data>
     </node>
-    <node id="48">
+    <node id="22">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiTo Karasjok</data>
+      <data key="d4">UiAKris</data>
     </node>
     <node id="49">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiT Bo</data>
+      <data key="d4">HiTBo</data>
     </node>
     <node id="46">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HSM Kristiansun</data>
+      <data key="d4">HSMKris</data>
     </node>
     <node id="23">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiS Stavanger</data>
+      <data key="d4">UiSStav</data>
     </node>
     <node id="44">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HSM Molde</data>
+      <data key="d4">HSMMold</data>
     </node>
     <node id="45">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HVO Volda</data>
+      <data key="d4">HVOVold</data>
     </node>
-    <node id="42">
-      <data key="d0">PE</data>
+    <node id="28">
+      <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiA Alesund</data>
+      <data key="d4">Longyea</data>
     </node>
-    <node id="43">
-      <data key="d0">PE</data>
+    <node id="29">
+      <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HSF Forde</data>
+      <data key="d4">HiHHars</data>
     </node>
     <node id="40">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HSF Songdal</data>
+      <data key="d4">HSFSong</data>
     </node>
     <node id="41">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiB BT</data>
+      <data key="d4">UiBBT</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -234,259 +249,245 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiO</data>
+      <data key="d4">Custom1</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiO St Olavsplass 5</data>
+      <data key="d4">UiOStOl</data>
     </node>
     <node id="2">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiG Gjovik</data>
+      <data key="d4">HiGGjov</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiBU Kongsberg</data>
+      <data key="d4">HiBUKon</data>
     </node>
     <node id="4">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Statenskartverkgeodesi</data>
+      <data key="d4">Statens</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiBu Honefoss</data>
+      <data key="d4">HiBuHon</data>
     </node>
     <node id="6">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UNIK Kjeller</data>
+      <data key="d4">UNIKKje</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiN Narvik</data>
+      <data key="d4">HiNNarv</data>
     </node>
     <node id="8">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiTo</data>
-    </node>
-    <node id="18">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HiT Porsgrunn</data>
-    </node>
-    <node id="35">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HiNe Sandnesjoen</data>
-    </node>
-    <node id="13">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HiF Kirkenes</data>
-    </node>
-    <node id="12">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HiF Vadso</data>
-    </node>
-    <node id="73">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HH Kongsvinger</data>
-    </node>
-    <node id="72">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HH Elverum</data>
-    </node>
-    <node id="71">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HH Rena</data>
-    </node>
-    <node id="70">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HH Evenstad</data>
-    </node>
-    <node id="15">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HiF Alta</data>
-    </node>
-    <node id="32">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HiNT Namsos</data>
-    </node>
-    <node id="14">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HiF Hammerfest</data>
-    </node>
-    <node id="11">
-      <data key="d0">P</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HVE Borre</data>
-    </node>
-    <node id="10">
-      <data key="d0">PE</data>
-      <data key="d1">Peer</data>
-      <data key="d2">1</data>
-      <data key="d3">router</data>
-      <data key="d4">HiBU Drammen</data>
+      <data key="d4">Custom2</data>
     </node>
     <node id="39">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HBO Bodo</data>
+      <data key="d4">HBOBodo</data>
+    </node>
+    <node id="47">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HiNTLev</data>
     </node>
     <node id="38">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HBO Mo i Rana</data>
+      <data key="d4">HBOMoiR</data>
+    </node>
+    <node id="73">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HHKongs</data>
+    </node>
+    <node id="72">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HHElver</data>
+    </node>
+    <node id="71">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HHRena</data>
+    </node>
+    <node id="70">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HHEvens</data>
     </node>
     <node id="59">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiO Fredrikstad</data>
+      <data key="d4">HiOFred</data>
     </node>
-    <node id="22">
+    <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiA Kristiansand</data>
+      <data key="d4">HiFHamm</data>
+    </node>
+    <node id="11">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HVEBorr</data>
+    </node>
+    <node id="10">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HiBUDra</data>
+    </node>
+    <node id="13">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HiFKirk</data>
+    </node>
+    <node id="12">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HiFVads</data>
+    </node>
+    <node id="15">
+      <data key="d0">PE</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">HiFAlta</data>
+    </node>
+    <node id="58">
+      <data key="d0">P</data>
+      <data key="d1">Peer</data>
+      <data key="d2">1</data>
+      <data key="d3">router</data>
+      <data key="d4">UMBAs</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiB Hoyteklogibygget</data>
+      <data key="d4">UiBHoyt</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HSH Stord</data>
+      <data key="d4">HSHStor</data>
     </node>
     <node id="19">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UiA Arendal</data>
+      <data key="d4">UiAAren</data>
     </node>
-    <node id="54">
-      <data key="d0">P</data>
+    <node id="18">
+      <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HVE Larvik</data>
+      <data key="d4">HiTPors</data>
     </node>
     <node id="31">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">SA/SH Kautokeino</data>
+      <data key="d4">SA/SHKa</data>
     </node>
-    <node id="56">
+    <node id="30">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiO Sarpsborg</data>
+      <data key="d4">NRSAndo</data>
     </node>
     <node id="51">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Hing Stjordal</data>
+      <data key="d4">HingStj</data>
     </node>
     <node id="36">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiNe Nesna</data>
+      <data key="d4">HiNeNes</data>
     </node>
-    <node id="53">
+    <node id="35">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HRP Halden</data>
+      <data key="d4">HiNeSan</data>
     </node>
-    <node id="52">
-      <data key="d0">PE</data>
+    <node id="34">
+      <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiAK Kjeller</data>
+      <data key="d4">HiNTSte</data>
     </node>
     <node id="33">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UNIS Svalbard</data>
+      <data key="d4">UNISSva</data>
     </node>
     <node id="55">
       <data key="d0">PE</data>
@@ -500,37 +501,41 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NB Mo i Rana</data>
+      <data key="d4">NBMoiRa</data>
     </node>
-    <node id="47">
+    <node id="32">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiNT Levanger</data>
+      <data key="d4">HiNTNam</data>
     </node>
     <node id="57">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiO Halden</data>
+      <data key="d4">HiOHald</data>
     </node>
     <node id="50">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HiT Notodden</data>
+      <data key="d4">HiTNoto</data>
     </node>
-    <edge source="58" target="0" />
-    <edge source="58" target="59" />
-    <edge source="30" target="29" />
-    <edge source="28" target="33" />
-    <edge source="29" target="9" />
-    <edge source="29" target="8" />
-    <edge source="29" target="39" />
-    <edge source="29" target="33" />
+    <edge source="56" target="1" />
+    <edge source="56" target="11" />
+    <edge source="56" target="57" />
+    <edge source="54" target="11" />
+    <edge source="42" target="44" />
+    <edge source="42" target="45" />
+    <edge source="42" target="17" />
+    <edge source="42" target="66" />
+    <edge source="48" target="13" />
+    <edge source="48" target="31" />
+    <edge source="43" target="45" />
+    <edge source="43" target="40" />
     <edge source="60" target="33" />
     <edge source="61" target="40" />
     <edge source="62" target="33" />
@@ -540,7 +545,6 @@
     <edge source="65" target="2" />
     <edge source="66" target="26" />
     <edge source="66" target="17" />
-    <edge source="66" target="42" />
     <edge source="66" target="35" />
     <edge source="66" target="34" />
     <edge source="66" target="3" />
@@ -554,11 +558,11 @@
     <edge source="68" target="46" />
     <edge source="68" target="69" />
     <edge source="69" target="70" />
-    <edge source="34" target="47" />
-    <edge source="34" target="32" />
+    <edge source="52" target="6" />
+    <edge source="53" target="57" />
     <edge source="24" target="23" />
-    <edge source="25" target="16" />
     <edge source="25" target="23" />
+    <edge source="25" target="16" />
     <edge source="26" target="9" />
     <edge source="26" target="8" />
     <edge source="26" target="14" />
@@ -566,63 +570,60 @@
     <edge source="20" target="49" />
     <edge source="21" target="19" />
     <edge source="21" target="22" />
-    <edge source="48" target="13" />
-    <edge source="48" target="31" />
+    <edge source="22" target="3" />
+    <edge source="22" target="23" />
+    <edge source="22" target="49" />
     <edge source="49" target="0" />
     <edge source="49" target="50" />
-    <edge source="49" target="22" />
     <edge source="49" target="18" />
     <edge source="46" target="44" />
-    <edge source="23" target="22" />
     <edge source="23" target="41" />
-    <edge source="44" target="42" />
-    <edge source="45" target="42" />
-    <edge source="45" target="43" />
-    <edge source="42" target="17" />
-    <edge source="43" target="40" />
+    <edge source="28" target="33" />
+    <edge source="29" target="9" />
+    <edge source="29" target="8" />
+    <edge source="29" target="39" />
+    <edge source="29" target="30" />
+    <edge source="29" target="33" />
     <edge source="40" target="17" />
     <edge source="41" target="0" />
     <edge source="41" target="3" />
     <edge source="41" target="17" />
     <edge source="1" target="0" />
     <edge source="1" target="3" />
-    <edge source="1" target="56" />
     <edge source="1" target="6" />
+    <edge source="0" target="58" />
     <edge source="0" target="3" />
     <edge source="0" target="73" />
     <edge source="3" target="10" />
-    <edge source="3" target="22" />
     <edge source="3" target="2" />
     <edge source="5" target="10" />
     <edge source="5" target="50" />
     <edge source="5" target="7" />
     <edge source="4" target="7" />
     <edge source="7" target="6" />
-    <edge source="6" target="52" />
     <edge source="9" target="39" />
     <edge source="8" target="15" />
-    <edge source="18" target="19" />
-    <edge source="35" target="36" />
-    <edge source="13" target="12" />
-    <edge source="12" target="14" />
+    <edge source="39" target="37" />
+    <edge source="39" target="36" />
+    <edge source="47" target="51" />
+    <edge source="47" target="34" />
+    <edge source="38" target="37" />
     <edge source="73" target="72" />
     <edge source="72" target="71" />
     <edge source="71" target="70" />
-    <edge source="15" target="31" />
-    <edge source="15" target="14" />
-    <edge source="32" target="37" />
-    <edge source="11" target="54" />
-    <edge source="11" target="56" />
-    <edge source="11" target="10" />
-    <edge source="39" target="37" />
-    <edge source="39" target="36" />
-    <edge source="38" target="37" />
     <edge source="59" target="57" />
+    <edge source="59" target="58" />
+    <edge source="14" target="12" />
+    <edge source="14" target="15" />
+    <edge source="11" target="10" />
+    <edge source="13" target="12" />
+    <edge source="15" target="31" />
     <edge source="17" target="16" />
-    <edge source="56" target="57" />
-    <edge source="51" target="47" />
+    <edge source="19" target="18" />
     <edge source="36" target="37" />
-    <edge source="53" target="57" />
+    <edge source="36" target="35" />
+    <edge source="34" target="32" />
     <edge source="33" target="55" />
+    <edge source="37" target="32" />
   </graph>
 </graphml>
