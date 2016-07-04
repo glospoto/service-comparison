@@ -135,7 +135,7 @@ This class models the switch in the network
 class Switch(object):
     def __init__(self, dpid, name, role):
         self._dpid = int(dpid)
-        self._name = self._parse_name(name)
+        self._name = name
         # self._variable_name = self._name.lower()
         self._vrf_role = role
         self._interfaces = []
@@ -155,7 +155,7 @@ class Switch(object):
     def _parse_name(name):
         name.replace(' ', '_')
         name.replace(',', '')
-        switch_name = name[:5]
+        switch_name = name[:7]
         if switch_name.endswith('_'):
             switch_name = switch_name.replace('_', '')
         return switch_name

@@ -1,7 +1,7 @@
 from threading import Thread
-import os
 import time
 
+from utils.file import File
 from utils.log import Logger
 from utils.fs import FileSystem
 
@@ -117,6 +117,18 @@ class Simulation(Thread):
         return self._simulation_path
 
     '''
+    Save information of topology into the folder containing simulation's results
+    '''
+
+    def _save_topology_information(self):
+        # Create a new file
+        info_topology_file = File(self._simulation_path, 'topology.info')
+        # Write information about the overlay
+        info_topology_file.write(self._service.get_overlay())
+        # Save the file into the simulation folder
+        info_topology_file.save()
+
+    '''
     Execute extractors, if needed
     '''
 
@@ -193,6 +205,8 @@ class Simulation(Thread):
     '''
 
     def run(self):
+        # Save information about topology into the simulation folder
+        self._save_topology_information()
         self._log.debug(self.__class__.__name__, 'Preparing the execution of the simulation.')
         self._execute_collectors()
         self._start_environment()
