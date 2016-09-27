@@ -41,7 +41,7 @@ class ControllerStarter(object):
 
     def stop(self):
         self._log.debug(self.__class__.__name__, 'Stopping controller.')
-        # Create a psutil.Process starting from the pid
+		# Create a psutil.Process starting from the pid
         process = psutil.Process(self._controller_process.pid)
         self._log.debug(self.__class__.__name__, 'All child have been kept.')
         # Get all child' PID

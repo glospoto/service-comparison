@@ -4,7 +4,8 @@ from subprocess import PIPE
 from utils.process import Process
 
 """
-This class implements an instance of a docker container. In the framework, each docker instance represents a router.
+This class implements an instance of a docker container. In the framework, each docker instance 
+represents a router.
 """
 
 
@@ -27,7 +28,8 @@ class Docker(object):
 
     def create(self):
         cmd = 'sudo docker create --name=%s %s -i %s' % (self._name, self._opts, self._image)
-        cmd_debug = 'sudo docker create --name=%s %s --tty --interactive -i %s' % (self._name, self._opts, self._image)
+        cmd_debug = 'sudo docker create --name=%s %s --tty --interactive -i %s' % (
+			self._name, self._opts, self._image)
         process = Process()
         process.execute(cmd_debug)
         process.communicate()
@@ -68,8 +70,9 @@ class Docker(object):
 
 
 """
-This class wraps the "docker network" command. It is used in the environment built on top of Docker to create link
-between each pair of router interfaces (remember that each docker instance represents a router).
+This class wraps the "docker network" command. It is used in the environment built on top of Docker 
+to create link between each pair of router interfaces (remember that each docker instance 
+represents a router).
 """
 
 

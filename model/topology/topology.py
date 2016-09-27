@@ -7,9 +7,10 @@ from model.topology.overlay import TopologyOverlay
 from utils.log import Logger
 
 """
-This class class models a topology. A topology object is a list of different overlay, each of which represents a graph
-where each node is a specialization of class Node and each edge is a specialization of the class Edge. It allows user to
-create topologies with objects that have their behavior related to the service.
+This class class models a topology. A topology object is a list of different overlay, each of which 
+represents a graph where each node is a specialization of class Node and each edge is a 
+specialization of the class Edge. It allows user to create topologies with objects that have their 
+behavior related to the service.
 """
 
 
