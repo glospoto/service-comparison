@@ -33,6 +33,6 @@ class Observable(object):
 	Notify all observers of this object
 	'''
 
-	def notify_all(self):
+	def notify_all(self, msg):
 		for observer in self._observers:
-			observer.update()
+			observer.update(msg)

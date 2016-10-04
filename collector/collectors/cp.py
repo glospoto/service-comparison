@@ -56,3 +56,49 @@ class MininetControlPlaneMessages(ControlPlaneMessages):
 
 	def run(self):
 		self.collect_data()
+
+"""
+This class models a control plane messages collector for Docker environment. This means starting a 
+Sniffer on specific interfaces and collecting messages into a pcap file inside TMP folder.
+"""
+
+
+class DockerControlPlaneMessages(ControlPlaneMessages):
+	def __init__(self):
+		ControlPlaneMessages.__init__(self)
+
+	def __repr__(self):
+		return self.__class__.__name__
+
+	'''
+	Get all docker bridges
+	'''
+	def _get_interfaces(self):
+		pass
+
+	'''
+	Collect data for this collector.
+	'''
+
+	def collect_data(self):
+		self._get_interfaces()
+		'''
+		self._log.debug(self.__class__.__name__, 'Creating a new sniffer on interface lo.')
+		# Starting a sniffer
+		self._sniffer = Sniffer('lo', self._fs.get_tmp_folder() + '/sniff.pcap')
+		# Sniff data
+		self._log.info(self.__class__.__name__, 'Starting to sniff control plane messages.')
+		self._sniffer.sniff()
+		self._log.info(self.__class__.__name__, 'Sniffer has been finished to collect data.')
+		'''
+
+	'''
+	Run the thread containing the control plane messages collector.
+	'''
+
+	def run(self):
+		self.collect_data()
+
+	def update(self, msg):
+		if msg == 'bridge':
+			print '##########@@@@@@@@@@@@ A new bridge has been added! Start the sniffer'

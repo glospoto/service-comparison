@@ -4,6 +4,7 @@ from loader.env.mininet_simulator import MininetTopology, MininetStartSimulation
 from loader.env.docker_simulator import Docker, Bridge
 import utils.class_for_name as Class
 from utils.log import Logger
+from utils.patterns.observer import Observable
 
 """
 This class has in charge the task to load the environment.
@@ -107,9 +108,10 @@ an instance of a docker container.
 """
 
 
-class DockerEnvironment(Environment):
+class DockerEnvironment(Environment, Observable):
 	def __init__(self):
 		Environment.__init__(self)
+		Observable.__init__(self)
 		# Running instances
 		self._running_docker_instances = []
 		# Active bridges
@@ -176,6 +178,8 @@ class DockerEnvironment(Environment):
 				self.__class__.__name__, 'Creating bridge for link %s.', link.get_name())
 
 			bridge = Bridge(link.get_name())
+			# Add to this bridge (observale) an observer (this class)
+			bridge.add_observer(self)
 			# Create the Docker bridge
 			bridge.create(link.get_subnet())
 			# Connect the Docker instances of this link to the Docker bridge (remember to pass the 
@@ -216,3 +220,11 @@ class DockerEnvironment(Environment):
 				'Container for node %s has been correctly removed.', instance.get_name())
 		self._log.info(
 			self.__class__.__name__, 'All Docker instances are now successfully stopped.')
+
+	'''
+	This method is implemented accordingly to Observer pattern 
+	'''	
+	def update(self, msg):
+		if msg == 'bridge':
+			# Notify all observers
+			self.notify_all(msg)

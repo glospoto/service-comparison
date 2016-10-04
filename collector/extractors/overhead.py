@@ -102,11 +102,46 @@ class MininetControlPlaneOverhead(ControlPlaneOverhead):
 		output_file.save()
 		self._log.info(self.__class__.__name__, 'All data has been correctly extracted.')
 		# Notify all observers
-		self.notify_all()
+		self.notify_all('extractor')
 
 	'''
 	Run the thread in which this extractor is in execution.
 	'''
+
+	def run(self):
+		self.extract_data()
+
+
+class DockerControlPlaneOverhead(ControlPlaneOverhead):
+	def __init__(self,):
+		ControlPlaneOverhead.__init__(self)
+		# The abspath to the extraction folder
+		self._extractor_folder = None
+		# The file name which contains extracted information
+		self._extractor_file_name = 'overhead.data'
+
+	def __repr__(self):
+		return self.__class__.__name__
+
+	'''
+	Set the simulation path in which save the extracted data.
+	'''
+
+	def set_simulation(self, simulation):
+		# Set the simulation
+		self._simulation = simulation
+		# The abspath to the extraction folder
+		self._extractor_folder = self._fs.join(
+			simulation.get_simulation_path(), self._extractor_folder_name)
+		# Create extraction folder on the file system
+		self._fs.make_dir(self._extractor_folder)
+
+	'''
+	Start the process of extracting data.
+	'''
+
+	def extract_data(self):
+		pass
 
 	def run(self):
 		self.extract_data()

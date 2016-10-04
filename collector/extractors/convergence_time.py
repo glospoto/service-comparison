@@ -108,7 +108,7 @@ class MininetControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
 		output_file.save()
 		self._log.info(self.__class__.__name__, 'All data has been successfully extracted.')
 		# Notify all observers
-		self.notify_all()
+		self.notify_all('extractor')
 
 	'''
 	Run the thread in which this extractor is in execution.

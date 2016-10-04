@@ -4,6 +4,7 @@ import time
 from utils.file import File
 from utils.log import Logger
 from utils.fs import FileSystem
+from utils.patterns.observer import Observable
 
 """
 This class models a simulation. A simulation consists of a folder in which frameworks stores some 
@@ -19,9 +20,10 @@ following structure:
 """
 
 
-class Simulation(Thread):
+class Simulation(Thread, Observable):
 	def __init__(self, topology, service, environment, alternative):
 		Thread.__init__(self)
+		Observable.__init__(self)
 		""" Utils objects """
 		# Get the object for filesystem handling
 		self._fs = FileSystem.get_instance()
@@ -59,11 +61,13 @@ class Simulation(Thread):
 		# Check if the simulation folder exists
 		if not self._fs.path_exists(self._root_simulation_path):
 			self._fs.make_dir(self._root_simulation_path)
-			self._log.info(self.__class__.__name__, 'Simulation folder misses; it has been just created.')
+			self._log.info(
+				self.__class__.__name__, 'Simulation folder misses; it has been just created.')
 		else:
 			self._log.debug(self.__class__.__name__, 'Simulation folder exists.')
 
-		# Create a folder for this simulation (simulations/service/alternative/) up to the name of the alternative
+		# Create a folder for this simulation (simulations/service/alternative/) up to the name of 
+		# the alternative
 		alternative_path = self._fs.join(
 			self._root_simulation_path, self._service.get_name().lower(), 
 			self._alternative.get_name())
@@ -82,10 +86,12 @@ class Simulation(Thread):
 				'Service folder inside %s already exists; create folders for environment.',
 				self._simulation_path)
 		# Create the last level of folder (timestamp based)
-		self._simulation_path = self._fs.join(alternative_path, time.strftime('%Y%m%d%H%M%S', time.localtime()))
+		self._simulation_path = self._fs.join(
+			alternative_path, time.strftime('%Y%m%d%H%M%S', time.localtime()))
 		self._log.debug(self.__class__.__name__, 'Creating folder for this simulation.')
 		self._fs.make_dir(self._simulation_path)
-		self._log.info(self.__class__.__name__, 'Folder for this simulation has been successfully created.')
+		self._log.info(
+			self.__class__.__name__, 'Folder for this simulation has been successfully created.')
 
 	'''
 	Return the topology which the simulation is running on.
@@ -130,7 +136,7 @@ class Simulation(Thread):
 		# Create a new file
 		info_topology_file = File(self._simulation_path, 'topology.info')
 		# Write information about the overlay
-		info_topology_file.write(self._service.get_overlay())
+		info_topology_file.write(str(self._service.get_overlay()))
 		# Save the file into the simulation folder
 		info_topology_file.save()
 
@@ -147,6 +153,8 @@ class Simulation(Thread):
 			collector = metric.get_collector()
 			if collector is not None:
 				if collector.get_name() not in activated_collectors:
+					# Add the collector observer to the environment
+					self._environment.add_observer(collector)
 					self._log.debug(
 						self.__class__.__name__, 
 						'A new collector %s has been detected; start it.', collector.get_name())
@@ -176,9 +184,13 @@ class Simulation(Thread):
 	'''
 
 	def _start_environment(self):
-		self._log.debug(self.__class__.__name__, 'Preparing the environment %s to be executed.', self._environment)
+		self._log.debug(
+			self.__class__.__name__, 
+			'Preparing the environment %s to be executed.', self._environment)
 		self._environment.run(self._service.get_overlay())
-		self._log.debug(self.__class__.__name__, 'Environment %s has been successfully started.', self._environment)
+		self._log.debug(
+			self.__class__.__name__, 
+			'Environment %s has been successfully started.', self._environment)
 
 	'''
 	Deploy alternative based on scenario and overlay.
@@ -186,7 +198,8 @@ class Simulation(Thread):
 
 	def _deploy_alternative(self):
 		# Deploying the alternative on the overlay and scenario for the current service.
-		self._log.debug(self.__class__.__name__, 'Deploying alternative %s.', self._alternative.get_name())
+		self._log.debug(
+			self.__class__.__name__, 'Deploying alternative %s.', self._alternative.get_name())
 		# Setting the overlay for current alternative
 		self._alternative.deploy(self._service.get_overlay(), self._service.get_scenario())
 		self._log.debug(
@@ -230,32 +243,37 @@ class Simulation(Thread):
 		self._log.debug(self.__class__.__name__, 'Preparing the execution of the simulation.')
 		self._execute_collectors()
 		self._start_environment()
-		self._deploy_alternative()
-		self._execute_extractors()
+		#self._deploy_alternative()
+		#self._execute_extractors()
 		self._log.info(self.__class__.__name__, 'Simulation has been successfully started.')
 
 	'''
-	This method is implemented in accord with Observer pattern. It observes the extractor: when all
+	This method is implemented in accord with 
+ pattern. It observes the extractor: when all
 	extractors ends	their task, the update method will stop the environment.
 	'''
 
-	def update(self):
-		self._extractor_count += 1
-		if self._extractor_count == self._extractor_number:
-			self._log.debug(
-				self.__class__.__name__,
-				'All extractors done; starting to stop alternative %s and environment %s.',
-				self._alternative.get_name(), self._environment)
-			self._alternative.destroy()  # TODO check it!
-			self._log.debug(
-				self.__class__.__name__,
-				'Alternative %s has been successfully stopped.', self._alternative.get_name())
-			self._environment.stop()
-			self._log.debug(
-				self.__class__.__name__,
-				'Environment %s has been successfully stopped.', self._environment)
-			self._extractor_count = 0
-		self._log.info(
-			self.__class__.__name__,
-			'Alternative %s and environment %s have been successfully stopped.',
-			 self._alternative.get_name(), self._environment)
+	def update(self, msg):
+		if msg == 'bridge':
+			# Notidy other oberserver
+			self.notify_all(msg)
+		elif msg == 'extractor':
+			self._extractor_count += 1
+			if self._extractor_count == self._extractor_number:
+				self._log.debug(
+					self.__class__.__name__,
+					'All extractors done; starting to stop alternative %s and environment %s.',
+					self._alternative.get_name(), self._environment)
+				self._alternative.destroy()  # TODO check it!
+				self._log.debug(
+					self.__class__.__name__,
+					'Alternative %s has been successfully stopped.', self._alternative.get_name())
+				self._environment.stop()
+				self._log.debug(
+					self.__class__.__name__,
+					'Environment %s has been successfully stopped.', self._environment)
+				self._extractor_count = 0
+				self._log.info(
+					self.__class__.__name__,
+					'Alternative %s and environment %s have been successfully stopped.',
+			 	self._alternative.get_name(), self._environment)
