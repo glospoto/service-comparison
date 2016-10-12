@@ -44,6 +44,8 @@ class Simulation(Thread, Observable):
 		self._alternative = alternative
 		# The metrics to evaluate during this simulation
 		self._metrics = alternative.get_metrics()
+		# Active collectors
+		self._active_collectors = []
 		# Extractor count. This variable is used to keep track of how many extractors notified this object
 		self._extractor_number = len(self._metrics)
 		self._extractor_count = 0
@@ -164,6 +166,7 @@ class Simulation(Thread, Observable):
 						'Collector %s has been successfully started.', collector.get_name())
 					# Put the collector into the list of activated collectors
 					activated_collectors.append(collector.get_name())
+					self._active_collectors.append(collector)
 					self._log.debug(
 						self.__class__.__name__,
 						'Collector %s has been added to the list of activated collectors.',
@@ -243,8 +246,8 @@ class Simulation(Thread, Observable):
 		self._log.debug(self.__class__.__name__, 'Preparing the execution of the simulation.')
 		self._execute_collectors()
 		self._start_environment()
-		#self._deploy_alternative()
-		#self._execute_extractors()
+		self._deploy_alternative()
+		self._execute_extractors()
 		self._log.info(self.__class__.__name__, 'Simulation has been successfully started.')
 
 	'''
@@ -262,8 +265,13 @@ class Simulation(Thread, Observable):
 			if self._extractor_count == self._extractor_number:
 				self._log.debug(
 					self.__class__.__name__,
-					'All extractors done; starting to stop alternative %s and environment %s.',
-					self._alternative.get_name(), self._environment)
+					'All extractors done; starting to stop alternative %s, environment %s and ' + 
+					'active collectors.', self._alternative.get_name(), self._environment)
+				for collector in self._active_collectors:
+					collector.stop()
+					self._log.debug(
+						self.__class__.__name__,
+						'Collector %s has been successfully stopped.', collector.get_name())
 				self._alternative.destroy()  # TODO check it!
 				self._log.debug(
 					self.__class__.__name__,

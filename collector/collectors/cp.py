@@ -1,11 +1,14 @@
-from abc import ABCMeta, abstractmethod
-
-from collector.collector import Collector
-from utils.network import Sniffer
-
 """
 This class models an abstract DeviceLoad extractor
 """
+
+from abc import ABCMeta, abstractmethod
+
+import netifaces
+
+from collector.collector import Collector
+from utils.network import Sniffer
+from utils.process import Process
 
 
 class ControlPlaneMessages(Collector):
@@ -48,7 +51,7 @@ class MininetControlPlaneMessages(ControlPlaneMessages):
 		# Sniff data
 		self._log.info(self.__class__.__name__, 'Starting to sniff control plane messages.')
 		self._sniffer.sniff()
-		self._log.info(self.__class__.__name__, 'Sniffer has been finished to collect data.')
+		self._log.info(self.__class__.__name__, 'Sniffer finished to collect data.')
 
 	'''
 	Run the thread containing the control plane messages collector.
@@ -56,6 +59,9 @@ class MininetControlPlaneMessages(ControlPlaneMessages):
 
 	def run(self):
 		self.collect_data()
+
+	def stop(self):
+		pass
 
 """
 This class models a control plane messages collector for Docker environment. This means starting a 
@@ -66,6 +72,10 @@ Sniffer on specific interfaces and collecting messages into a pcap file inside T
 class DockerControlPlaneMessages(ControlPlaneMessages):
 	def __init__(self):
 		ControlPlaneMessages.__init__(self)
+		# A list of interfaces with an active sniffere associated
+		self._active_ifaces = []
+		# The list of all tcpdump processes
+		self._processes = []
 
 	def __repr__(self):
 		return self.__class__.__name__
@@ -74,31 +84,50 @@ class DockerControlPlaneMessages(ControlPlaneMessages):
 	Get all docker bridges
 	'''
 	def _get_interfaces(self):
-		pass
+		host_ifaces = netifaces.interfaces()
+		ifaces = filter(lambda iface: 'br-' in iface, host_ifaces)
+		return ifaces
 
 	'''
 	Collect data for this collector.
 	'''
 
 	def collect_data(self):
-		self._get_interfaces()
-		'''
-		self._log.debug(self.__class__.__name__, 'Creating a new sniffer on interface lo.')
-		# Starting a sniffer
-		self._sniffer = Sniffer('lo', self._fs.get_tmp_folder() + '/sniff.pcap')
-		# Sniff data
-		self._log.info(self.__class__.__name__, 'Starting to sniff control plane messages.')
-		self._sniffer.sniff()
-		self._log.info(self.__class__.__name__, 'Sniffer has been finished to collect data.')
-		'''
+		ifaces = self._get_interfaces()
+		if len(ifaces) > 0:
+			for iface in ifaces:
+				if iface not in self._active_ifaces:
+					self._log.debug(
+						self.__class__.__name__, 
+						'Creating a new sniffer on interface %s.', iface)
+					cmd = 'sudo tcpdump -nli %s -w %s' % (
+						iface, self._fs.get_tmp_folder() + '/' + iface + '.pcap')
+					self._active_ifaces.append(iface)
+					self._log.info(
+						self.__class__.__name__, 
+						'Starting to sniff control plane messages on interface %s.', iface)
+					process = Process()
+					process.execute(cmd)
+					self._processes.append(process)
+					self._log.info(
+						self.__class__.__name__, 'Sniffer finished to collect data.')
 
 	'''
 	Run the thread containing the control plane messages collector.
 	'''
 
 	def run(self):
-		self.collect_data()
+		# self.collect_data()
+		pass
+
+	def stop(self):
+		# Kill all sniffers
+		for p in self._processes:
+			p.kill()
+		self._processes[:]
+		self._active_ifaces[:]
 
 	def update(self, msg):
 		if msg == 'bridge':
-			print '##########@@@@@@@@@@@@ A new bridge has been added! Start the sniffer'
+			self.collect_data()
+			

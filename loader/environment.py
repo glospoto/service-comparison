@@ -58,9 +58,10 @@ accord with the controller and starting Mininet itself and controller.
 """
 
 
-class MininetEnvironment(Environment):
+class MininetEnvironment(Environment, Observable):
 	def __init__(self):
 		Environment.__init__(self)
+		Observable.__init__(self)
 		# Object for directly handler Mininet environment
 		self._mininet_topology = None
 		self._mininet_starter = None

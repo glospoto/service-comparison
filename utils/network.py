@@ -1,8 +1,8 @@
-from scapy.sendrecv import sniff, wrpcap
-
 """
 This class implements a sniffer used for some collectors.
 """
+
+from scapy.sendrecv import sniff, wrpcap
 
 
 class Sniffer(object):
@@ -17,3 +17,4 @@ class Sniffer(object):
 	def sniff(self):
 		pkts = sniff(iface=self._interface, timeout=14)
 		wrpcap(self._pcap_file, pkts)
+
