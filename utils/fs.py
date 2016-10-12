@@ -130,6 +130,13 @@ class FileSystem(object):
 		return os.path.abspath(path)
 
 	'''
+	List the content of a specifi folder
+	'''
+	@staticmethod
+	def list_dir(path):
+		return os.listdir(path)
+
+	'''
 	Copy source into destination.
 	'''
 

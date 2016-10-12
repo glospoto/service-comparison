@@ -385,8 +385,8 @@ class MplsBgpVpnConfigurator(Configurator):
 		if node.get_role() == 'PE':
 			self._log.debug(
 				self.__class__.__name__, 'Starting GoBGP routing daemon on %s.', node.get_name())
-			cmd_gobgp_daemon = 'sudo docker exec -d %s ' + \
-				'/root/go/bin/gobgpd -f /etc/quagga/gobgp.conf' % node.get_name()
+			cmd_gobgp_daemon = 'sudo docker exec -d %s x/root/go/bin/gobgpd -f ' \
+				'/etc/quagga/gobgp.conf' % node.get_name()
 			process.execute(cmd_gobgp_daemon)
 			process.communicate()
 			self._log.debug(
@@ -406,8 +406,8 @@ class MplsBgpVpnConfigurator(Configurator):
 					self.__class__.__name__, 
 					'Starting BagPipeBGP routing daemon on host %s.', host.get_name())
 				# Starting BagPipeBGP
-				cmd_bagpipebgp_daemon = 'sudo docker exec -d %s ' + \
-					'service bagpipe-bgp start' % host.get_name()
+				cmd_bagpipebgp_daemon = \
+					'sudo docker exec -d %s service bagpipe-bgp start' % host.get_name()
 				process.execute(cmd_bagpipebgp_daemon)
 				process.communicate()
 				self._log.debug(

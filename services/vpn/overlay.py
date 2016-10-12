@@ -81,10 +81,12 @@ class VpnOverlay(Overlay):
 	'''
 
 	def get_host_link(self, host):
+		# Apparently, it is just used by MplsBgpConfigurator
 		for link in self._links:
+			# sec and dst switch are Switch objects
 			src_switch = link.get_from_switch()
 			dst_switch = link.get_to_switch()
-			if src_switch == host.get_name() or dst_switch.get_name() == host.get_name():
+			if src_switch.get_name() == host.get_name() or dst_switch.get_name() == host.get_name():
 				return link
 
 	'''

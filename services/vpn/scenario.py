@@ -1,11 +1,13 @@
-from model.scenario import Scenario
-from services.vpn.vpn import VirtualPrivateNetwork, Host, Link, Site
-from utils.generator import AddressGenerator
-
 """
 This class implements the scenario for the VPN service. In this case, scenario simply consists of 
 the number of VPNs in the network
 """
+
+import sys
+
+from model.scenario import Scenario
+from services.vpn.vpn import VirtualPrivateNetwork, Host, Link, Site
+from utils.generator import AddressGenerator
 
 
 class VpnScenario(Scenario):
@@ -46,6 +48,11 @@ class VpnScenario(Scenario):
 			self._log.debug(self.__class__.__name__, 'VPN %s has been created', name)
 			# Take two random PEs
 			pes = overlay.get_two_random_pes()
+			if len(pes) != 2:
+				self._log.error(
+					self.__class__.__name__, 
+					'There are no enough PEs in the network; fix it.')
+				sys.exit(-1)
 			# Create sites
 			self._log.debug(
 				self.__class__.__name__, 

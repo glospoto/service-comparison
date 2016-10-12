@@ -109,8 +109,6 @@ class DockerControlPlaneMessages(ControlPlaneMessages):
 					process = Process()
 					process.execute(cmd)
 					self._processes.append(process)
-					self._log.info(
-						self.__class__.__name__, 'Sniffer finished to collect data.')
 
 	'''
 	Run the thread containing the control plane messages collector.
@@ -126,6 +124,7 @@ class DockerControlPlaneMessages(ControlPlaneMessages):
 			p.kill()
 		self._processes[:]
 		self._active_ifaces[:]
+		self._log.info(self.__class__.__name__, 'Sniffers finished to collect data.')
 
 	def update(self, msg):
 		if msg == 'bridge':

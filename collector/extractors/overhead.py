@@ -1,16 +1,18 @@
+"""
+This class implements an extractor for measuring the control plane overhead in terms of number of 
+exchanged control plane messages.
+"""
+
 from abc import ABCMeta, abstractmethod
 import time
 
+from scapy.contrib.bgp import BGPHeader
 from scapy.layers.inet import TCP
 from scapy.utils import rdpcap
 
 from collector.extractor import Extractor
 from utils.file import File
-
-"""
-This class implements an extractor for measuring the control plane overhead in terms of number of 
-exchanged control plane messages.
-"""
+from scapy.contrib.ospf import OSPF_Hdr
 
 
 class ControlPlaneOverhead(Extractor):
@@ -93,13 +95,15 @@ class MininetControlPlaneOverhead(ControlPlaneOverhead):
 					count += 1
 		self._log.debug(
 			self.__class__.__name__, 
-			'Starting to write the convergence time into extractor folder.')
+			'Starting to write the control plane overhead into extractor folder.')
 		# Write it into a file inside the extractor folder
 		output_file = File(self._extractor_folder, self._extractor_file_name)
 		# output_file_name = self._simulation_path + '/' + self._extractor_folder + '/overhead.data'
 		# output_file = open(output_file_name, 'w')
 		output_file.write('Exchanged packets: %s' % str(count))
 		output_file.save()
+		# Delete the pcap file
+		self._fs.delete(self._fs.get_tmp_folder() + '/sniff.pcap') 
 		self._log.info(self.__class__.__name__, 'All data has been correctly extracted.')
 		# Notify all observers
 		self.notify_all('extractor')
@@ -141,7 +145,39 @@ class DockerControlPlaneOverhead(ControlPlaneOverhead):
 	'''
 
 	def extract_data(self):
-		pass
+		# First of all, sleep for 8 minutes
+		self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
+		time.sleep(480)
+		self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
+		# Take pcap files
+		pcap_files = self._fs.list_dir(self._fs.get_tmp_folder())
+		# Counter for counting all openflow packets included into the sniffing.
+		count = 0
+		for pcap_file in pcap_files:
+			if pcap_file.startswith('br-') and pcap_file.endswith('.pcap'):
+				# Load the sniff
+				pkts = rdpcap(self._fs.get_tmp_folder() + '/' + pcap_file)
+				self._log.debug(
+					self.__class__.__name__, 
+					'Calculating the total number of exchanged control plane messages.')
+				for pkt in pkts:
+					p = pkt.payload
+					if BGPHeader in p or OSPF_Hdr in p:
+						count += 1
+				# Delete the pcap file
+				self._fs.delete(self._fs.get_tmp_folder() + '/' + pcap_file) 
+		self._log.debug(
+			self.__class__.__name__, 
+			'Starting to write the control plane overhead into extractor folder.')
+		# Write it into a file inside the extractor folder
+		output_file = File(self._extractor_folder, self._extractor_file_name)
+		# output_file_name = self._simulation_path + '/' + self._extractor_folder + '/overhead.data'
+		# output_file = open(output_file_name, 'w')
+		output_file.write('Exchanged packets: %s' % str(count))
+		output_file.save()
+		self._log.info(self.__class__.__name__, 'All data has been correctly extracted.')
+		# Notify all observers
+		self.notify_all('extractor')
 
 	def run(self):
 		self.extract_data()
