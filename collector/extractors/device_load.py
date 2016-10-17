@@ -176,7 +176,7 @@ class DockerDeviceLoad(DeviceLoad):
 			output_file = File(self._extractor_folder, file_name)
 			# Command for extracting data
 			self._log.debug(self.__class__.__name__, 'Starting to extract FIB information.')
-			cmd_vrf = 'sudo docker exec %s bagpipe-looking-glass vpns instances test ' + \
+			cmd_vrf = 'sudo docker exec %s bagpipe-looking-glass vpns instances test ' \
 				'routes' % host.get_name()
 				
 			extractor_customer = Process()
