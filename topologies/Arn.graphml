@@ -18,28 +18,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mostaga</data>
+      <data key="d4">Mosta</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Tlemcen</data>
+      <data key="d4">Tlemc</data>
     </node>
     <node id="27">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">SidiBel</data>
+      <data key="d4">SidiB</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Tiaret</data>
+      <data key="d4">Tiare</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
@@ -74,7 +74,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mascara</data>
+      <data key="d4">Masca</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -88,7 +88,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Djelfa</data>
+      <data key="d4">Djelf</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
@@ -102,7 +102,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Interne</data>
+      <data key="d4">Inter</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -116,42 +116,42 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">ElOued</data>
+      <data key="d4">ElOue</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ouargla</data>
+      <data key="d4">Ouarg</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Laghoua</data>
+      <data key="d4">Lagho</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Biskra</data>
+      <data key="d4">Biskr</data>
     </node>
     <node id="8">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Constan</data>
+      <data key="d4">Const</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">TiziOuz</data>
+      <data key="d4">TiziO</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
@@ -165,28 +165,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Guelma</data>
+      <data key="d4">Guelm</data>
     </node>
     <node id="12">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Annaba</data>
+      <data key="d4">Annab</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">OumelBo</data>
+      <data key="d4">Oumel</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Tebessa</data>
+      <data key="d4">Tebes</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
@@ -200,7 +200,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bejaia</data>
+      <data key="d4">Bejai</data>
     </node>
     <node id="19">
       <data key="d0">P</data>
@@ -214,7 +214,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Skikda</data>
+      <data key="d4">Skikd</data>
     </node>
     <edge source="24" target="25" />
     <edge source="24" target="26" />

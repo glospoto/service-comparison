@@ -157,7 +157,7 @@ class DockerControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
 	def extract_data(self):
 		# First of all, sleep for 1 minute
 		self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
-		time.sleep(480)
+		time.sleep(120)
 		self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
 		# Take pcap files
 		pcap_files = self._fs.list_dir(self._fs.get_tmp_folder())
@@ -173,9 +173,7 @@ class DockerControlPlaneConvergenceTime(ControlPlaneConvergenceTime):
 				for pkt in pkts:
 					p = pkt.payload
 					if BGPHeader in p or OSPF_Hdr in p:
-						packets.append(pkt.time)
-				# Delete the pcap file
-				self._fs.delete(self._fs.get_tmp_folder() + '/' + pcap_file) 
+						packets.append(pkt.time) 
 		self._log.debug(
 			self.__class__.__name__, 'Calculating the time of the of the last sniffed packet.')
 		# Take the time of the last sniffed packet

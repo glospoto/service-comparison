@@ -11,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Waterfo</data>
+      <data key="d4">Water</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -25,28 +25,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Limeric</data>
+      <data key="d4">Limer</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Galway</data>
+      <data key="d4">Galwa</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Tralee</data>
+      <data key="d4">Trale</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Letterk</data>
+      <data key="d4">Lette</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
@@ -60,28 +60,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Dundalk</data>
+      <data key="d4">Dunda</data>
     </node>
     <node id="6">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Athlone</data>
+      <data key="d4">Athlo</data>
     </node>
     <node id="9">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Carlow</data>
+      <data key="d4">Carlo</data>
     </node>
     <node id="8">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Blancha</data>
+      <data key="d4">Blanc</data>
     </node>
     <edge source="10" target="8" />
     <edge source="1" target="8" />

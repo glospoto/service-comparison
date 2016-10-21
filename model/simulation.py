@@ -280,6 +280,8 @@ class Simulation(Thread, Observable):
 				self._log.debug(
 					self.__class__.__name__,
 					'Environment %s has been successfully stopped.', self._environment)
+				self._log.debug(self.__class__.__name__, 'Cleaning the TMP folder.')
+				self._fs.clean_tmp()
 				self._extractor_count = 0
 				self._log.info(
 					self.__class__.__name__,

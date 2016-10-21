@@ -67,7 +67,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Telekom</data>
+      <data key="d4">Telek</data>
     </node>
     <node id="27">
       <data key="d0">PE</data>
@@ -284,14 +284,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom1</data>
+      <data key="d4">Cu1</data>
     </node>
     <node id="15">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom2</data>
+      <data key="d4">Cu2</data>
     </node>
     <node id="48">
       <data key="d0">P</data>

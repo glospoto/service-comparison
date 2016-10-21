@@ -18,21 +18,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Grodno</data>
+      <data key="d4">Grodn</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Mogilev</data>
+      <data key="d4">Mogil</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vitebsk</data>
+      <data key="d4">Viteb</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -53,7 +53,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pionier</data>
+      <data key="d4">Pioni</data>
     </node>
     <edge source="1" target="0" />
     <edge source="1" target="3" />

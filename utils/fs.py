@@ -73,6 +73,15 @@ class FileSystem(object):
 		return self._current_working_path
 
 	""" Methods for operating over application's folders """
+	
+	'''
+	Clean the tmp folder
+	'''
+	
+	def clean_tmp(self):
+		tmp_files = self.list_dir(self.get_tmp_folder())
+		for tmp_file in tmp_files:
+			self.delete(self.join(self.get_tmp_folder(), tmp_file))
 
 	'''
 	Set the current working directory to the root folder.

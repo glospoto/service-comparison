@@ -18,7 +18,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jogeva</data>
+      <data key="d4">Jogev</data>
     </node>
     <node id="12">
       <data key="d0">PE</data>
@@ -32,7 +32,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Haapsal</data>
+      <data key="d4">Haaps</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
@@ -46,21 +46,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Rakvere</data>
+      <data key="d4">Rakve</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kuressa</data>
+      <data key="d4">Kures</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Tallinn</data>
+      <data key="d4">Talli</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
@@ -81,14 +81,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">GEANT2</data>
+      <data key="d4">GEANT</data>
     </node>
     <node id="9">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Viljand</data>
+      <data key="d4">Vilja</data>
     </node>
     <node id="8">
       <data key="d0">PE</data>

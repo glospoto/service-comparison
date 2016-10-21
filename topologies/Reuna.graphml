@@ -11,21 +11,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Temuco</data>
+      <data key="d4">Temuc</data>
     </node>
     <node id="25">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Concepc</data>
+      <data key="d4">Conce</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Santiag</data>
+      <data key="d4">Santi</data>
     </node>
     <node id="27">
       <data key="d0">P</data>
@@ -39,28 +39,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Copiapo</data>
+      <data key="d4">Copia</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Antofag</data>
+      <data key="d4">Antof</data>
     </node>
     <node id="22">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Iquique</data>
+      <data key="d4">Iquiq</data>
     </node>
     <node id="23">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Valdivi</data>
+      <data key="d4">Valdi</data>
     </node>
     <node id="28">
       <data key="d0">PE</data>
@@ -81,7 +81,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">ULAGOS</data>
+      <data key="d4">ULAGO</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
@@ -109,7 +109,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UNAPSed</data>
+      <data key="d4">UNAPS</data>
     </node>
     <node id="4">
       <data key="d0">PE</data>
@@ -144,7 +144,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">ULAGOPu</data>
+      <data key="d4">Cu1</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
@@ -158,7 +158,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">PITsNac</data>
+      <data key="d4">PITsN</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
@@ -172,49 +172,49 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">RCNacio</data>
+      <data key="d4">RCNac</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom1</data>
+      <data key="d4">Cu2</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom2</data>
+      <data key="d4">Cu3</data>
     </node>
     <node id="17">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">RedCLAR</data>
+      <data key="d4">RedCL</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom3</data>
+      <data key="d4">Cu4</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">LaSeren</data>
+      <data key="d4">LaSer</data>
     </node>
     <node id="18">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Osorno</data>
+      <data key="d4">Osorn</data>
     </node>
     <node id="31">
       <data key="d0">P</data>
@@ -263,7 +263,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UCHILE</data>
+      <data key="d4">UCHIL</data>
     </node>
     <edge source="24" target="25" />
     <edge source="24" target="13" />

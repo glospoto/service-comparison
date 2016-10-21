@@ -18,7 +18,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ostrava</data>
+      <data key="d4">Ostra</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
@@ -39,28 +39,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">CeskeBu</data>
+      <data key="d4">Ceske</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Liberec</data>
+      <data key="d4">Liber</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HradecK</data>
+      <data key="d4">Hrade</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pardubi</data>
+      <data key="d4">Pardu</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
@@ -74,7 +74,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Olomouc</data>
+      <data key="d4">Olomo</data>
     </node>
     <edge source="1" target="3" />
     <edge source="0" target="9" />

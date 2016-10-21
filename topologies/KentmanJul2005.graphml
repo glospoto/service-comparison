@@ -39,7 +39,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Tonbrid</data>
+      <data key="d4">Tonbr</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
@@ -60,28 +60,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">BlueBel</data>
+      <data key="d4">BlueB</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">BeaconH</data>
+      <data key="d4">Beaco</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Dunkirk</data>
+      <data key="d4">Dunki</data>
     </node>
     <node id="5">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Horsted</data>
+      <data key="d4">Horst</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
@@ -95,14 +95,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NTLWye</data>
+      <data key="d4">NTLWy</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cranbro</data>
+      <data key="d4">Cranb</data>
     </node>
     <node id="9">
       <data key="d0">PE</data>
@@ -116,7 +116,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Univers</data>
+      <data key="d4">Unive</data>
     </node>
     <edge source="11" target="4" />
     <edge source="10" target="15" />

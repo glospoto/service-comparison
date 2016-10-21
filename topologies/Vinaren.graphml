@@ -18,14 +18,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Abilene</data>
+      <data key="d4">Abile</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Interne</data>
+      <data key="d4">Inter</data>
     </node>
     <node id="22">
       <data key="d0">P</data>
@@ -39,7 +39,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom1</data>
+      <data key="d4">Cu1</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -102,7 +102,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NhaTran</data>
+      <data key="d4">NhaTr</data>
     </node>
     <node id="8">
       <data key="d0">PE</data>
@@ -116,7 +116,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">ThaiNgu</data>
+      <data key="d4">ThaiN</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
@@ -137,7 +137,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">AnGiang</data>
+      <data key="d4">AnGia</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
@@ -151,7 +151,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HaiPhon</data>
+      <data key="d4">HaiPh</data>
     </node>
     <node id="17">
       <data key="d0">P</data>

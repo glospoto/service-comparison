@@ -11,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">OpenUni</data>
+      <data key="d4">OpenU</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
@@ -32,7 +32,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Technol</data>
+      <data key="d4">Techn</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
@@ -81,21 +81,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">KREPNET</data>
+      <data key="d4">KREPN</data>
     </node>
     <node id="0">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">ASGCNET</data>
+      <data key="d4">ASGCN</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">APANJP</data>
+      <data key="d4">APANJ</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
@@ -109,21 +109,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">CERNET</data>
+      <data key="d4">CERNE</data>
     </node>
     <node id="4">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Interna</data>
+      <data key="d4">Inter</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">GOOGLE</data>
+      <data key="d4">GOOGL</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
@@ -137,7 +137,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vocatio</data>
+      <data key="d4">Vocat</data>
     </node>
     <node id="20">
       <data key="d0">PE</data>

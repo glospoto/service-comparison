@@ -102,8 +102,6 @@ class MininetControlPlaneOverhead(ControlPlaneOverhead):
 		# output_file = open(output_file_name, 'w')
 		output_file.write('Exchanged packets: %s' % str(count))
 		output_file.save()
-		# Delete the pcap file
-		self._fs.delete(self._fs.get_tmp_folder() + '/sniff.pcap') 
 		self._log.info(self.__class__.__name__, 'All data has been correctly extracted.')
 		# Notify all observers
 		self.notify_all('extractor')
@@ -147,7 +145,7 @@ class DockerControlPlaneOverhead(ControlPlaneOverhead):
 	def extract_data(self):
 		# First of all, sleep for 8 minutes
 		self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
-		time.sleep(480)
+		time.sleep(120)
 		self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
 		# Take pcap files
 		pcap_files = self._fs.list_dir(self._fs.get_tmp_folder())
@@ -164,8 +162,6 @@ class DockerControlPlaneOverhead(ControlPlaneOverhead):
 					p = pkt.payload
 					if BGPHeader in p or OSPF_Hdr in p:
 						count += 1
-				# Delete the pcap file
-				self._fs.delete(self._fs.get_tmp_folder() + '/' + pcap_file) 
 		self._log.debug(
 			self.__class__.__name__, 
 			'Starting to write the control plane overhead into extractor folder.')

@@ -144,7 +144,7 @@ class DockerDeviceLoad(DeviceLoad):
 		extractors = []
 		# First of all, sleep for 4 minute
 		self._log.info(self.__class__.__name__, 'Sleeping waiting for data to extract.')
-		time.sleep(240)
+		time.sleep(15)
 		self._log.info(self.__class__.__name__, 'I woke up. I am starting to extract data.')
 		switches = self._simulation.get_overlay().get_nodes()
 		hosts = self._simulation.get_overlay().get_hosts()
@@ -192,7 +192,7 @@ class DockerDeviceLoad(DeviceLoad):
 			e.wait()
 		self._log.info(self.__class__.__name__, 'All data has been successfully extracted.')
 		# Notify all observers
-		self.notify_all()
+		self.notify_all('extractor')
 
 	'''
 	Run the thread in which this extractor is in execution.

@@ -67,7 +67,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pacwave</data>
+      <data key="d4">Pacwa</data>
     </node>
     <node id="64">
       <data key="d0">P</data>
@@ -102,7 +102,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Starlig</data>
+      <data key="d4">Starl</data>
     </node>
     <node id="24">
       <data key="d0">P</data>
@@ -116,14 +116,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom2</data>
+      <data key="d4">Cu2</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">PANTEX</data>
+      <data key="d4">PANTE</data>
     </node>
     <node id="27">
       <data key="d0">P</data>
@@ -137,14 +137,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom3</data>
+      <data key="d4">Cu3</data>
     </node>
     <node id="21">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom4</data>
+      <data key="d4">Cu4</data>
     </node>
     <node id="48">
       <data key="d0">P</data>
@@ -165,7 +165,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">DOEGTN</data>
+      <data key="d4">DOEGT</data>
     </node>
     <node id="47">
       <data key="d0">P</data>
@@ -179,14 +179,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">BECHTEL</data>
+      <data key="d4">BECHT</data>
     </node>
     <node id="45">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">YUCCAMT</data>
+      <data key="d4">YUCCA</data>
     </node>
     <node id="42">
       <data key="d0">P</data>
@@ -200,21 +200,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom1</data>
+      <data key="d4">Cu1</data>
     </node>
     <node id="40">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom5</data>
+      <data key="d4">Cu5</data>
     </node>
     <node id="41">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom6</data>
+      <data key="d4">Cu6</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -277,7 +277,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">AlliedS</data>
+      <data key="d4">Allie</data>
     </node>
     <node id="8">
       <data key="d0">PE</data>
@@ -298,21 +298,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom12</data>
+      <data key="d4">Cu12</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pacific</data>
+      <data key="d4">Pacif</data>
     </node>
     <node id="12">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Abilene</data>
+      <data key="d4">Abile</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
@@ -326,7 +326,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom10</data>
+      <data key="d4">Cu10</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
@@ -347,14 +347,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom7</data>
+      <data key="d4">Cu7</data>
     </node>
     <node id="38">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom8</data>
+      <data key="d4">Cu8</data>
     </node>
     <node id="59">
       <data key="d0">PE</data>
@@ -368,21 +368,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">SaltLak</data>
+      <data key="d4">SaltL</data>
     </node>
     <node id="17">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom9</data>
+      <data key="d4">Cu9</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom11</data>
+      <data key="d4">Cu11</data>
     </node>
     <node id="19">
       <data key="d0">P</data>
@@ -410,7 +410,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">AMPATH</data>
+      <data key="d4">AMPAT</data>
     </node>
     <node id="51">
       <data key="d0">P</data>
@@ -431,7 +431,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Equinix</data>
+      <data key="d4">Equin</data>
     </node>
     <node id="52">
       <data key="d0">P</data>
@@ -466,7 +466,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">MAXGPOP</data>
+      <data key="d4">MAXGP</data>
     </node>
     <node id="57">
       <data key="d0">PE</data>

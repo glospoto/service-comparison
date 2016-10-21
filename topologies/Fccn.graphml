@@ -18,14 +18,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Aveiro</data>
+      <data key="d4">Aveir</data>
     </node>
     <node id="22">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Coimbra</data>
+      <data key="d4">Coimb</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -39,28 +39,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Portale</data>
+      <data key="d4">Porta</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Castelo</data>
+      <data key="d4">Caste</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Guarda</data>
+      <data key="d4">Guard</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Leiria</data>
+      <data key="d4">Leiri</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
@@ -74,28 +74,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Samtare</data>
+      <data key="d4">Samta</data>
     </node>
     <node id="6">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Lisboa</data>
+      <data key="d4">Lisbo</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">PontaDe</data>
+      <data key="d4">Ponta</data>
     </node>
     <node id="8">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Setubal</data>
+      <data key="d4">Setub</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
@@ -123,21 +123,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Funchal</data>
+      <data key="d4">Funch</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vianade</data>
+      <data key="d4">Viana</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Covilha</data>
+      <data key="d4">Covil</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
@@ -151,21 +151,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Barcelo</data>
+      <data key="d4">Barce</data>
     </node>
     <node id="19">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Braganc</data>
+      <data key="d4">Cu1</data>
     </node>
     <node id="18">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">VillaRe</data>
+      <data key="d4">Villa</data>
     </node>
     <edge source="20" target="15" />
     <edge source="20" target="14" />

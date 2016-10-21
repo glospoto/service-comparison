@@ -11,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pardubi</data>
+      <data key="d4">Pardu</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
@@ -25,7 +25,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">HradecK</data>
+      <data key="d4">Hrade</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -39,21 +39,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">TEN155</data>
+      <data key="d4">TEN15</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Olomouc</data>
+      <data key="d4">Olomo</data>
     </node>
     <node id="2">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ostrava</data>
+      <data key="d4">Ostra</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -81,21 +81,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ustinad</data>
+      <data key="d4">Ustin</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">CeskeBu</data>
+      <data key="d4">Ceske</data>
     </node>
     <node id="8">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Liberec</data>
+      <data key="d4">Liber</data>
     </node>
     <edge source="11" target="7" />
     <edge source="10" target="7" />

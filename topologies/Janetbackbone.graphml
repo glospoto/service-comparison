@@ -11,21 +11,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">EaStMAN</data>
+      <data key="d4">EaStM</data>
     </node>
     <node id="25">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Clydene</data>
+      <data key="d4">Clyde</data>
     </node>
     <node id="26">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NorMAN</data>
+      <data key="d4">NorMA</data>
     </node>
     <node id="27">
       <data key="d0">P</data>
@@ -60,7 +60,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">FaTMAN</data>
+      <data key="d4">FaTMA</data>
     </node>
     <node id="28">
       <data key="d0">PE</data>
@@ -95,14 +95,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">MidMAN</data>
+      <data key="d4">MidMA</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">EastNet</data>
+      <data key="d4">EastN</data>
     </node>
     <node id="4">
       <data key="d0">PE</data>
@@ -116,7 +116,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kentish</data>
+      <data key="d4">Kenti</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
@@ -130,7 +130,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Dublin</data>
+      <data key="d4">Dubli</data>
     </node>
     <node id="8">
       <data key="d0">PE</data>
@@ -144,21 +144,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Reading</data>
+      <data key="d4">Readi</data>
     </node>
     <node id="10">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Scoloca</data>
+      <data key="d4">Scolo</data>
     </node>
     <node id="13">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Warring</data>
+      <data key="d4">Warri</data>
     </node>
     <node id="12">
       <data key="d0">P</data>
@@ -172,42 +172,42 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Telehou</data>
+      <data key="d4">Teleh</data>
     </node>
     <node id="14">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Glasgow</data>
+      <data key="d4">Glasg</data>
     </node>
     <node id="17">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">London</data>
+      <data key="d4">Londo</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Telecit</data>
+      <data key="d4">Telec</data>
     </node>
     <node id="19">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">C&amp;NLMAN</data>
+      <data key="d4">C&amp;NLM</data>
     </node>
     <node id="18">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bristol</data>
+      <data key="d4">Brist</data>
     </node>
     <edge source="24" target="25" />
     <edge source="24" target="12" />

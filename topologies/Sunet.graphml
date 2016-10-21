@@ -11,14 +11,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Borlang</data>
+      <data key="d4">Borla</data>
     </node>
     <node id="25">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Uppsala</data>
+      <data key="d4">Uppsa</data>
     </node>
     <node id="20">
       <data key="d0">P</data>
@@ -39,7 +39,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Sundsva</data>
+      <data key="d4">Sunds</data>
     </node>
     <node id="23">
       <data key="d0">P</data>
@@ -53,49 +53,49 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Skovde</data>
+      <data key="d4">Skovd</data>
     </node>
     <node id="0">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Gotebor</data>
+      <data key="d4">Goteb</data>
     </node>
     <node id="3">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Karlsta</data>
+      <data key="d4">Karls</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Orebro</data>
+      <data key="d4">Orebr</data>
     </node>
     <node id="5">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Linkopi</data>
+      <data key="d4">Linko</data>
     </node>
     <node id="4">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Halmsta</data>
+      <data key="d4">Halms</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Trollha</data>
+      <data key="d4">Troll</data>
     </node>
     <node id="6">
       <data key="d0">P</data>
@@ -116,14 +116,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jonkopi</data>
+      <data key="d4">Jonko</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kristia</data>
+      <data key="d4">Krist</data>
     </node>
     <node id="10">
       <data key="d0">PE</data>
@@ -137,14 +137,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kalmar</data>
+      <data key="d4">Kalma</data>
     </node>
     <node id="12">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ronneby</data>
+      <data key="d4">Ronne</data>
     </node>
     <node id="15">
       <data key="d0">P</data>
@@ -165,14 +165,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vasten</data>
+      <data key="d4">Vaste</data>
     </node>
     <node id="16">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Stockho</data>
+      <data key="d4">Stock</data>
     </node>
     <node id="19">
       <data key="d0">P</data>
@@ -186,7 +186,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kiruna</data>
+      <data key="d4">Kirun</data>
     </node>
     <edge source="24" target="2" />
     <edge source="24" target="23" />

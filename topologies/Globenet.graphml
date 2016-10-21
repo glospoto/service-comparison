@@ -11,14 +11,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom3</data>
+      <data key="d4">Cu3</data>
     </node>
     <node id="54">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Aracaju</data>
+      <data key="d4">Araca</data>
     </node>
     <node id="28">
       <data key="d0">P</data>
@@ -32,7 +32,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Palmas</data>
+      <data key="d4">Palma</data>
     </node>
     <node id="29">
       <data key="d0">P</data>
@@ -46,21 +46,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NewYork</data>
+      <data key="d4">NewYo</data>
     </node>
     <node id="61">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Tuckert</data>
+      <data key="d4">Tucke</data>
     </node>
     <node id="62">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">BocaRat</data>
+      <data key="d4">BocaR</data>
     </node>
     <node id="63">
       <data key="d0">P</data>
@@ -74,21 +74,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Maiquet</data>
+      <data key="d4">Maiqu</data>
     </node>
     <node id="65">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Caracas</data>
+      <data key="d4">Carac</data>
     </node>
     <node id="66">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cucuta</data>
+      <data key="d4">Cucut</data>
     </node>
     <node id="34">
       <data key="d0">P</data>
@@ -102,7 +102,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cuiaba</data>
+      <data key="d4">Cuiab</data>
     </node>
     <node id="25">
       <data key="d0">PE</data>
@@ -116,14 +116,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">PortoAl</data>
+      <data key="d4">Porto</data>
     </node>
     <node id="27">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pelotas</data>
+      <data key="d4">Pelot</data>
     </node>
     <node id="20">
       <data key="d0">PE</data>
@@ -137,7 +137,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Goiania</data>
+      <data key="d4">Goian</data>
     </node>
     <node id="48">
       <data key="d0">P</data>
@@ -158,14 +158,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Campina</data>
+      <data key="d4">Campi</data>
     </node>
     <node id="47">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Maceio</data>
+      <data key="d4">Macei</data>
     </node>
     <node id="44">
       <data key="d0">PE</data>
@@ -193,14 +193,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Curitib</data>
+      <data key="d4">Curit</data>
     </node>
     <node id="40">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">SaoPaul</data>
+      <data key="d4">SaoPa</data>
     </node>
     <node id="41">
       <data key="d0">P</data>
@@ -214,28 +214,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Manaus</data>
+      <data key="d4">Manau</data>
     </node>
     <node id="0">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">SantaEl</data>
+      <data key="d4">Santa</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">BoaVist</data>
+      <data key="d4">BoaVi</data>
     </node>
     <node id="2">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Bogota</data>
+      <data key="d4">Bogot</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -256,14 +256,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Teresin</data>
+      <data key="d4">Teres</data>
     </node>
     <node id="6">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">SaoLuis</data>
+      <data key="d4">SaoLu</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
@@ -277,21 +277,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Florian</data>
+      <data key="d4">Flori</data>
     </node>
     <node id="49">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Recife</data>
+      <data key="d4">Recif</data>
     </node>
     <node id="35">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">RioBran</data>
+      <data key="d4">RioBr</data>
     </node>
     <node id="13">
       <data key="d0">PE</data>
@@ -319,7 +319,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">CampoGr</data>
+      <data key="d4">Campo</data>
     </node>
     <node id="11">
       <data key="d0">PE</data>
@@ -333,28 +333,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Fortale</data>
+      <data key="d4">Forta</data>
     </node>
     <node id="39">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">RiodeJa</data>
+      <data key="d4">Riode</data>
     </node>
     <node id="38">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom1</data>
+      <data key="d4">Cu1</data>
     </node>
     <node id="59">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">StDavid</data>
+      <data key="d4">StDav</data>
     </node>
     <node id="58">
       <data key="d0">P</data>
@@ -375,14 +375,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Rondono</data>
+      <data key="d4">Rondo</data>
     </node>
     <node id="19">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Brasili</data>
+      <data key="d4">Brasi</data>
     </node>
     <node id="18">
       <data key="d0">PE</data>
@@ -396,7 +396,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom2</data>
+      <data key="d4">Cu2</data>
     </node>
     <node id="30">
       <data key="d0">P</data>
@@ -417,28 +417,28 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">PortoVe</data>
+      <data key="d4">Cu4</data>
     </node>
     <node id="53">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Salvado</data>
+      <data key="d4">Salva</data>
     </node>
     <node id="52">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Vitoria</data>
+      <data key="d4">Vitor</data>
     </node>
     <node id="33">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Custom4</data>
+      <data key="d4">Cu5</data>
     </node>
     <node id="55">
       <data key="d0">PE</data>
@@ -466,14 +466,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Medelli</data>
+      <data key="d4">Medel</data>
     </node>
     <node id="50">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">JoaoPes</data>
+      <data key="d4">JoaoP</data>
     </node>
     <edge source="56" target="39" />
     <edge source="56" target="51" />

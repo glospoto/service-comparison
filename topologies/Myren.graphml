@@ -11,7 +11,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">MonashM</data>
+      <data key="d4">Monas</data>
     </node>
     <node id="25">
       <data key="d0">P</data>
@@ -53,7 +53,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UNITEN</data>
+      <data key="d4">UNITE</data>
     </node>
     <node id="23">
       <data key="d0">P</data>
@@ -67,14 +67,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UniMAP</data>
+      <data key="d4">UniMA</data>
     </node>
     <node id="29">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cyberja</data>
+      <data key="d4">Cyber</data>
     </node>
     <node id="1">
       <data key="d0">P</data>
@@ -116,7 +116,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">UNIMAS</data>
+      <data key="d4">UNIMA</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
@@ -144,7 +144,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Notting</data>
+      <data key="d4">Notti</data>
     </node>
     <node id="11">
       <data key="d0">P</data>
@@ -221,21 +221,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">SouthPo</data>
+      <data key="d4">South</data>
     </node>
     <node id="30">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">BorderR</data>
+      <data key="d4">Borde</data>
     </node>
     <node id="36">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Commodi</data>
+      <data key="d4">Commo</data>
     </node>
     <node id="35">
       <data key="d0">PE</data>
@@ -249,21 +249,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">KLPoP(U</data>
+      <data key="d4">KLPoP</data>
     </node>
     <node id="33">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">NorthPo</data>
+      <data key="d4">North</data>
     </node>
     <node id="32">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">EastCoa</data>
+      <data key="d4">EastC</data>
     </node>
     <edge source="24" target="29" />
     <edge source="25" target="29" />

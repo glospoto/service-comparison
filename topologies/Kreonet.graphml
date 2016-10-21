@@ -11,14 +11,14 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Pohang</data>
+      <data key="d4">Pohan</data>
     </node>
     <node id="10">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Daejeon</data>
+      <data key="d4">Daeje</data>
     </node>
     <node id="12">
       <data key="d0">P</data>
@@ -39,7 +39,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Jeonju</data>
+      <data key="d4">Jeonj</data>
     </node>
     <node id="3">
       <data key="d0">P</data>
@@ -53,7 +53,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Kwangju</data>
+      <data key="d4">Kwang</data>
     </node>
     <node id="5">
       <data key="d0">P</data>
@@ -67,7 +67,7 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Changwo</data>
+      <data key="d4">Chang</data>
     </node>
     <node id="7">
       <data key="d0">P</data>
@@ -81,21 +81,21 @@
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Incheon</data>
+      <data key="d4">Inche</data>
     </node>
     <node id="9">
       <data key="d0">P</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Ochang</data>
+      <data key="d4">Ochan</data>
     </node>
     <node id="8">
       <data key="d0">PE</data>
       <data key="d1">Peer</data>
       <data key="d2">1</data>
       <data key="d3">router</data>
-      <data key="d4">Cheonan</data>
+      <data key="d4">Cheon</data>
     </node>
     <edge source="11" target="10" />
     <edge source="10" target="12" />
